@@ -31,7 +31,8 @@
     "render": "remotion render DemoVideo out/demo.mp4",
     "render:ad": "remotion render QylineAd out/qyline-pub-20s.mp4",
     "still": "remotion still DemoVideo out/thumbnail.png --frame=60",
-    "audio": "node scripts/make-audio.mjs"
+    "audio": "node scripts/make-audio.mjs",
+    "render:ad-mobile": "remotion render QylineAdVertical out/qyline-pub-mobile.mp4"
   },
   "sideEffects": [
     "*.css"

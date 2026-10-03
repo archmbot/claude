@@ -4,6 +4,7 @@
 export const BRAND = {
   name: "QYLINE",
   tagline: "Votre présence en ligne commence ici",
+  taglineLines: ["Votre présence en ligne", "commence ici"], // version mobile
   site: "qyline.org",
   email: "qyline40@gmail.com",
   phone: "06 10 24 26 78",
@@ -98,6 +99,8 @@ export const FPS = 30;
 export const WIDTH = 1920;
 export const HEIGHT = 1080;
 export const DURATION = 600; // 20 s
+export const MOBILE_WIDTH = 1080; // version verticale 9:16
+export const MOBILE_HEIGHT = 1920;
 
 // Scènes (en images). Les coupes tombent sur les mesures de la musique (120 BPM).
 // Toute modification doit être reportée dans scripts/make-audio.mjs.
