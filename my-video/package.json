@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@fontsource/bricolage-grotesque": "^5.3.0",
     "@fontsource/plus-jakarta-sans": "^5.3.0",
     "@remotion/cli": "4.0.532",
     "@remotion/tailwind-v4": "4.0.532",
@@ -28,8 +29,9 @@
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
     "render": "remotion render DemoVideo out/demo.mp4",
-    "render:ad": "remotion render QylineAd out/qyline-pub.mp4",
-    "still": "remotion still DemoVideo out/thumbnail.png --frame=60"
+    "render:ad": "remotion render QylineAd out/qyline-pub-20s.mp4",
+    "still": "remotion still DemoVideo out/thumbnail.png --frame=60",
+    "audio": "node scripts/make-audio.mjs"
   },
   "sideEffects": [
     "*.css"

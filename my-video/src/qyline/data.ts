@@ -8,39 +8,39 @@ export const BRAND = {
   email: "qyline40@gmail.com",
   phone: "06 10 24 26 78",
   baseline: "Indépendant dans les Landes",
-  cta: "Donnez vie à votre projet avec QYLINE",
 };
 
+// Couleurs relevées sur qyline.org
 export const COLORS = {
-  bg: "#070b1f",
-  bg2: "#0d1433",
-  violet: "#7c3aed",
-  violetDeep: "#6a1bea",
-  blue: "#0066ff",
-  cyan: "#38bdf8",
-  text: "#ffffff",
-  muted: "#b4bdea",
+  blue: "#24459A",
+  blueDeep: "#1B347A",
+  grid: "#3352A1",
+  yellow: "#F5C518",
+  navy: "#121A33",
+  paper: "#F4F6FA",
+  white: "#FFFFFF",
+  muted: "#C5CEE4",
 };
 
 export type Plan = {
+  ref: string;
   name: string;
-  kind: string;
   from: number;
   featured?: boolean;
   badge?: string;
 };
 
 export const PLANS: Plan[] = [
-  { name: "Portfolio\nJeune Créateur", kind: "Réf. 01", from: 35 },
-  { name: "Portfolio\nPro", kind: "Réf. 02", from: 130 },
+  { ref: "Réf. 01", name: "Portfolio\nJeune Créateur", from: 35 },
+  { ref: "Réf. 02", name: "Portfolio\nPro", from: 130 },
   {
+    ref: "Réf. 03",
     name: "Site Vitrine\nEntreprise",
-    kind: "Réf. 03",
     from: 625,
     featured: true,
     badge: "Le plus demandé",
   },
-  { name: "Boutique\nen ligne", kind: "Réf. 04", from: 950 },
+  { ref: "Réf. 04", name: "Boutique\nen ligne", from: 950 },
 ];
 
 export const EXTRA_PLANS = {
@@ -48,6 +48,7 @@ export const EXTRA_PLANS = {
   custom: { label: "Projet spécifique", note: "Sur devis" },
 };
 
+// Non affichés dans la version 20 s, conservés pour une version longue.
 export const RUNNING_COSTS = [
   { label: "Hébergement (France, HTTPS inclus)", value: "20 €", unit: "/ an" },
   { label: "Nom de domaine", value: "dès 45,75 €", unit: "/ an" },
@@ -59,6 +60,7 @@ export const LEGAL = "TVA non applicable, art. 293 B du CGI";
 
 export const SERVICES = [
   {
+    plate: "Planche A",
     title: "Sites vitrines",
     text: "Sites vitrines et portfolios professionnels.",
     bullets: [
@@ -69,8 +71,9 @@ export const SERVICES = [
     icon: "site" as const,
   },
   {
+    plate: "Planche B",
     title: "Développement sur mesure",
-    text: "Applications et outils métier accessibles depuis un navigateur.",
+    text: "Outils métier accessibles depuis un navigateur.",
     bullets: [
       "Espace client, tableau de bord",
       "Gestion et automatisation",
@@ -79,6 +82,7 @@ export const SERVICES = [
     icon: "code" as const,
   },
   {
+    plate: "Planche C",
     title: "Accompagnement",
     text: "Assistance informatique et dépannage à distance.",
     bullets: [
@@ -93,13 +97,19 @@ export const SERVICES = [
 export const FPS = 30;
 export const WIDTH = 1920;
 export const HEIGHT = 1080;
-export const DURATION = 900;
+export const DURATION = 600; // 20 s
 
-// Début de chaque scène (en images)
+// Scènes (en images). Les coupes tombent sur les mesures de la musique (120 BPM).
+// Toute modification doit être reportée dans scripts/make-audio.mjs.
 export const SCENES = {
-  intro: { from: 0, duration: 150 },
-  web: { from: 150, duration: 150 },
-  services: { from: 300, duration: 210 },
-  pricing: { from: 510, duration: 210 },
-  outro: { from: 720, duration: 180 },
+  intro: { from: 0, duration: 75 },
+  web: { from: 75, duration: 120 },
+  services: { from: 195, duration: 120 },
+  pricing: { from: 315, duration: 180 },
+  outro: { from: 495, duration: 105 },
 };
+
+export const BEAT = 15; // images par temps
+export const FIRST_BEAT = 15; // le logo se pose sur le premier temps
+export const LAST_BEAT = 555; // accord final
+export const HITS = [15, 495, 555]; // impacts (secousse de caméra)
