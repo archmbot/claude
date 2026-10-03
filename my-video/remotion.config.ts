@@ -6,9 +6,19 @@
  */
 
 import { Config } from "@remotion/cli/config";
+import { existsSync } from 'node:fs';
 import { enableTailwind } from '@remotion/tailwind-v4';
 
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.overrideBundlerConfig(enableTailwind);
+Config.setCodec("h264");
+Config.setPixelFormat("yuv420p");
+
+// Sandboxed environments without access to remotion.media: reuse a local headless shell.
+const localShell =
+  "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell";
+if (existsSync(localShell)) {
+  Config.setBrowserExecutable(localShell);
+}

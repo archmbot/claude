@@ -1,10 +1,16 @@
 import "./index.css";
-import { MyComposition } from "./Composition";
+import { Composition } from "remotion";
+import { DemoVideo, DURATION, FPS, HEIGHT, WIDTH } from "./Composition";
 
 export const RemotionRoot: React.FC = () => {
   return (
-    <>
-      <MyComposition />
-    </>
+    <Composition
+      id="DemoVideo"
+      component={DemoVideo}
+      durationInFrames={DURATION}
+      fps={FPS}
+      width={WIDTH}
+      height={HEIGHT}
+    />
   );
 };
