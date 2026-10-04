@@ -1,6 +1,8 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { DemoVideo, DURATION, FPS, HEIGHT, WIDTH } from "./Composition";
+import { BlackU15Intro, calculateBU15Metadata } from "./black-u15/Intro";
+import { DURATION as BU15_DURATION, FPS as BU15_FPS, HEIGHT as BU15_HEIGHT, WIDTH as BU15_WIDTH } from "./black-u15/timeline";
 import { QylineAd } from "./qyline/Ad";
 import { QylineAdVertical } from "./qyline/AdVertical";
 import {
@@ -30,6 +32,16 @@ export const RemotionRoot: React.FC = () => {
         fps={AD_FPS}
         width={MOBILE_WIDTH}
         height={MOBILE_HEIGHT}
+      />
+      <Composition
+        id="BlackU15Intro"
+        component={BlackU15Intro}
+        durationInFrames={BU15_DURATION}
+        fps={BU15_FPS}
+        width={BU15_WIDTH}
+        height={BU15_HEIGHT}
+        defaultProps={{ players: [] }}
+        calculateMetadata={calculateBU15Metadata}
       />
       <Composition
         id="DemoVideo"
