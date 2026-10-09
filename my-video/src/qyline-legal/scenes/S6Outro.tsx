@@ -7,7 +7,6 @@ import { BODY, C, Footnote, HEAD, LogoMark, Stamp, clamp, usePop } from "../ui";
 
 export const S6Outro: React.FC = () => {
   const frame = useCurrentFrame();
-  const check = localCue(5, "vérifiez", 1);
   const brand = localCue(5, "qyline", 1);
   const site = localCue(5, "qyline.org");
   const logo = usePop(2, 12, 200);
@@ -39,13 +38,13 @@ export const S6Outro: React.FC = () => {
         </div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 520, display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <Rise delay={check - 6}>
+        <Rise delay={6}>
           <div style={h}>VÉRIFIEZ</div>
         </Rise>
-        <Rise delay={check - 2}>
+        <Rise delay={11}>
           <div style={h}>VOTRE SITE</div>
         </Rise>
-        <Rise delay={check + 2}>
+        <Rise delay={16}>
           <div style={{ ...h, color: C.yellow }}>DÈS AUJOURD&apos;HUI</div>
         </Rise>
       </div>
