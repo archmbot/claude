@@ -36,7 +36,10 @@
     "audio": "node scripts/make-audio.mjs",
     "render:ad-mobile": "remotion render QylineAdVertical out/qyline-pub-mobile.mp4",
     "bu15:audio": "node scripts/black-u15/make-audio.mjs",
-    "bu15:render": "remotion render BlackU15Intro out/black-u15-intro-4k.mp4 --scale=2 --crf=20"
+    "bu15:render": "remotion render BlackU15Intro out/black-u15-intro-4k.mp4 --scale=2 --crf=20",
+    "legal:voice": "python3 scripts/qyline-legal/make-voice.py .kokoro",
+    "legal:audio": "node scripts/qyline-legal/make-audio.mjs",
+    "legal:render": "remotion render QylineLegal out/qyline-mentions-legales.mp4"
   },
   "sideEffects": [
     "*.css"

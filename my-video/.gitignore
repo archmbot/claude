@@ -8,3 +8,6 @@ out
 
 # Photos des joueurs (mineurs) : ne jamais publier dans Git
 public/black-u15/players/
+
+# Modèles de synthèse vocale (lourds, téléchargés à part)
+.kokoro/

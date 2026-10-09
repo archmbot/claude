@@ -4,6 +4,8 @@ import { DemoVideo, DURATION, FPS, HEIGHT, WIDTH } from "./Composition";
 import { BlackU15Intro, calculateBU15Metadata } from "./black-u15/Intro";
 import { DURATION as BU15_DURATION, FPS as BU15_FPS, HEIGHT as BU15_HEIGHT, WIDTH as BU15_WIDTH } from "./black-u15/timeline";
 import { QylineAd } from "./qyline/Ad";
+import { QylineLegal } from "./qyline-legal/Video";
+import { DURATION as LEGAL_DURATION, FPS as LEGAL_FPS, HEIGHT as LEGAL_HEIGHT, WIDTH as LEGAL_WIDTH } from "./qyline-legal/timeline";
 import { QylineAdVertical } from "./qyline/AdVertical";
 import {
   DURATION as AD_DURATION,
@@ -32,6 +34,14 @@ export const RemotionRoot: React.FC = () => {
         fps={AD_FPS}
         width={MOBILE_WIDTH}
         height={MOBILE_HEIGHT}
+      />
+      <Composition
+        id="QylineLegal"
+        component={QylineLegal}
+        durationInFrames={LEGAL_DURATION}
+        fps={LEGAL_FPS}
+        width={LEGAL_WIDTH}
+        height={LEGAL_HEIGHT}
       />
       <Composition
         id="BlackU15Intro"

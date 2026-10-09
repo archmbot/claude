@@ -36,6 +36,65 @@ export const svf = (cutoff, q) => {
   return f;
 };
 
+// Limiteur à anticipation (4 ms), en place, avec fondu de sortie optionnel.
+export const limiter = (L, R, { levelIn = 1, limit = 0.76, fadeOut = 0 } = {}) => {
+  const N = L.length;
+  const LOOK = Math.round(SR * 0.004);
+  const need = new Float32Array(N);
+  for (let i = 0; i < N; i++) {
+    const a = Math.max(Math.abs(L[i]), Math.abs(R[i])) * levelIn;
+    need[i] = a > limit ? limit / a : 1;
+  }
+  // minimum glissant sur la fenêtre d'anticipation, puis lissage de même longueur
+  const minAhead = new Float32Array(N);
+  const dq = [];
+  for (let i = N - 1; i >= 0; i--) {
+    while (dq.length && need[dq[dq.length - 1]] >= need[i]) dq.pop();
+    dq.push(i);
+    while (dq[0] > i + LOOK) dq.shift();
+    minAhead[i] = need[dq[0]];
+  }
+  const release = 1 - Math.exp(-1 / (SR * 0.06));
+  let g = 1;
+  let acc = LOOK; // fenêtre initialement remplie de 1
+  const duration = N / SR;
+  const fadeStart = duration - fadeOut;
+  for (let i = 0; i < N; i++) {
+    acc += minAhead[i] - (i >= LOOK ? minAhead[i - LOOK] : 1);
+    const smooth = Math.min(minAhead[i], acc / LOOK);
+    g = smooth < g ? smooth : g + (smooth - g) * release;
+    const t = i / SR;
+    const fade = fadeOut > 0 && t > fadeStart ? Math.max(0, 1 - (t - fadeStart) / fadeOut) : 1;
+    L[i] = L[i] * levelIn * g * fade;
+    R[i] = R[i] * levelIn * g * fade;
+  }
+};
+
+// WAV PCM 16 bits stéréo
+export const writeWav = (path, L, R) => {
+  const N = L.length;
+  const data = Buffer.alloc(N * 4);
+  for (let i = 0; i < N; i++) {
+    data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, L[i])) * 32767), i * 4);
+    data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, R[i])) * 32767), i * 4 + 2);
+  }
+  const header = Buffer.alloc(44);
+  header.write("RIFF", 0);
+  header.writeUInt32LE(36 + data.length, 4);
+  header.write("WAVE", 8);
+  header.write("fmt ", 12);
+  header.writeUInt32LE(16, 16);
+  header.writeUInt16LE(1, 20);
+  header.writeUInt16LE(2, 22);
+  header.writeUInt32LE(SR, 24);
+  header.writeUInt32LE(SR * 4, 28);
+  header.writeUInt16LE(4, 32);
+  header.writeUInt16LE(16, 34);
+  header.write("data", 36);
+  header.writeUInt32LE(data.length, 40);
+  writeFileSync(path, Buffer.concat([header, data]));
+};
+
 export const createSynth = ({ duration, seed = 1234567 }) => {
   const N = Math.ceil(SR * duration);
   const bus = () => ({ L: new Float32Array(N), R: new Float32Array(N) });
@@ -337,8 +396,8 @@ export const createSynth = ({ duration, seed = 1234567 }) => {
     return out;
   };
 
-  // Mixe les bus, normalise, limite (≈ -14 LUFS, crête vraie sous -1 dBTP) et écrit un WAV.
-  const render = (path, { levelIn = 1.22, limit = 0.76, fadeOut = 0.6, duckDepth = 0.6, roomSize = 0.8 } = {}) => {
+  // Mixe les bus (sidechain, réverbération, passe-haut), sans normalisation.
+  const mixdown = ({ duckDepth = 0.6, roomSize = 0.8 } = {}) => {
     // Sidechain : la musique s'efface brièvement sous chaque grosse caisse.
     kicks.sort((a, b) => a - b);
     const duck = new Float32Array(N).fill(1);
@@ -354,75 +413,29 @@ export const createSynth = ({ duration, seed = 1234567 }) => {
 
     const hpL = svf(28, 0.7);
     const hpR = svf(28, 0.7);
-    const outL = new Float32Array(N);
-    const outR = new Float32Array(N);
+    const L = new Float32Array(N);
+    const R = new Float32Array(N);
     let peak = 0;
     for (let i = 0; i < N; i++) {
       hpL.run(drums.L[i] + music.L[i] * duck[i] + fx.L[i] + wetL[i] * 0.55);
       hpR.run(drums.R[i] + music.R[i] * duck[i] + fx.R[i] + wetR[i] * 0.55);
-      outL[i] = hpL.hp;
-      outR[i] = hpR.hp;
-      peak = Math.max(peak, Math.abs(outL[i]), Math.abs(outR[i]));
+      L[i] = hpL.hp;
+      R[i] = hpR.hp;
+      peak = Math.max(peak, Math.abs(L[i]), Math.abs(R[i]));
     }
+    return { L, R, peak };
+  };
 
-    // Normalisation et légère saturation
+  // Mixe, normalise avec une légère saturation, limite (≈ -14 LUFS, crête vraie sous -1 dBTP), écrit un WAV.
+  const render = (path, { levelIn = 1.22, limit = 0.76, fadeOut = 0.6, duckDepth = 0.6, roomSize = 0.8 } = {}) => {
+    const { L, R, peak } = mixdown({ duckDepth, roomSize });
     const drive = 1.3;
     for (let i = 0; i < N; i++) {
-      outL[i] = (Math.tanh((outL[i] / peak) * drive) / Math.tanh(drive)) * 0.89;
-      outR[i] = (Math.tanh((outR[i] / peak) * drive) / Math.tanh(drive)) * 0.89;
+      L[i] = (Math.tanh((L[i] / peak) * drive) / Math.tanh(drive)) * 0.89;
+      R[i] = (Math.tanh((R[i] / peak) * drive) / Math.tanh(drive)) * 0.89;
     }
-
-    // Limiteur à anticipation
-    const LOOK = Math.round(SR * 0.004);
-    const need = new Float32Array(N);
-    for (let i = 0; i < N; i++) {
-      const a = Math.max(Math.abs(outL[i]), Math.abs(outR[i])) * levelIn;
-      need[i] = a > limit ? limit / a : 1;
-    }
-    // minimum glissant sur la fenêtre d'anticipation, puis lissage de même longueur
-    const minAhead = new Float32Array(N);
-    const dq = [];
-    for (let i = N - 1; i >= 0; i--) {
-      while (dq.length && need[dq[dq.length - 1]] >= need[i]) dq.pop();
-      dq.push(i);
-      while (dq[0] > i + LOOK) dq.shift();
-      minAhead[i] = need[dq[0]];
-    }
-    const release = 1 - Math.exp(-1 / (SR * 0.06));
-    let g = 1;
-    let acc = LOOK; // fenêtre initialement remplie de 1
-    const fadeStart = duration - fadeOut;
-    for (let i = 0; i < N; i++) {
-      acc += minAhead[i] - (i >= LOOK ? minAhead[i - LOOK] : 1);
-      const smooth = Math.min(minAhead[i], acc / LOOK);
-      g = smooth < g ? smooth : g + (smooth - g) * release;
-      const t = i / SR;
-      const fade = t > fadeStart ? Math.max(0, 1 - (t - fadeStart) / fadeOut) : 1;
-      outL[i] = outL[i] * levelIn * g * fade;
-      outR[i] = outR[i] * levelIn * g * fade;
-    }
-
-    // WAV PCM 16 bits stéréo
-    const data = Buffer.alloc(N * 4);
-    for (let i = 0; i < N; i++) {
-      data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, outL[i])) * 32767), i * 4);
-      data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, outR[i])) * 32767), i * 4 + 2);
-    }
-    const header = Buffer.alloc(44);
-    header.write("RIFF", 0);
-    header.writeUInt32LE(36 + data.length, 4);
-    header.write("WAVE", 8);
-    header.write("fmt ", 12);
-    header.writeUInt32LE(16, 16);
-    header.writeUInt16LE(1, 20);
-    header.writeUInt16LE(2, 22);
-    header.writeUInt32LE(SR, 24);
-    header.writeUInt32LE(SR * 4, 28);
-    header.writeUInt16LE(4, 32);
-    header.writeUInt16LE(16, 34);
-    header.write("data", 36);
-    header.writeUInt32LE(data.length, 40);
-    writeFileSync(path, Buffer.concat([header, data]));
+    limiter(L, R, { levelIn, limit, fadeOut });
+    writeWav(path, L, R);
     return peak;
   };
 
@@ -448,6 +461,7 @@ export const createSynth = ({ duration, seed = 1234567 }) => {
     impact,
     pop,
     stamp,
+    mixdown,
     render,
   };
 };

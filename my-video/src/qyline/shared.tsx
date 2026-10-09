@@ -31,7 +31,7 @@ const FONTS: [string, number, string][] = [
   ["Plus Jakarta Sans", 800, "plus-jakarta-sans-latin-800-normal.woff2"],
 ];
 
-const useFonts = () => {
+export const useFonts = () => {
   const [handle] = useState(() => delayRender("Chargement des polices"));
   useEffect(() => {
     Promise.all(
@@ -127,7 +127,7 @@ const Background: React.FC = () => {
 
 // ------------------------------------------------------------ transitions
 // Volet diagonal : bande jaune + corps marine, qui masque la coupe.
-const Wipe: React.FC<{ at: number }> = ({ at }) => {
+export const Wipe: React.FC<{ at: number }> = ({ at }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   if (frame < at - 10 || frame > at + 10) return null;
@@ -158,7 +158,7 @@ const Wipe: React.FC<{ at: number }> = ({ at }) => {
 };
 
 // Petit « coup de zoom » à l'entrée de chaque scène
-const SceneIn: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const SceneIn: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const p = useSpring(0, 20, 170);
   return (
     <AbsoluteFill style={{ transform: `scale(${interpolate(p, [0, 1], [1.12, 1])})` }}>{children}</AbsoluteFill>
