@@ -27,7 +27,11 @@ SR = 24000
 DURATION = 60.0
 VOICE = "ff_siwis"
 
-# {affiché|prononcé} : ce que l'on lit à l'écran et ce que la voix dit
+# Prononciations imposées, en phonèmes (entre barres obliques dans le texte prononcé)
+QYLINE = "/kˈaɪlaɪn/"  # « QYLINE » lu à l'anglaise : « kaï-laïne »
+ORG = "/ˈɔʁɡ/"  # « .org » dit « orgue »
+
+# {affiché|prononcé} : ce que l'on lit à l'écran et ce que la voix dit ; /…/ = phonèmes imposés
 SCENES = [
     {  # 0-7 s (la fin de phrase peut déborder un peu sur la scène suivante)
         "window": (0.2, 7.5),
@@ -62,17 +66,17 @@ SCENES = [
     {  # 42-52 s
         "window": (42.3, 51.8),
         "sentences": [
-            "Chez {QYLINE|Qyline}, nous créons des sites internet modernes, et vous accompagnons dans la mise "
+            f"Chez {{QYLINE|{QYLINE}}}, nous créons des sites internet modernes, et vous accompagnons dans la mise "
             "en place des informations légales adaptées à votre activité.",
         ],
     },
     {  # 52-60 s
-        "window": (52.25, 59.6),
+        "window": (52.25, 59.35),
         "sentences": [
             "N'attendez pas qu'un problème survienne.",
             "Vérifiez votre site dès aujourd'hui.",
-            "{QYLINE|Qyline}, votre partenaire web.",
-            "Rendez-vous sur {qyline.org|qyline point org}.",
+            f"{{QYLINE|{QYLINE}}}, votre partenaire web.",
+            f"Rendez-vous sur {{qyline.org|{QYLINE} point {ORG}}}.",
         ],
     },
 ]
@@ -107,9 +111,10 @@ def parse(sentence):
     return "".join(spoken), merged
 
 
-def trim(a, thr=0.01):
+def trim(a, thr=0.004):
+    """Retire le silence au début et à la fin, en gardant 40 ms après la dernière consonne."""
     idx = np.where(np.abs(a) > thr)[0]
-    return a[idx[0]: idx[-1] + 1] if len(idx) else a
+    return a[idx[0]: idx[-1] + int(0.04 * SR)] if len(idx) else a
 
 
 def pauses(a):
@@ -176,8 +181,22 @@ def main():
     track = np.zeros(int(SR * DURATION), dtype=np.float32)
     words_out, scenes_out = [], []
 
+    def to_phonemes(text):
+        """Texte français -> phonèmes, en gardant tels quels les passages /…/ imposés."""
+        out = []
+        for i, part in enumerate(re.split(r"/([^/]+)/", text)):
+            if i % 2:
+                out.append(part)
+            elif part.strip():
+                out.append(kokoro.tokenizer.phonemize(part, "fr-fr"))
+        ph = " ".join(o for o in out if o)
+        # espeak encadre les mots anglais (« web ») de balises « (en) … (fr) » que Kokoro prononcerait
+        ph = re.sub(r"\([a-z]{2}(?:-[a-z]{2})?\)", "", ph)
+        ph = re.sub(r"\s+([,.;:?!])", r"\1", ph)
+        return re.sub(r"\s{2,}", " ", ph).strip()
+
     def synth(text, speed):
-        samples, sr = kokoro.create(text, voice=VOICE, speed=speed, lang="fr-fr")
+        samples, sr = kokoro.create(to_phonemes(text), voice=VOICE, speed=speed, lang="fr-fr", is_phonemes=True)
         assert sr == SR
         return trim(np.asarray(samples, dtype=np.float32))
 
@@ -196,6 +215,8 @@ def main():
             speed = min(MAX_SPEED, speed * total / (w1 - w0) * 1.01)
             audios = [synth(sp, speed) for sp, _ in parsed]
         t = w0
+        for spoken, _ in parsed:
+            print("   ", to_phonemes(spoken))
         for sent_i, ((spoken, words), a) in enumerate(zip(parsed, audios)):
             i0 = int(t * SR)
             track[i0: i0 + len(a)] += a[: len(track) - i0]

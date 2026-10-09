@@ -3,161 +3,161 @@
   {
    "text": "Vous",
    "start": 0.2,
-   "end": 0.419,
+   "end": 0.417,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "êtes",
-   "start": 0.419,
-   "end": 0.639,
+   "start": 0.417,
+   "end": 0.633,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "artisan",
-   "start": 0.639,
-   "end": 1.022,
+   "start": 0.633,
+   "end": 1.012,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "ou",
-   "start": 1.022,
-   "end": 1.132,
+   "start": 1.012,
+   "end": 1.12,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "entrepreneur,",
-   "start": 1.132,
-   "end": 1.79,
+   "start": 1.12,
+   "end": 1.77,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "et",
-   "start": 2.04,
-   "end": 2.142,
+   "start": 2.02,
+   "end": 2.118,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "vous",
-   "start": 2.142,
-   "end": 2.347,
+   "start": 2.118,
+   "end": 2.315,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "possédez",
-   "start": 2.347,
-   "end": 2.755,
+   "start": 2.315,
+   "end": 2.709,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "un",
-   "start": 2.755,
-   "end": 2.858,
+   "start": 2.709,
+   "end": 2.807,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "site",
-   "start": 2.858,
-   "end": 3.062,
+   "start": 2.807,
+   "end": 3.004,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "internet ?",
-   "start": 3.062,
-   "end": 3.471,
+   "start": 3.004,
+   "end": 3.397,
    "scene": 0,
    "sentence": 0
   },
   {
    "text": "Attention :",
-   "start": 3.691,
-   "end": 4.162,
+   "start": 3.617,
+   "end": 4.077,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "une",
-   "start": 4.162,
-   "end": 4.319,
+   "start": 4.177,
+   "end": 4.329,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "simple",
-   "start": 4.319,
-   "end": 4.632,
+   "start": 4.329,
+   "end": 4.633,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "obligation",
-   "start": 4.632,
-   "end": 5.155,
+   "start": 4.633,
+   "end": 5.14,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "oubliée",
-   "start": 5.155,
-   "end": 5.521,
+   "start": 5.14,
+   "end": 5.495,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "peut",
-   "start": 5.521,
-   "end": 5.731,
+   "start": 5.495,
+   "end": 5.698,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "vous",
-   "start": 5.731,
-   "end": 5.94,
+   "start": 5.698,
+   "end": 5.9,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "exposer",
-   "start": 5.94,
-   "end": 6.306,
+   "start": 5.9,
+   "end": 6.255,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "à",
-   "start": 6.306,
-   "end": 6.358,
+   "start": 6.255,
+   "end": 6.306,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "de",
-   "start": 6.358,
-   "end": 6.463,
+   "start": 6.306,
+   "end": 6.407,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "lourdes",
-   "start": 6.463,
-   "end": 6.829,
+   "start": 6.407,
+   "end": 6.762,
    "scene": 0,
    "sentence": 1
   },
   {
    "text": "sanctions.",
-   "start": 6.829,
-   "end": 7.3,
+   "start": 6.762,
+   "end": 7.218,
    "scene": 0,
    "sentence": 1
   },
@@ -297,644 +297,644 @@
   {
    "text": "pour",
    "start": 15.44,
-   "end": 15.647,
+   "end": 15.657,
    "scene": 1,
    "sentence": 0
   },
   {
    "text": "une",
-   "start": 15.647,
-   "end": 15.802,
+   "start": 15.657,
+   "end": 15.82,
    "scene": 1,
    "sentence": 0
   },
   {
    "text": "personne",
-   "start": 15.802,
-   "end": 16.216,
+   "start": 15.82,
+   "end": 16.254,
    "scene": 1,
    "sentence": 0
   },
   {
    "text": "physique.",
-   "start": 16.216,
-   "end": 16.63,
+   "start": 16.254,
+   "end": 16.688,
    "scene": 1,
    "sentence": 0
   },
   {
    "text": "Vos",
    "start": 17.25,
-   "end": 17.439,
+   "end": 17.438,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "visiteurs",
-   "start": 17.439,
-   "end": 18.005,
+   "start": 17.438,
+   "end": 18.001,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "doivent",
-   "start": 18.005,
-   "end": 18.446,
+   "start": 18.001,
+   "end": 18.438,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "pouvoir",
-   "start": 18.446,
-   "end": 18.886,
+   "start": 18.438,
+   "end": 18.876,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "identifier",
-   "start": 18.886,
-   "end": 19.516,
+   "start": 18.876,
+   "end": 19.502,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "votre",
-   "start": 19.516,
-   "end": 19.831,
+   "start": 19.502,
+   "end": 19.815,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "entreprise :",
-   "start": 19.831,
-   "end": 20.46,
+   "start": 19.815,
+   "end": 20.44,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "votre",
-   "start": 20.67,
-   "end": 20.916,
+   "start": 20.75,
+   "end": 21.004,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "identité,",
-   "start": 20.916,
-   "end": 21.31,
+   "start": 21.004,
+   "end": 21.41,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "vos",
-   "start": 21.41,
-   "end": 21.637,
+   "start": 21.5,
+   "end": 21.742,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "coordonnées,",
-   "start": 21.637,
-   "end": 22.47,
+   "start": 21.742,
+   "end": 22.63,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "les",
-   "start": 22.69,
-   "end": 22.868,
+   "start": 22.8,
+   "end": 22.978,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "informations",
-   "start": 22.868,
-   "end": 23.582,
+   "start": 22.978,
+   "end": 23.692,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "d'immatriculation",
-   "start": 23.582,
-   "end": 24.534,
+   "start": 23.692,
+   "end": 24.644,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "requises,",
-   "start": 24.534,
-   "end": 25.01,
+   "start": 24.644,
+   "end": 25.12,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "et",
-   "start": 25.14,
-   "end": 25.254,
+   "start": 25.24,
+   "end": 25.363,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "votre",
-   "start": 25.254,
-   "end": 25.54,
+   "start": 25.363,
+   "end": 25.672,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "hébergeur.",
-   "start": 25.54,
-   "end": 26.055,
+   "start": 25.672,
+   "end": 26.228,
    "scene": 2,
    "sentence": 0
   },
   {
    "text": "Ces",
-   "start": 26.275,
-   "end": 26.453,
+   "start": 26.448,
+   "end": 26.629,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "informations",
-   "start": 26.453,
-   "end": 27.163,
+   "start": 26.629,
+   "end": 27.353,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "doivent",
-   "start": 27.163,
-   "end": 27.578,
+   "start": 27.353,
+   "end": 27.776,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "être",
-   "start": 27.578,
-   "end": 27.815,
+   "start": 27.776,
+   "end": 28.017,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "facilement",
-   "start": 27.815,
-   "end": 28.407,
+   "start": 28.017,
+   "end": 28.621,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "accessibles.",
-   "start": 28.407,
-   "end": 29.059,
+   "start": 28.621,
+   "end": 29.285,
    "scene": 2,
    "sentence": 1
   },
   {
    "text": "La",
    "start": 30.25,
-   "end": 30.416,
+   "end": 30.415,
    "scene": 3,
    "sentence": 0
   },
   {
    "text": "solution ?",
-   "start": 30.416,
-   "end": 31.078,
+   "start": 30.415,
+   "end": 31.073,
    "scene": 3,
    "sentence": 0
   },
   {
    "text": "Vérifiez",
-   "start": 31.298,
-   "end": 31.834,
+   "start": 31.293,
+   "end": 31.829,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "vos",
-   "start": 31.834,
-   "end": 32.035,
+   "start": 31.829,
+   "end": 32.03,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "informations,",
-   "start": 32.035,
-   "end": 32.838,
+   "start": 32.03,
+   "end": 32.833,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "et",
-   "start": 33.108,
-   "end": 33.229,
+   "start": 33.103,
+   "end": 33.224,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "ajoutez",
-   "start": 33.229,
-   "end": 33.653,
+   "start": 33.224,
+   "end": 33.648,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "une",
-   "start": 33.653,
-   "end": 33.835,
+   "start": 33.648,
+   "end": 33.83,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "page",
-   "start": 33.835,
-   "end": 34.077,
+   "start": 33.83,
+   "end": 34.072,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "de",
-   "start": 34.077,
-   "end": 34.198,
+   "start": 34.072,
+   "end": 34.193,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "mentions",
-   "start": 34.198,
-   "end": 34.683,
+   "start": 34.193,
+   "end": 34.678,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "légales",
-   "start": 34.683,
-   "end": 35.107,
+   "start": 34.678,
+   "end": 35.102,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "facilement",
-   "start": 35.107,
-   "end": 35.712,
+   "start": 35.102,
+   "end": 35.707,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "accessible,",
-   "start": 35.712,
-   "end": 36.318,
+   "start": 35.707,
+   "end": 36.313,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "par",
-   "start": 36.598,
-   "end": 36.787,
+   "start": 36.593,
+   "end": 36.786,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "exemple",
-   "start": 36.787,
-   "end": 37.227,
+   "start": 36.786,
+   "end": 37.237,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "depuis",
-   "start": 37.227,
-   "end": 37.604,
+   "start": 37.237,
+   "end": 37.623,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "le",
-   "start": 37.604,
-   "end": 37.73,
+   "start": 37.623,
+   "end": 37.752,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "pied",
-   "start": 37.73,
-   "end": 37.982,
+   "start": 37.752,
+   "end": 38.01,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "de",
-   "start": 37.982,
-   "end": 38.107,
+   "start": 38.01,
+   "end": 38.138,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "page",
-   "start": 38.107,
-   "end": 38.359,
+   "start": 38.138,
+   "end": 38.396,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "de",
-   "start": 38.359,
-   "end": 38.485,
+   "start": 38.396,
+   "end": 38.525,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "votre",
-   "start": 38.485,
-   "end": 38.799,
+   "start": 38.525,
+   "end": 38.847,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "site.",
-   "start": 38.799,
-   "end": 39.051,
+   "start": 38.847,
+   "end": 39.104,
    "scene": 3,
    "sentence": 1
   },
   {
    "text": "Chez",
    "start": 42.3,
-   "end": 42.592,
+   "end": 42.603,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "QYLINE,",
-   "start": 42.592,
-   "end": 43.03,
+   "start": 42.603,
+   "end": 43.21,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "nous",
-   "start": 43.2,
-   "end": 43.435,
+   "start": 43.41,
+   "end": 43.646,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "créons",
-   "start": 43.435,
-   "end": 43.788,
+   "start": 43.646,
+   "end": 44.001,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "des",
-   "start": 43.788,
-   "end": 43.965,
+   "start": 44.001,
+   "end": 44.179,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "sites",
-   "start": 43.965,
-   "end": 44.259,
+   "start": 44.179,
+   "end": 44.474,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "internet",
-   "start": 44.259,
-   "end": 44.729,
+   "start": 44.474,
+   "end": 44.947,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "modernes,",
-   "start": 44.729,
-   "end": 45.2,
+   "start": 44.947,
+   "end": 45.42,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "et",
-   "start": 45.51,
-   "end": 45.632,
+   "start": 45.72,
+   "end": 45.844,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "vous",
-   "start": 45.632,
-   "end": 45.875,
+   "start": 45.844,
+   "end": 46.091,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "accompagnons",
-   "start": 45.875,
-   "end": 46.605,
+   "start": 46.091,
+   "end": 46.833,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "dans",
-   "start": 46.605,
-   "end": 46.848,
+   "start": 46.833,
+   "end": 47.08,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "la",
-   "start": 46.848,
-   "end": 46.97,
+   "start": 47.08,
+   "end": 47.204,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "mise",
-   "start": 46.97,
-   "end": 47.213,
+   "start": 47.204,
+   "end": 47.451,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "en",
-   "start": 47.213,
-   "end": 47.335,
+   "start": 47.451,
+   "end": 47.575,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "place",
-   "start": 47.335,
-   "end": 47.639,
+   "start": 47.575,
+   "end": 47.884,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "des",
-   "start": 47.639,
-   "end": 47.822,
+   "start": 47.884,
+   "end": 48.07,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "informations",
-   "start": 47.822,
-   "end": 48.552,
+   "start": 48.07,
+   "end": 48.812,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "légales",
-   "start": 48.552,
-   "end": 48.977,
+   "start": 48.812,
+   "end": 49.245,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "adaptées",
-   "start": 48.977,
-   "end": 49.464,
+   "start": 49.245,
+   "end": 49.739,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "à",
-   "start": 49.464,
-   "end": 49.525,
+   "start": 49.739,
+   "end": 49.801,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "votre",
-   "start": 49.525,
-   "end": 49.829,
+   "start": 49.801,
+   "end": 50.11,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "activité.",
-   "start": 49.829,
-   "end": 50.316,
+   "start": 50.11,
+   "end": 50.605,
    "scene": 4,
    "sentence": 0
   },
   {
    "text": "N'attendez",
    "start": 52.25,
-   "end": 52.718,
+   "end": 52.703,
    "scene": 5,
    "sentence": 0
   },
   {
    "text": "pas",
-   "start": 52.718,
-   "end": 52.873,
+   "start": 52.703,
+   "end": 52.854,
    "scene": 5,
    "sentence": 0
   },
   {
    "text": "qu'un",
-   "start": 52.873,
-   "end": 53.081,
+   "start": 52.854,
+   "end": 53.055,
    "scene": 5,
    "sentence": 0
   },
   {
    "text": "problème",
-   "start": 53.081,
-   "end": 53.497,
+   "start": 53.055,
+   "end": 53.458,
    "scene": 5,
    "sentence": 0
   },
   {
    "text": "survienne.",
-   "start": 53.497,
-   "end": 53.964,
+   "start": 53.458,
+   "end": 53.911,
    "scene": 5,
    "sentence": 0
   },
   {
    "text": "Vérifiez",
-   "start": 54.184,
-   "end": 54.629,
+   "start": 54.131,
+   "end": 54.557,
    "scene": 5,
    "sentence": 1
   },
   {
    "text": "votre",
-   "start": 54.629,
-   "end": 54.907,
+   "start": 54.557,
+   "end": 54.822,
    "scene": 5,
    "sentence": 1
   },
   {
    "text": "site",
-   "start": 54.907,
-   "end": 55.129,
+   "start": 54.822,
+   "end": 55.035,
    "scene": 5,
    "sentence": 1
   },
   {
    "text": "dès",
-   "start": 55.129,
-   "end": 55.296,
+   "start": 55.035,
+   "end": 55.195,
    "scene": 5,
    "sentence": 1
   },
   {
    "text": "aujourd'hui.",
-   "start": 55.296,
-   "end": 55.852,
+   "start": 55.195,
+   "end": 55.727,
    "scene": 5,
    "sentence": 1
   },
   {
    "text": "QYLINE,",
-   "start": 56.073,
-   "end": 56.518,
+   "start": 55.947,
+   "end": 56.424,
    "scene": 5,
    "sentence": 2
   },
   {
    "text": "votre",
-   "start": 56.518,
-   "end": 56.888,
+   "start": 56.424,
+   "end": 56.722,
    "scene": 5,
    "sentence": 2
   },
   {
    "text": "partenaire",
-   "start": 56.888,
-   "end": 57.629,
+   "start": 56.722,
+   "end": 57.319,
    "scene": 5,
    "sentence": 2
   },
   {
    "text": "web.",
-   "start": 57.629,
-   "end": 57.851,
+   "start": 57.319,
+   "end": 57.497,
    "scene": 5,
    "sentence": 2
   },
   {
    "text": "Rendez-vous",
-   "start": 58.071,
-   "end": 58.611,
+   "start": 57.718,
+   "end": 58.239,
    "scene": 5,
    "sentence": 3
   },
   {
    "text": "sur",
-   "start": 58.611,
-   "end": 58.773,
+   "start": 58.239,
+   "end": 58.395,
    "scene": 5,
    "sentence": 3
   },
   {
    "text": "qyline.org.",
-   "start": 58.773,
-   "end": 59.53,
+   "start": 58.395,
+   "end": 59.281,
    "scene": 5,
    "sentence": 3
   }
@@ -942,33 +942,33 @@
  "scenes": [
   {
    "start": 0.2,
-   "end": 7.299,
-   "speed": 1.213
+   "end": 7.219,
+   "speed": 1.227
   },
   {
    "start": 7.7,
-   "end": 16.63,
+   "end": 16.688,
    "speed": 1.05
   },
   {
    "start": 17.25,
-   "end": 29.059,
+   "end": 29.284,
    "speed": 1.05
   },
   {
    "start": 30.25,
-   "end": 39.05,
+   "end": 39.104,
    "speed": 1.05
   },
   {
    "start": 42.3,
-   "end": 50.316,
+   "end": 50.605,
    "speed": 1.05
   },
   {
    "start": 52.25,
-   "end": 59.53,
-   "speed": 1.124
+   "end": 59.281,
+   "speed": 1.182
   }
  ]
 }

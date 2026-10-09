@@ -172,7 +172,7 @@ for (let i = 0; i < s.N; i++) {
   L[i] = hp.hp + music.L[i] * m;
   R[i] = hp.hp + music.R[i] * m;
 }
-limiter(L, R, { levelIn: 1.25, limit: 0.84, fadeOut: 0.4 });
+limiter(L, R, { levelIn: 1.25, limit: 0.84, fadeOut: 0.3 });
 const out = process.argv[2] ?? "public/qyline-legal/audio.wav";
 writeWav(out, L, R);
 console.log(`Écrit ${out} (${DURATION}s)`);
