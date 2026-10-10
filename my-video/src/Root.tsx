@@ -1,8 +1,10 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { DemoVideo, DURATION, FPS, HEIGHT, WIDTH } from "./Composition";
+import { DemoVideo, DURATION, FPS, HEIGHT, WIDTH } from "./demo/DemoVideo";
 import { BlackU15Intro, calculateBU15Metadata } from "./black-u15/Intro";
 import { DURATION as BU15_DURATION, FPS as BU15_FPS, HEIGHT as BU15_HEIGHT, WIDTH as BU15_WIDTH } from "./black-u15/timeline";
+import { QylineChoix } from "./Composition";
+import { DURATION as CHOIX_DURATION, FPS as CHOIX_FPS, HEIGHT as CHOIX_HEIGHT, WIDTH as CHOIX_WIDTH } from "./timeline";
 import { QylineAd } from "./qyline/Ad";
 import { QylineLegal } from "./qyline-legal/Video";
 import { DURATION as LEGAL_DURATION, FPS as LEGAL_FPS, HEIGHT as LEGAL_HEIGHT, WIDTH as LEGAL_WIDTH } from "./qyline-legal/timeline";
@@ -19,6 +21,14 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="QylineChoix"
+        component={QylineChoix}
+        durationInFrames={CHOIX_DURATION}
+        fps={CHOIX_FPS}
+        width={CHOIX_WIDTH}
+        height={CHOIX_HEIGHT}
+      />
       <Composition
         id="QylineAd"
         component={QylineAd}

@@ -58,6 +58,33 @@ npm run legal:voice    # voix, minutage des mots, src/qyline-legal/voice.ts
 npm run legal:audio    # musique + effets mixés sous la voix -> audio.wav
 ```
 
+## Vidéo QYLINE « Site vitrine ou boutique en ligne ? » (80 s, 1080 × 1920)
+
+Composition `QylineChoix` (30 i/s, 2 400 images) pour TikTok, Reels et Shorts.
+
+- `src/Composition.tsx` : assemblage (scènes, transitions, logo en haut à gauche, sous-titres, barre de progression).
+- `src/scenes/` : une scène par fichier (Intro, SiteVitrine, BoutiqueEnLigne, Comparaison, Solutions, Tarifs, Conclusion).
+- `src/components/` : AnimatedWebsite, AnimatedPhone, Subtitles, PriceCard, Logo et le thème (palette, curseur, notifications).
+- `src/timeline.ts` : durées des scènes, position des sous-titres et `SUBTITLE_OFFSET`
+  (en secondes : une valeur positive affiche les sous-titres plus tard).
+- `src/events.json` : repères d'interface (clics, notifications, compteurs de prix) calés sur des mots de la voix off.
+  L'animation et les bruitages les lisent tous les deux : changer un repère, puis relancer `npm run choix:audio`.
+
+```console
+npm run dev            # prévisualisation (choisir « QylineChoix »)
+npm run choix:render   # export MP4 H.264 + AAC -> out/qyline-site-vitrine-ou-boutique.mp4
+```
+
+Modifier le texte de la voix off : éditer `scripts/qyline-choix/make-voice.py` (mêmes prérequis que ci-dessus), puis
+
+```console
+npm run choix:voice    # voix, minutage des mots, src/voiceover.ts
+npm run choix:audio    # musique + bruitages mixés sous la voix -> public/qyline-choix/audio.wav
+```
+
+Les sites, la boutique, les paiements et les commandes montrés sont des démonstrations fictives,
+signalées comme telles à l'écran.
+
 ## Docs
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

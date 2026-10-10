@@ -11,3 +11,4 @@ public/black-u15/players/
 
 # Modèles de synthèse vocale (lourds, téléchargés à part)
 .kokoro/
+__pycache__/

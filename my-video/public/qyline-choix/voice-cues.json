@@ -1,0 +1,1336 @@
+{
+ "words": [
+  {
+   "text": "Vous",
+   "start": 0.25,
+   "end": 0.497,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "voulez",
+   "start": 0.497,
+   "end": 0.867,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "créer",
+   "start": 0.867,
+   "end": 1.175,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "un",
+   "start": 1.175,
+   "end": 1.298,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "site",
+   "start": 1.298,
+   "end": 1.545,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "internet",
+   "start": 1.545,
+   "end": 2.038,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "pour",
+   "start": 2.038,
+   "end": 2.285,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "votre",
+   "start": 2.285,
+   "end": 2.593,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "entreprise,",
+   "start": 2.593,
+   "end": 3.21,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "mais",
+   "start": 3.46,
+   "end": 3.681,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "vous",
+   "start": 3.681,
+   "end": 3.903,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "hésitez",
+   "start": 3.903,
+   "end": 4.29,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "entre",
+   "start": 4.29,
+   "end": 4.567,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "un",
+   "start": 4.567,
+   "end": 4.677,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "site",
+   "start": 4.677,
+   "end": 4.898,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "vitrine",
+   "start": 4.898,
+   "end": 5.286,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "et",
+   "start": 5.286,
+   "end": 5.396,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "une",
+   "start": 5.396,
+   "end": 5.562,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "boutique",
+   "start": 5.562,
+   "end": 6.005,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "en",
+   "start": 6.005,
+   "end": 6.116,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "ligne ?",
+   "start": 6.116,
+   "end": 6.392,
+   "scene": 0,
+   "sentence": 0
+  },
+  {
+   "text": "Voici",
+   "start": 6.612,
+   "end": 6.922,
+   "scene": 0,
+   "sentence": 1
+  },
+  {
+   "text": "comment",
+   "start": 6.922,
+   "end": 7.356,
+   "scene": 0,
+   "sentence": 1
+  },
+  {
+   "text": "choisir !",
+   "start": 7.356,
+   "end": 7.791,
+   "scene": 0,
+   "sentence": 1
+  },
+  {
+   "text": "Le",
+   "start": 8.35,
+   "end": 8.485,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "site",
+   "start": 8.485,
+   "end": 8.756,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "vitrine",
+   "start": 8.756,
+   "end": 9.229,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "est",
+   "start": 9.229,
+   "end": 9.432,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "idéal",
+   "start": 9.432,
+   "end": 9.77,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "pour",
+   "start": 9.77,
+   "end": 10.04,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "les",
+   "start": 10.04,
+   "end": 10.243,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "artisans",
+   "start": 10.243,
+   "end": 10.784,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "et",
+   "start": 10.784,
+   "end": 10.919,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "les",
+   "start": 10.919,
+   "end": 11.122,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "prestataires",
+   "start": 11.122,
+   "end": 11.933,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "de",
+   "start": 11.933,
+   "end": 12.068,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "services.",
+   "start": 12.068,
+   "end": 12.609,
+   "scene": 1,
+   "sentence": 0
+  },
+  {
+   "text": "Il",
+   "start": 12.829,
+   "end": 12.961,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "présente",
+   "start": 12.961,
+   "end": 13.49,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "votre",
+   "start": 13.49,
+   "end": 13.82,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "activité,",
+   "start": 13.82,
+   "end": 14.349,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "vos",
+   "start": 14.579,
+   "end": 14.767,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "réalisations,",
+   "start": 14.767,
+   "end": 15.519,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "et",
+   "start": 15.809,
+   "end": 15.929,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "permet",
+   "start": 15.929,
+   "end": 16.288,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "à",
+   "start": 16.288,
+   "end": 16.347,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "vos",
+   "start": 16.347,
+   "end": 16.527,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "futurs",
+   "start": 16.527,
+   "end": 16.886,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "clients",
+   "start": 16.886,
+   "end": 17.304,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "de",
+   "start": 17.304,
+   "end": 17.424,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "vous",
+   "start": 17.424,
+   "end": 17.663,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "contacter",
+   "start": 17.663,
+   "end": 18.202,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "ou",
+   "start": 18.202,
+   "end": 18.321,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "de",
+   "start": 18.321,
+   "end": 18.441,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "demander",
+   "start": 18.441,
+   "end": 18.919,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "un",
+   "start": 18.919,
+   "end": 19.039,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "devis.",
+   "start": 19.039,
+   "end": 19.338,
+   "scene": 1,
+   "sentence": 1
+  },
+  {
+   "text": "Avec",
+   "start": 21.35,
+   "end": 21.59,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "une",
+   "start": 21.59,
+   "end": 21.77,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "boutique",
+   "start": 21.77,
+   "end": 22.25,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "en",
+   "start": 22.25,
+   "end": 22.37,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "ligne,",
+   "start": 22.37,
+   "end": 22.67,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "vos",
+   "start": 22.88,
+   "end": 23.015,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "clients",
+   "start": 23.015,
+   "end": 23.331,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "peuvent",
+   "start": 23.331,
+   "end": 23.647,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "choisir",
+   "start": 23.647,
+   "end": 23.963,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "leurs",
+   "start": 23.963,
+   "end": 24.189,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "produits,",
+   "start": 24.189,
+   "end": 24.55,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "payer",
+   "start": 24.69,
+   "end": 24.971,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "directement,",
+   "start": 24.971,
+   "end": 25.59,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "et",
+   "start": 25.78,
+   "end": 25.887,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "commander",
+   "start": 25.887,
+   "end": 26.369,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "à",
+   "start": 26.369,
+   "end": 26.422,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "toute",
+   "start": 26.422,
+   "end": 26.69,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "heure.",
+   "start": 26.69,
+   "end": 26.957,
+   "scene": 2,
+   "sentence": 0
+  },
+  {
+   "text": "C'est",
+   "start": 27.177,
+   "end": 27.435,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "idéal",
+   "start": 27.435,
+   "end": 27.758,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "pour",
+   "start": 27.758,
+   "end": 28.016,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "vendre",
+   "start": 28.016,
+   "end": 28.404,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "au-delà",
+   "start": 28.404,
+   "end": 28.791,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "de",
+   "start": 28.791,
+   "end": 28.92,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "votre",
+   "start": 28.92,
+   "end": 29.243,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "zone",
+   "start": 29.243,
+   "end": 29.501,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "géographique.",
+   "start": 29.501,
+   "end": 30.276,
+   "scene": 2,
+   "sentence": 1
+  },
+  {
+   "text": "La",
+   "start": 34.35,
+   "end": 34.488,
+   "scene": 3,
+   "sentence": 0
+  },
+  {
+   "text": "vraie",
+   "start": 34.488,
+   "end": 34.833,
+   "scene": 3,
+   "sentence": 0
+  },
+  {
+   "text": "différence ?",
+   "start": 34.833,
+   "end": 35.522,
+   "scene": 3,
+   "sentence": 0
+  },
+  {
+   "text": "Le",
+   "start": 35.742,
+   "end": 35.873,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "site",
+   "start": 35.873,
+   "end": 36.134,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "vitrine",
+   "start": 36.134,
+   "end": 36.591,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "génère",
+   "start": 36.591,
+   "end": 36.984,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "des",
+   "start": 36.984,
+   "end": 37.18,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "contacts.",
+   "start": 37.18,
+   "end": 37.702,
+   "scene": 3,
+   "sentence": 1
+  },
+  {
+   "text": "La",
+   "start": 37.923,
+   "end": 38.04,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "boutique",
+   "start": 38.04,
+   "end": 38.51,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "permet",
+   "start": 38.51,
+   "end": 38.863,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "de",
+   "start": 38.863,
+   "end": 38.98,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "vendre",
+   "start": 38.98,
+   "end": 39.332,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "directement.",
+   "start": 39.332,
+   "end": 39.978,
+   "scene": 3,
+   "sentence": 2
+  },
+  {
+   "text": "Mais",
+   "start": 40.198,
+   "end": 40.423,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "attention :",
+   "start": 40.423,
+   "end": 40.928,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "elle",
+   "start": 41.138,
+   "end": 41.343,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "demande",
+   "start": 41.343,
+   "end": 41.702,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "aussi",
+   "start": 41.702,
+   "end": 41.958,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "de",
+   "start": 41.958,
+   "end": 42.061,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "gérer",
+   "start": 42.061,
+   "end": 42.317,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "les",
+   "start": 42.317,
+   "end": 42.471,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "stocks,",
+   "start": 42.471,
+   "end": 42.778,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "les",
+   "start": 43.098,
+   "end": 43.249,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "commandes",
+   "start": 43.249,
+   "end": 43.702,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "et",
+   "start": 43.702,
+   "end": 43.803,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "les",
+   "start": 43.803,
+   "end": 43.954,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "livraisons.",
+   "start": 43.954,
+   "end": 44.457,
+   "scene": 3,
+   "sentence": 3
+  },
+  {
+   "text": "Vous",
+   "start": 47.35,
+   "end": 47.593,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "pouvez",
+   "start": 47.593,
+   "end": 47.958,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "aussi",
+   "start": 47.958,
+   "end": 48.261,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "commencer",
+   "start": 48.261,
+   "end": 48.808,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "par",
+   "start": 48.808,
+   "end": 48.99,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "un",
+   "start": 48.99,
+   "end": 49.112,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "site",
+   "start": 49.112,
+   "end": 49.355,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "vitrine,",
+   "start": 49.355,
+   "end": 49.78,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "et",
+   "start": 50.05,
+   "end": 50.163,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "ajouter",
+   "start": 50.163,
+   "end": 50.558,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "un",
+   "start": 50.558,
+   "end": 50.671,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "catalogue",
+   "start": 50.671,
+   "end": 51.179,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "ou",
+   "start": 51.179,
+   "end": 51.292,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "un",
+   "start": 51.292,
+   "end": 51.405,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "paiement",
+   "start": 51.405,
+   "end": 51.856,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "en",
+   "start": 51.856,
+   "end": 51.969,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "ligne.",
+   "start": 51.969,
+   "end": 52.251,
+   "scene": 4,
+   "sentence": 0
+  },
+  {
+   "text": "Pas",
+   "start": 52.471,
+   "end": 52.645,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "besoin",
+   "start": 52.645,
+   "end": 52.992,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "de",
+   "start": 52.992,
+   "end": 53.108,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "tout",
+   "start": 53.108,
+   "end": 53.34,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "construire",
+   "start": 53.34,
+   "end": 53.919,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "dès",
+   "start": 53.919,
+   "end": 54.093,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "le",
+   "start": 54.093,
+   "end": 54.209,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "départ !",
+   "start": 54.209,
+   "end": 54.556,
+   "scene": 4,
+   "sentence": 1
+  },
+  {
+   "text": "Chez",
+   "start": 57.35,
+   "end": 57.627,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "QYLINE,",
+   "start": 57.627,
+   "end": 58.18,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "votre",
+   "start": 58.37,
+   "end": 58.659,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "site",
+   "start": 58.659,
+   "end": 58.89,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "vitrine",
+   "start": 58.89,
+   "end": 59.294,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "démarre",
+   "start": 59.294,
+   "end": 59.699,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "à",
+   "start": 59.699,
+   "end": 59.757,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "625 €,",
+   "start": 59.757,
+   "end": 60.97,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "et",
+   "start": 61.26,
+   "end": 61.368,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "votre",
+   "start": 61.368,
+   "end": 61.637,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "boutique",
+   "start": 61.637,
+   "end": 62.068,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "en",
+   "start": 62.068,
+   "end": 62.175,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "ligne",
+   "start": 62.175,
+   "end": 62.445,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "à",
+   "start": 62.445,
+   "end": 62.499,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "950 €.",
+   "start": 62.499,
+   "end": 63.683,
+   "scene": 5,
+   "sentence": 0
+  },
+  {
+   "text": "Des",
+   "start": 63.903,
+   "end": 64.074,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "solutions",
+   "start": 64.074,
+   "end": 64.586,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "personnalisées,",
+   "start": 64.586,
+   "end": 65.383,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "adaptées",
+   "start": 65.663,
+   "end": 66.118,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "à",
+   "start": 66.118,
+   "end": 66.174,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "votre",
+   "start": 66.174,
+   "end": 66.459,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "entreprise",
+   "start": 66.459,
+   "end": 67.027,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "et",
+   "start": 67.027,
+   "end": 67.14,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "à",
+   "start": 67.14,
+   "end": 67.197,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "vos",
+   "start": 67.197,
+   "end": 67.368,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "besoins.",
+   "start": 67.368,
+   "end": 67.765,
+   "scene": 5,
+   "sentence": 1
+  },
+  {
+   "text": "Vous",
+   "start": 69.35,
+   "end": 69.585,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "ne",
+   "start": 69.585,
+   "end": 69.703,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "savez",
+   "start": 69.703,
+   "end": 69.997,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "pas",
+   "start": 69.997,
+   "end": 70.173,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "quelle",
+   "start": 70.173,
+   "end": 70.526,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "solution",
+   "start": 70.526,
+   "end": 70.996,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "choisir ?",
+   "start": 70.996,
+   "end": 71.408,
+   "scene": 6,
+   "sentence": 0
+  },
+  {
+   "text": "QYLINE",
+   "start": 71.628,
+   "end": 72.042,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "vous",
+   "start": 72.042,
+   "end": 72.249,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "accompagne",
+   "start": 72.249,
+   "end": 72.766,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "dans",
+   "start": 72.766,
+   "end": 72.973,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "votre",
+   "start": 72.973,
+   "end": 73.231,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "projet.",
+   "start": 73.231,
+   "end": 73.542,
+   "scene": 6,
+   "sentence": 1
+  },
+  {
+   "text": "Premier",
+   "start": 73.762,
+   "end": 74.201,
+   "scene": 6,
+   "sentence": 2
+  },
+  {
+   "text": "échange",
+   "start": 74.201,
+   "end": 74.639,
+   "scene": 6,
+   "sentence": 2
+  },
+  {
+   "text": "gratuit.",
+   "start": 74.639,
+   "end": 75.078,
+   "scene": 6,
+   "sentence": 2
+  },
+  {
+   "text": "Découvrez",
+   "start": 75.298,
+   "end": 75.808,
+   "scene": 6,
+   "sentence": 3
+  },
+  {
+   "text": "nos",
+   "start": 75.808,
+   "end": 75.978,
+   "scene": 6,
+   "sentence": 3
+  },
+  {
+   "text": "services",
+   "start": 75.978,
+   "end": 76.432,
+   "scene": 6,
+   "sentence": 3
+  },
+  {
+   "text": "sur",
+   "start": 76.432,
+   "end": 76.602,
+   "scene": 6,
+   "sentence": 3
+  },
+  {
+   "text": "qyline.org !",
+   "start": 76.602,
+   "end": 77.566,
+   "scene": 6,
+   "sentence": 3
+  }
+ ],
+ "scenes": [
+  {
+   "start": 0.25,
+   "end": 7.791,
+   "speed": 1.114
+  },
+  {
+   "start": 8.35,
+   "end": 19.338,
+   "speed": 1.05
+  },
+  {
+   "start": 21.35,
+   "end": 30.276,
+   "speed": 1.05
+  },
+  {
+   "start": 34.35,
+   "end": 44.457,
+   "speed": 1.05
+  },
+  {
+   "start": 47.35,
+   "end": 54.556,
+   "speed": 1.05
+  },
+  {
+   "start": 57.35,
+   "end": 67.766,
+   "speed": 1.05
+  },
+  {
+   "start": 69.35,
+   "end": 77.565,
+   "speed": 1.05
+  }
+ ]
+}

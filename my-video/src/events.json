@@ -1,0 +1,159 @@
+{
+  "_doc": "Repères d'interface de la vidéo « site vitrine ou boutique », partagés par l'animation (src/timeline.ts) et l'audio (scripts/qyline-choix/make-audio.mjs). scene/word/n = mot prononcé dans la scène (n-ième occurrence), add = décalage en secondes ; at = instant absolu.",
+  "title1": {
+    "at": 0.6
+  },
+  "goodChoice": {
+    "scene": 0,
+    "word": "voici",
+    "add": 0
+  },
+  "vitrineWord": {
+    "scene": 1,
+    "word": "vitrine",
+    "add": 0
+  },
+  "vitrineClick": {
+    "scene": 1,
+    "word": "contacter",
+    "add": 0
+  },
+  "vitrineNotif": {
+    "scene": 1,
+    "word": "contacter",
+    "add": 0.35
+  },
+  "shopWord": {
+    "scene": 2,
+    "word": "boutique",
+    "add": 0
+  },
+  "addCart1": {
+    "scene": 2,
+    "word": "choisir",
+    "add": 0
+  },
+  "addCart2": {
+    "scene": 2,
+    "word": "produits",
+    "add": 0.15
+  },
+  "checkout": {
+    "scene": 2,
+    "word": "payer",
+    "add": 0
+  },
+  "payClick": {
+    "scene": 2,
+    "word": "commander",
+    "add": 0
+  },
+  "orderOk": {
+    "scene": 2,
+    "word": "commander",
+    "add": 0.7
+  },
+  "orders": {
+    "scene": 2,
+    "word": "vendre",
+    "add": 0
+  },
+  "leftItems": {
+    "scene": 3,
+    "word": "contacts",
+    "add": 0
+  },
+  "rightItems": {
+    "scene": 3,
+    "word": "vendre",
+    "add": 0
+  },
+  "warn": {
+    "scene": 3,
+    "word": "attention",
+    "add": 0
+  },
+  "stocks": {
+    "scene": 3,
+    "word": "stocks",
+    "add": 0
+  },
+  "commandes": {
+    "scene": 3,
+    "word": "commandes",
+    "add": 0
+  },
+  "livraisons": {
+    "scene": 3,
+    "word": "livraisons",
+    "add": 0
+  },
+  "objective": {
+    "scene": 3,
+    "word": "livraisons",
+    "add": 0.9
+  },
+  "step1": {
+    "scene": 4,
+    "word": "vitrine",
+    "add": 0
+  },
+  "step2": {
+    "scene": 4,
+    "word": "catalogue",
+    "add": 0
+  },
+  "step3": {
+    "scene": 4,
+    "word": "paiement",
+    "add": 0
+  },
+  "depositClick": {
+    "scene": 4,
+    "word": "paiement",
+    "add": 1.4
+  },
+  "depositOk": {
+    "scene": 4,
+    "word": "paiement",
+    "add": 1.75
+  },
+  "motto": {
+    "scene": 4,
+    "word": "pas",
+    "add": 0
+  },
+  "price1": {
+    "scene": 5,
+    "word": "625",
+    "add": 0
+  },
+  "price2": {
+    "scene": 5,
+    "word": "950",
+    "add": 0
+  },
+  "tagline": {
+    "scene": 6,
+    "word": "vous",
+    "add": 0.25
+  },
+  "brand": {
+    "scene": 6,
+    "word": "qyline",
+    "add": 0
+  },
+  "free": {
+    "scene": 6,
+    "word": "premier",
+    "add": 0
+  },
+  "site": {
+    "scene": 6,
+    "word": "qyline.org",
+    "add": 0
+  },
+  "finale": {
+    "at": 78.0
+  }
+}

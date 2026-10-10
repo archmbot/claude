@@ -2,8 +2,8 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, HEAD, clamp, hard } from "../qyline/shared";
-import { FPS } from "./timeline";
-import { VOICE, VoiceWord } from "./voice";
+import { VOICE } from "./voice";
+import { Subtitles } from "../components/Subtitles";
 
 export const C = {
   blue: "#24459A",
@@ -295,85 +295,7 @@ const KEY_PHRASES = [
   "dès aujourd'hui",
   "qyline.org",
 ];
-const n = (s: string) => s.toLowerCase().replace(/[^\p{L}\d.']/gu, "").replace(/\.$/, "");
-const KEYS = new Set<number>();
-KEY_PHRASES.forEach((phrase) => {
-  const parts = phrase.split(" ").map(n);
-  VOICE.words.forEach((_, i) => {
-    if (parts.every((p, k) => VOICE.words[i + k] && n(VOICE.words[i + k].text) === p)) parts.forEach((_, k) => KEYS.add(i + k));
-  });
-});
 
-type Chunk = { words: (VoiceWord & { i: number })[]; start: number; end: number };
-const CHUNKS: Chunk[] = (() => {
-  const out: Chunk[] = [];
-  let cur: (VoiceWord & { i: number })[] = [];
-  const flush = () => {
-    if (cur.length) out.push({ words: cur, start: cur[0].start, end: cur[cur.length - 1].end });
-    cur = [];
-  };
-  VOICE.words.forEach((w, i) => {
-    const prev = cur[cur.length - 1];
-    if (prev && (prev.sentence !== w.sentence || prev.scene !== w.scene)) flush();
-    cur.push({ ...w, i });
-    const chars = cur.reduce((a, x) => a + x.text.length + 1, 0);
-    if (/[,:;?!.]$/.test(w.text) || cur.length >= 4 || chars > 22) flush();
-  });
-  flush();
-  // chaque morceau reste affiché jusqu'au suivant (au plus 0,6 s de plus)
-  out.forEach((c, k) => {
-    const next = out[k + 1];
-    c.end = Math.min(c.end + 0.6, next ? next.start : c.end + 0.6);
-  });
-  return out;
-})();
-
-export const Captions: React.FC = () => {
-  const frame = useCurrentFrame();
-  const t = frame / FPS;
-  const chunk = CHUNKS.find((c) => t >= c.start - 0.05 && t < c.end);
-  if (!chunk) return null;
-  const local = frame - Math.round(chunk.start * FPS);
-  const pop = spring({ frame: local, fps: FPS, config: { damping: 14, stiffness: 260 } });
-  return (
-    <div
-      style={{
-        position: "absolute",
-        left: 60,
-        right: 60,
-        top: 1440,
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "10px 16px",
-        transform: `translateY(${(1 - pop) * 24}px) scale(${0.92 + 0.08 * pop})`,
-        opacity: interpolate(pop, [0, 0.3], [0, 1], clamp),
-      }}
-    >
-      {chunk.words.map((w) => {
-        const key = KEYS.has(w.i);
-        const spoken = t >= w.start;
-        return (
-          <span
-            key={w.i}
-            style={{
-              fontFamily: BODY,
-              fontWeight: 800,
-              fontSize: 58,
-              lineHeight: 1.15,
-              padding: key ? "2px 12px" : "2px 0",
-              color: key ? C.navy : C.white,
-              background: key ? C.yellow : "transparent",
-              boxShadow: key ? hard(5) : undefined,
-              textShadow: key ? undefined : `0 4px 0 ${C.navy}, 0 0 18px rgba(18,26,51,0.8)`,
-              opacity: spoken ? 1 : 0.55,
-              transform: `rotate(${key ? -1.5 : 0}deg)`,
-            }}
-          >
-            {w.text}
-          </span>
-        );
-      })}
-    </div>
-  );
-};
+export const Captions: React.FC = () => (
+  <Subtitles words={VOICE.words} keyPhrases={KEY_PHRASES} top={1440} keyBg={C.yellow} keyColor={C.navy} shadow={C.navy} />
+);

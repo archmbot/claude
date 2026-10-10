@@ -39,7 +39,10 @@
     "bu15:render": "remotion render BlackU15Intro out/black-u15-intro-4k.mp4 --scale=2 --crf=20",
     "legal:voice": "python3 scripts/qyline-legal/make-voice.py .kokoro",
     "legal:audio": "node scripts/qyline-legal/make-audio.mjs",
-    "legal:render": "remotion render QylineLegal out/qyline-mentions-legales.mp4"
+    "legal:render": "remotion render QylineLegal out/qyline-mentions-legales.mp4",
+    "choix:voice": "python3 scripts/qyline-choix/make-voice.py .kokoro",
+    "choix:audio": "node scripts/qyline-choix/make-audio.mjs",
+    "choix:render": "remotion render QylineChoix out/qyline-site-vitrine-ou-boutique.mp4 --codec=h264 --crf=18"
   },
   "sideEffects": [
     "*.css"
