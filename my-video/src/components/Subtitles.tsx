@@ -26,8 +26,8 @@ const keyIndexes = (words: CaptionWord[], phrases: string[]) => {
   return keys;
 };
 
-// Morceaux courts (au plus 4 mots / 22 caractères), coupés à la ponctuation
-const buildChunks = (words: CaptionWord[]) => {
+// Morceaux courts (par défaut au plus 4 mots / 22 caractères), coupés à la ponctuation
+const buildChunks = (words: CaptionWord[], maxWords: number, maxChars: number) => {
   const out: Chunk[] = [];
   let cur: IndexedWord[] = [];
   const flush = () => {
@@ -39,7 +39,7 @@ const buildChunks = (words: CaptionWord[]) => {
     if (prev && (prev.sentence !== w.sentence || prev.scene !== w.scene)) flush();
     cur.push({ ...w, i });
     const chars = cur.reduce((a, x) => a + x.text.length + 1, 0);
-    if (/[,:;?!.]$/.test(w.text) || cur.length >= 4 || chars > 22) flush();
+    if (/[,:;?!.]$/.test(w.text) || cur.length >= maxWords || chars > maxChars) flush();
   });
   flush();
   // chaque morceau reste affiché jusqu'au suivant (au plus 0,6 s de plus)
@@ -61,10 +61,12 @@ export const Subtitles: React.FC<{
   keyBg: string;
   keyColor: string;
   shadow: string; // couleur de l'ombre du texte et des étiquettes
-}> = ({ words, keyPhrases, top, left = 60, right = 60, offset = 0, fontSize = 58, keyBg, keyColor, shadow }) => {
+  maxWords?: number;
+  maxChars?: number;
+}> = ({ words, keyPhrases, top, left = 60, right = 60, offset = 0, fontSize = 58, keyBg, keyColor, shadow, maxWords = 4, maxChars = 22 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const chunks = useMemo(() => buildChunks(words), [words]);
+  const chunks = useMemo(() => buildChunks(words, maxWords, maxChars), [words, maxWords, maxChars]);
   const keys = useMemo(() => keyIndexes(words, keyPhrases), [words, keyPhrases]);
   const t = frame / fps - offset;
   const chunk = chunks.find((c) => t >= c.start - 0.05 && t < c.end);

@@ -12,3 +12,6 @@ public/black-u15/players/
 # Modèles de synthèse vocale (lourds, téléchargés à part)
 .kokoro/
 __pycache__/
+
+# Audio du chapitre réseaux 1.1 (plus de 100 Mo) : régénéré par npm run reseau:voice puis reseau:audio
+public/reseau-1-1/*.wav

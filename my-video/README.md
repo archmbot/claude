@@ -85,6 +85,27 @@ npm run choix:audio    # musique + bruitages mixés sous la voix -> public/qylin
 Les sites, la boutique, les paiements et les commandes montrés sont des démonstrations fictives,
 signalées comme telles à l'écran.
 
+## Formation réseaux — chapitre 1.1 « Qu'est-ce qu'un réseau informatique ? » (≈ 24 min, 1920 × 1080)
+
+Composition `Reseau11` (25 i/s), tirée du scénario pédagogique (fiche, script, storyboard) :
+
+- `scripts/reseau-1-1/narration.txt` : texte intégral de la voix off (séquences `## Sn`, silences `[PAUSE n]`,
+  prononciations imposées `{affiché|/phonèmes/}`).
+- `src/reseau/` : `Video.tsx` (assemblage, cartons de séquence, sous-titres), `scenes1.tsx` et `scenes2.tsx`
+  (les dix séquences, plan par plan), `ui.tsx` (charte, icônes d'équipements, liaisons, paquets), `timing.ts`.
+- Chaque animation est calée sur un mot de la voix off (`T("expression")`), à partir du minutage
+  généré dans `src/reseau/voice.ts`.
+
+Les fichiers audio (plus de 100 Mo) ne sont pas versionnés ; pour les recréer puis exporter :
+
+```console
+npm run reseau:voice    # voix off Kokoro + minutage (modèles dans .kokoro/, voir plus haut)
+npm run reseau:audio    # voix + bruitages discrets, normalisés à -16 LUFS -> public/reseau-1-1/audio.wav
+npm run reseau:render   # export MP4 H.264 + AAC -> out/reseau-1-1-quest-ce-quun-reseau.mp4
+```
+
+Sans sous-titres incrustés : `npx remotion render Reseau11 out/reseau-1-1.mp4 --props='{"subtitles":false}'`.
+
 ## Docs
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

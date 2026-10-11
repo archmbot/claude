@@ -1,0 +1,140 @@
+# Voix off du chapitre 1.1 « Qu'est-ce qu'un réseau informatique ? » (texte de la partie C du scénario).
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Ce matin, vous avez peut-être envoyé un message depuis votre téléphone, regardé une vidéo, ou imprimé un document depuis l'ordinateur de la maison. À chaque fois, sans forcément y penser, vous avez utilisé un réseau informatique.
+[PAUSE 2]
+Votre ordinateur, votre smartphone, l'imprimante, et l'ordinateur lointain qui vous a envoyé la vidéo, qu'on appelle un serveur : tous ces appareils ont échangé des informations. Mais comment s'y prennent-ils ? Comment un document passe-t-il de l'ordinateur à l'imprimante ? Et un réseau, est-ce la même chose qu'Internet ?
+[PAUSE 2]
+C'est ce que nous allons voir ensemble. Les réseaux sont partout : à la maison, au lycée, dans les entreprises, les hôpitaux, les magasins, et même dans les voitures. Comprendre comment ils fonctionnent, c'est la base de toute cette formation.
+À la fin de cette vidéo, vous saurez expliquer avec vos propres mots ce qu'est un réseau, à quoi il sert, comment deux appareils communiquent, et quels équipements on y rencontre. Vous saurez aussi pourquoi un réseau peut très bien fonctionner sans Internet.
+[PAUSE 5]
+
+## S2
+Commençons par une définition simple. Un réseau informatique, c'est un ensemble d'appareils reliés entre eux pour échanger des données.
+Cette phrase contient trois idées. Prenons-les une par une.
+D'abord, les appareils. Un appareil informatique, c'est une machine capable de traiter de l'information : un ordinateur, un smartphone, une imprimante, une console de jeux ou une télévision connectée.
+Ensuite, reliés : les appareils disposent d'un chemin pour se joindre, un câble ou des ondes radio.
+Enfin, échanger des données. Pour un ordinateur, tout est une donnée : un texte, une photo, une vidéo, et même un clic de souris dans un jeu. À l'intérieur de la machine, ces informations sont représentées par des suites de 0 et de 1. Chaque 0 ou 1 s'appelle un bit. Échanger des données, c'est faire passer ces bits d'un appareil à un autre. C'est cela, communiquer : l'un envoie, l'autre reçoit, et les deux interprètent les données de la même façon.
+[PAUSE 2]
+Prenons l'exemple le plus simple. Voici l'ordinateur A, et voici l'ordinateur B. Je les relie avec un câble. Nous avons déjà deux ingrédients d'un réseau : des appareils et une liaison.
+Que peuvent-ils s'échanger ? Un message, par exemple « Bonjour ». Un fichier, comme un document ou une photo. Une information, comme l'état d'un appareil ou l'heure exacte. Ou encore une demande de service : l'ordinateur A demande à B de lui envoyer un fichier, et B lui répond.
+[PAUSE 2]
+Mais le câble ne suffit pas. Pour se comprendre, les deux ordinateurs doivent suivre les mêmes règles : comment commencer l'échange, sous quelle forme envoyer les données, comment signaler la fin. Pensez à deux personnes au téléphone : la ligne fonctionne parfaitement, mais si elles ne parlent pas la même langue, la conversation ne mène à rien. En informatique, ces règles communes s'appellent des protocoles. Nous y reviendrons dans quelques minutes.
+Remarquez aussi une chose importante : nos deux ordinateurs ne sont pas connectés à Internet. Ils forment pourtant un vrai réseau. Être relié à un autre appareil ne veut pas dire être relié à Internet.
+[PAUSE 2]
+Dernière remarque : un réseau peut être tout petit, comme celui-ci, ou immense. Le réseau d'un lycée relie souvent plusieurs centaines d'appareils. Celui d'une grande entreprise peut en compter des milliers, répartis dans plusieurs bâtiments. Le principe reste le même : des appareils, des liaisons, et des règles communes.
+
+## S3
+Pourquoi a-t-on inventé les réseaux ? Pour une raison simple : éviter que chaque appareil reste seul dans son coin.
+Imaginons une petite entreprise de quatre personnes. Léa est à l'accueil, Karim s'occupe de la comptabilité, Sophie est commerciale, et Thomas dirige l'entreprise. Chacun a son ordinateur. Pour l'instant, aucun n'est relié aux autres : ce sont des postes isolés.
+[PAUSE 2]
+Au quotidien, quand Karim a besoin d'un devis préparé par Sophie pour établir la facture, elle le copie sur une clé USB et la lui apporte. Puis Sophie corrige le devis sur son poste, mais Karim garde l'ancienne copie : il existe maintenant deux versions, et personne ne sait laquelle est la bonne. Pour imprimer, chacun a sa propre imprimante, ce qui coûte cher. Et si le disque dur de Thomas tombe en panne, tous ses fichiers sont perdus, car rien n'est sauvegardé ailleurs.
+[PAUSE 2]
+Maintenant, relions les quatre ordinateurs au même réseau. Tout change.
+Sophie enregistre le devis dans un dossier commun, et Karim l'ouvre directement depuis son poste. Il n'existe plus qu'une seule version. Une seule imprimante suffit pour toute l'équipe. On ajoute aussi un serveur, c'est-à-dire un ordinateur chargé de rendre service aux autres : il conserve les documents de l'entreprise et les sauvegarde chaque nuit. Les employés peuvent aussi s'envoyer des messages et utiliser le même logiciel de facturation.
+Et en dehors du travail, c'est aussi un réseau qui permet de jouer à plusieurs ou d'envoyer une photo du téléphone vers l'ordinateur.
+[PAUSE 2]
+On peut résumer l'intérêt d'un réseau en deux verbes : échanger et partager. Échanger des informations, et partager des ressources, c'est-à-dire des fichiers, des imprimantes, des applications ou de l'espace de stockage.
+Attention cependant : un réseau ne fonctionne pas tout seul. Il faut l'installer et le configurer. Il faut l'entretenir : mettre à jour les équipements, remplacer un câble défectueux. Et surtout, il faut le protéger. Quand les ordinateurs sont reliés, un virus peut passer de l'un à l'autre, et des personnes non autorisées pourraient accéder à des fichiers confidentiels. C'est pourquoi on utilise des mots de passe, des droits d'accès et des sauvegardes.
+
+## S4
+Voyons maintenant comment deux appareils communiquent. Toute communication repose sur les mêmes éléments.
+Il y a d'abord l'émetteur : c'est celui qui envoie. Ensuite, le récepteur : c'est celui qui reçoit. Entre les deux circule le message, c'est-à-dire ce que l'émetteur veut transmettre. Ce message est fait de données, qui voyagent sur un support de transmission : un câble en cuivre, une fibre optique ou des ondes radio. Enfin, il faut des règles communes : les protocoles.
+[PAUSE 2]
+Un protocole, c'est un ensemble de règles qui précise comment les appareils doivent échanger. Il en existe beaucoup, chacun pour un usage précis : afficher une page Web, envoyer un courriel, transférer un fichier.
+Voyons un exemple concret. L'ordinateur A veut envoyer à l'ordinateur B une présentation pleine d'images. Suivons-la étape par étape.
+[PAUSE 2]
+Première étape : le fichier se trouve sur le disque de l'ordinateur A. A est l'émetteur.
+Deuxième étape : un logiciel, par exemple l'explorateur de fichiers, prépare l'envoi. Il indique à qui le fichier est destiné et utilise le protocole adapté.
+Troisième étape : le fichier est découpé, car il est bien trop gros pour partir d'un seul bloc. Chaque petit morceau reçoit une sorte d'étiquette, qui indique notamment d'où il vient, où il va et sa place dans l'ensemble. On appelle souvent ces morceaux des paquets. En réalité, le nom exact dépend du niveau où l'on se place : on parle aussi de segment ou de trame. Nous préciserons ce vocabulaire plus tard. Pour l'instant, retenez que les données voyagent par petits morceaux étiquetés.
+[PAUSE 3]
+Quatrième étape : les paquets circulent sur le réseau, les uns derrière les autres, sous forme de signaux. Sur Internet, ils peuvent même emprunter des chemins différents et arriver dans le désordre.
+Cinquième étape : l'ordinateur B, le récepteur, reçoit les paquets.
+Sixième étape : avec le protocole utilisé pour ce type de transfert, B confirme à A, au fur et à mesure, les morceaux bien reçus. Si un morceau s'est perdu en route, A le renvoie. Une fois tous les morceaux arrivés, B les remet dans l'ordre grâce à leurs étiquettes et reconstitue le fichier, identique à l'original.
+[PAUSE 3]
+Attention : toutes les communications ne fonctionnent pas ainsi. Pour un appel vidéo en direct, par exemple, on utilise souvent un protocole qui ne renvoie pas les morceaux perdus. Un morceau d'image renvoyé une seconde trop tard ne servirait plus à rien : mieux vaut une image un instant dégradée qu'une conversation qui se fige. Selon l'usage, on choisit donc un protocole qui privilégie la fiabilité, ou un protocole qui privilégie la réactivité.
+
+## S5
+Revenons sur ces supports. Pour voyager, les bits sont transformés en signal physique : électrique, lumineux ou radio. Trois grands supports sont utilisés.
+[PAUSE 1]
+Le premier est le câble Ethernet en cuivre, celui qu'on branche à l'arrière d'un ordinateur ou d'une {box|/bˈɔks/}, avec sa prise rectangulaire à clip. À l'intérieur, des paires de fils de cuivre torsadés transportent les données sous forme de signaux électriques. Il est peu coûteux, simple à installer et très fiable. Selon le matériel et la catégorie du câble, il atteint couramment un {gigabit|/ʒiɡabˈit/} par seconde, soit un milliard de bits par seconde, et parfois davantage. En revanche, un câble Ethernet en cuivre ne doit pas dépasser environ cent mètres entre deux équipements. Et de fortes perturbations électriques à proximité peuvent le gêner. Exemple : un ordinateur de bureau relié en Ethernet.
+[PAUSE 2]
+Le deuxième support est la fibre optique. Ici, les données voyagent sous forme d'impulsions de lumière dans un fil de verre plus fin qu'un cheveu. La fibre permet des débits très élevés sur de longues distances : de quelques centaines de mètres à plusieurs dizaines de kilomètres, selon le type de fibre et les équipements. Elle est insensible aux perturbations électromagnétiques. En revanche, elle est plus délicate à installer et à raccorder, et le matériel coûte souvent plus cher. Exemple : la fibre qui arrive dans un immeuble, ou celle qui relie deux bâtiments d'un même lycée.
+[PAUSE 2]
+Le troisième support, ce sont les ondes radio, avec le Wi-Fi : les données sont transmises sans câble. Son grand avantage, c'est la mobilité : vous vous déplacez avec votre smartphone et vous restez connecté. Mais la portée se limite à quelques dizaines de mètres dans un bâtiment, et le débit réel varie beaucoup selon la distance, les murs, le nombre d'appareils connectés et les réseaux voisins qui utilisent les mêmes fréquences. Exemple : votre smartphone connecté au Wi-Fi de la maison.
+[PAUSE 2]
+Aucun de ces supports n'est meilleur dans l'absolu. On choisit selon le besoin : le câble en cuivre pour un poste fixe qui doit rester stable, la fibre pour les longues distances et les gros débits, le Wi-Fi pour la mobilité. Et dans beaucoup de réseaux, notamment ceux des entreprises et des lycées, les trois cohabitent.
+
+## S6
+Passons aux équipements que l'on rencontre dans un réseau. Pour chacun, posez-vous une question simple : à quoi sert-il ?
+[PAUSE 1]
+Commençons par l'ordinateur. Dans un réseau, il peut utiliser des ressources, par exemple en ouvrant un fichier partagé : on dit alors qu'il est client. Il peut aussi en fournir, en partageant un dossier ou une imprimante.
+Le serveur, lui, est un ordinateur ou un système qui fournit des services à d'autres appareils : stocker des fichiers, héberger un site Web, gérer la messagerie. Attention à une idée reçue : un serveur n'est pas forcément une grosse machine. Un petit boîtier de stockage en réseau, un ordinateur portable ou un micro-ordinateur de la taille d'une carte bancaire peut être un serveur. Ce qui compte, c'est son rôle : il répond aux demandes des clients.
+[PAUSE 2]
+Le switch, ou commutateur en français, est un boîtier muni de nombreuses prises Ethernet, appelées ports. Il relie entre eux les appareils câblés d'un même lieu. Chaque appareil possède une adresse {MAC|/mˈak/} : un identifiant normalement unique, attribué à sa carte réseau, c'est-à-dire au composant qui le relie au réseau. Les morceaux de données que manipule le switch s'appellent des trames. À chaque trame reçue, le switch note l'adresse {MAC|/mˈak/} de l'expéditeur et le port d'où elle arrive : il apprend ainsi où se trouve chaque appareil. Quand une trame est destinée à un appareil qu'il connaît, il l'envoie uniquement vers ce port. S'il ne le connaît pas encore, il l'envoie sur tous ses autres ports. Exemple : le switch d'une salle informatique.
+[PAUSE 2]
+Le routeur, lui, relie des réseaux différents entre eux. Il reçoit des paquets et choisit vers quel réseau les envoyer, en s'appuyant sur des informations de routage, un peu comme les panneaux indicateurs d'un carrefour. Il utilise pour cela l'adresse IP, que nous étudierons en détail. Exemple : le routeur qui relie le réseau d'une entreprise à Internet.
+Le point d'accès Wi-Fi permet aux appareils sans fil de rejoindre un réseau. Il émet le réseau Wi-Fi et le raccorde, le plus souvent, au réseau câblé. Exemple : les bornes fixées au plafond des couloirs d'un lycée.
+[PAUSE 2]
+Enfin, la {box|/bˈɔks/} Internet. Cet équipement domestique regroupe souvent plusieurs fonctions : un routeur, un petit switch avec quelques ports Ethernet, un point d'accès Wi-Fi, et l'équipement qui se raccorde à la ligne de l'opérateur, comme un modem pour l'ADSL ou un module de terminaison pour la fibre. Selon le modèle et la technologie, ces fonctions sont parfois réparties dans plusieurs boîtiers.
+Dernière précision : certains switchs d'entreprise, plus évolués, savent aussi router ; nous verrons plus tard comment. Les frontières ne sont donc pas toujours nettes, mais ces définitions vous serviront de repères.
+
+## S7
+Venons-en à une distinction essentielle : réseau local et Internet.
+Un réseau local, c'est un réseau limité à un lieu : une maison, une salle de classe, les bureaux d'une entreprise. Il est généralement privé : il appartient à une personne ou à une organisation, qui décide qui peut s'y connecter.
+[PAUSE 1]
+Regardons un réseau domestique. Il comprend deux ordinateurs, un smartphone, une imprimante et une {box|/bˈɔks/} Internet. Le premier ordinateur est relié à la {box|/bˈɔks/} par un câble Ethernet. Le second, le smartphone et l'imprimante utilisent le Wi-Fi. La {box|/bˈɔks/} joue ici le rôle de switch et de point d'accès : tous ces appareils font partie du même réseau local.
+[PAUSE 2]
+Ils peuvent donc communiquer entre eux : l'ordinateur envoie un document à l'imprimante, le smartphone transfère une photo vers l'ordinateur. À condition, bien sûr, que les services et les autorisations nécessaires soient en place : un partage de dossier activé, une imprimante installée.
+[PAUSE 1]
+Mais la {box|/bˈɔks/} a une troisième fonction : elle sert de routeur. Elle relie ce réseau local au réseau d'un opérateur, le fournisseur d'accès à Internet. C'est l'abonnement souscrit auprès de cet opérateur qui permet de rejoindre Internet : on parle d'un accès Internet.
+Et Internet, alors ? Internet, c'est un ensemble mondial de réseaux interconnectés : ceux des opérateurs, des entreprises, des universités, des hébergeurs de sites. Des dizaines de milliers de réseaux indépendants, reliés par des routeurs, qui échangent des données en suivant des protocoles communs. Le Web, c'est-à-dire les sites, n'est qu'un des services d'Internet, comme la messagerie.
+[PAUSE 2]
+Voici maintenant le point le plus important de ce chapitre. Imaginons que la ligne de l'opérateur soit coupée. Plus d'Internet : les sites ne s'ouvrent plus. Mais tant que la {box|/bˈɔks/} reste allumée, l'ordinateur peut toujours imprimer, et le smartphone peut toujours envoyer des photos vers l'ordinateur. Le réseau local continue de fonctionner.
+De même, dans une entreprise, un serveur de fichiers installé sur place reste accessible sans Internet. Un réseau local peut donc fonctionner sans accès à Internet. Seuls s'arrêtent les appareils ou logiciels qui dépendent d'un service en ligne. Et un smartphone peut afficher un signal Wi-Fi au maximum sans avoir Internet : ce signal indique seulement la qualité de la liaison radio entre le smartphone et la {box|/bˈɔks/}.
+
+## S8
+Mettons tout cela en pratique avec le réseau de notre petite entreprise, que nous allons construire étape par étape.
+[PAUSE 1]
+Voici les quatre ordinateurs : ceux de Léa, Karim, Sophie et Thomas. Au centre, j'ajoute un switch. Chaque ordinateur y est relié par un câble Ethernet. Ensuite, j'ajoute les équipements partagés : un serveur de fichiers et une imprimante réseau, branchés eux aussi sur le switch. Enfin, j'ajoute un routeur, relié au switch d'un côté et à l'accès Internet de l'autre.
+[PAUSE 3]
+Avant de lancer la démonstration, précisons nos hypothèses. Tous ces appareils font partie du même réseau local et sont correctement configurés. Chaque employé a le droit d'accéder au dossier commun du serveur. L'imprimante reçoit les impressions directement, sans passer par le serveur. Et chaque ordinateur sait qu'il doit confier au routeur tout ce qui est destiné à un autre réseau.
+[PAUSE 1]
+Première action : Léa ouvre un document stocké sur le serveur. Son ordinateur envoie une demande, qui passe par le switch et arrive au serveur. Le serveur répond en envoyant le document, qui repasse par le switch jusqu'à Léa. Le routeur n'intervient pas : tout reste dans le réseau local.
+[PAUSE 2]
+Deuxième action : Karim imprime une facture. Les données partent de son ordinateur, traversent le switch et arrivent à l'imprimante. Là encore, le trajet est court, et Internet n'est pas utilisé.
+[PAUSE 2]
+Troisième action : Sophie consulte le site d'un fournisseur. Ce site est hébergé sur un serveur extérieur à l'entreprise. La demande de Sophie traverse donc le switch et arrive au routeur. Le routeur l'envoie vers le réseau de l'opérateur, puis, de réseau en réseau, elle atteint le serveur du site. La réponse revient ensuite jusqu'à Sophie, en repassant par le routeur puis le switch. Je simplifie volontairement : avant cela, l'ordinateur a dû traduire le nom du site en adresse IP, grâce à un service appelé DNS, et le routeur effectue d'autres opérations que nous verrons plus tard.
+[PAUSE 2]
+Quatrième action : Léa a partagé un dossier sur son propre ordinateur, et Thomas vient y chercher un fichier. La demande de Thomas passe par le switch et arrive chez Léa. Le fichier revient par le même chemin. Le switch le transmet uniquement sur le port de Thomas : les ordinateurs de Karim et de Sophie ne le reçoivent pas.
+[PAUSE 2]
+Observez la différence : pour les échanges internes, le switch suffit. Le routeur n'entre en jeu que lorsque les données doivent sortir du réseau local.
+
+## S9
+Passons à la vérification, avec cinq questions. Répondez avant de voir la correction, et mettez la vidéo en pause si vous avez besoin de plus de temps.
+Question 1. Chez lui, Karim voit le Wi-Fi de son smartphone au maximum, pourtant aucun site ne s'ouvre. Il arrive quand même à imprimer depuis son smartphone. Comment est-ce possible ?
+[PAUSE 8]
+Le Wi-Fi relie seulement le smartphone à la {box|/bˈɔks/}, qui sert ici de point d'accès. Le plus probable : c'est l'accès Internet qui est coupé, pas le réseau local. Comme l'imprimante se trouve dans ce réseau local, l'impression fonctionne toujours.
+Question 2. Léa envoie un fichier à Karim. Pourquoi le switch ne le transmet-il pas aussi aux ordinateurs de Sophie et de Thomas ?
+[PAUSE 8]
+Parce que le switch a appris, grâce aux adresses {MAC|/mˈak/}, sur quel port se trouve chaque appareil. Il transmet donc les trames uniquement vers le port de Karim. Et même si, au tout début, il les envoie sur tous ses ports, les autres ordinateurs les ignorent, car elles ne leur sont pas destinées.
+Question 3. Dans une famille, un vieil ordinateur portable reste allumé dans un placard et partage les photos avec tous les appareils de la maison. Est-ce un serveur ?
+[PAUSE 8]
+Oui. Un serveur se définit par son rôle, et non par sa taille. Ce portable fournit un service aux autres appareils, qui sont ses clients.
+Question 4. Une entreprise veut relier deux bâtiments distants de cinq cents mètres. Quel support choisiriez-vous ?
+[PAUSE 8]
+La fibre optique, le choix le plus courant. Un câble Ethernet en cuivre est limité à environ cent mètres entre deux équipements, et un point d'accès Wi-Fi ordinaire ne porte pas aussi loin. Une liaison radio spécialisée existe aussi, mais elle est plus sensible aux obstacles et à la météo.
+Question 5. L'entreprise ouvre une agence dans une autre ville, avec son propre réseau. Quel équipement permet aux deux réseaux de communiquer ?
+[PAUSE 8]
+Le routeur. Le switch relie les appareils d'un même réseau local ; pour passer d'un réseau à un autre, il faut un équipement qui achemine les paquets entre réseaux. En pratique, chaque site a son routeur, et les deux sites sont reliés par un opérateur ou par Internet.
+
+## S10
+Faisons le point.
+Un réseau informatique est un ensemble d'appareils reliés entre eux pour échanger des données. Deux appareils suffisent pour former un réseau.
+Toute communication repose sur un émetteur, un récepteur, un message composé de données, un support et des protocoles. Les données voyagent par petits morceaux, souvent appelés paquets, sur du cuivre, dans une fibre optique ou par ondes radio.
+Les principaux équipements sont l'ordinateur, le serveur, le switch, le routeur, le point d'accès Wi-Fi, et la {box|/bˈɔks/} Internet, qui regroupe souvent plusieurs de ces fonctions.
+Et surtout, un réseau local peut fonctionner sans Internet. Internet, lui, est un ensemble de réseaux reliés entre eux à l'échelle mondiale.
+[PAUSE 2]
+Tout cela fonctionne parce que les appareils respectent des règles et des technologies communes. C'est ce qui permet à un smartphone coréen de dialoguer avec un serveur irlandais.
+Vous l'avez sans doute remarqué : le réseau d'une maison, celui d'une entreprise et Internet n'ont pas du tout la même taille. Dans le prochain chapitre, nous classerons les réseaux selon leur étendue : LAN, MAN et WAN. Nous verrons aussi le {WLAN|/dubləve lˈan/}, le réseau local sans fil, et la place d'Internet. À tout de suite.
+[PAUSE 6]
