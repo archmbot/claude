@@ -280,8 +280,9 @@ export const Spots: React.FC<{ spots: SpotDef[] }> = ({ spots }) => {
   return (
     <>
       {spots.map((s, i) => {
-        if (f < s.from - 2 || f > s.to + 8) return null;
-        const o = interpolate(f, [s.from, s.from + 6, s.to, s.to + 8], [0, 1, 1, 0], clamp);
+        const to = Math.max(s.to, s.from + 8); // deux repères vocaux peuvent tomber au même instant
+        if (f < s.from - 2 || f > to + 8) return null;
+        const o = interpolate(f, [s.from, s.from + 6, to, to + 8], [0, 1, 1, 0], clamp);
         const pop = spring({ frame: f - s.from, fps, config: { damping: 15, stiffness: 180 } });
         const [x, y, w, h] = s.r;
         const col = s.color ?? K.orange;
