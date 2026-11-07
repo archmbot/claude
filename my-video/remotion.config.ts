@@ -6,7 +6,7 @@
  */
 
 import { Config } from "@remotion/cli/config";
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { enableTailwind } from '@remotion/tailwind-v4';
 
 Config.setRspack(true);
@@ -16,9 +16,17 @@ Config.overrideBundlerConfig(enableTailwind);
 Config.setCodec("h264");
 Config.setPixelFormat("yuv420p");
 
-// Sandboxed environments without access to remotion.media: reuse a local headless shell.
-const localShell =
-  "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell";
-if (existsSync(localShell)) {
+// Sandboxed environments without access to remotion.media: reuse a local headless shell
+// (Playwright install, whatever its version and directory layout).
+const browsers = "/opt/pw-browsers";
+const localShell = existsSync(browsers)
+  ? readdirSync(browsers)
+      .filter((d) => d.startsWith("chromium_headless_shell-"))
+      .sort()
+      .reverse()
+      .flatMap((d) => [`${browsers}/${d}/chrome-linux/headless_shell`, `${browsers}/${d}/chrome-headless-shell-linux64/chrome-headless-shell`])
+      .find((p) => existsSync(p))
+  : undefined;
+if (localShell) {
   Config.setBrowserExecutable(localShell);
 }

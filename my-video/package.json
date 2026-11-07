@@ -45,7 +45,10 @@
     "choix:render": "remotion render QylineChoix out/qyline-site-vitrine-ou-boutique.mp4 --codec=h264 --crf=18",
     "reseau:voice": "python3 scripts/reseau-1-1/make-voice.py .kokoro",
     "reseau:audio": "python3 scripts/reseau-1-1/make-audio.py",
-    "reseau:render": "remotion render Reseau11 out/reseau-1-1-quest-ce-quun-reseau.mp4 --codec=h264 --crf=20"
+    "reseau:render": "remotion render Reseau11 out/reseau-1-1-quest-ce-quun-reseau.mp4 --codec=h264 --crf=20",
+    "nas:voice": "python3 scripts/nas-cout/make-voice.py .kokoro",
+    "nas:audio": "node scripts/nas-cout/make-audio.mjs",
+    "nas:render": "remotion render NasCout out/nas-pourquoi-informatique-si-cher.mp4 --codec=h264 --crf=18"
   },
   "sideEffects": [
     "*.css"

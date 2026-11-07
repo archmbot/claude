@@ -169,7 +169,13 @@ export type IconKind =
   | "plug"
   | "socket"
   | "ont"
-  | "bolt";
+  | "bolt"
+  | "disk"
+  | "ups"
+  | "key"
+  | "refresh"
+  | "pulse"
+  | "headset";
 
 export const Icon: React.FC<{ kind: IconKind; size?: number; color?: string; fill?: string }> = ({ kind, size = 140, color = C.device, fill = "none" }) => {
   const s = { fill: "none", stroke: color, strokeWidth: 5, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
@@ -495,6 +501,53 @@ export const Icon: React.FC<{ kind: IconKind; size?: number; color?: string; fil
           <rect x={18} y={30} width={64} height={44} rx={8} {...soft} />
           <circle cx={36} cy={52} r={6} {...solid} />
           <path d="M52 46H70M52 58H64" {...s} />
+        </>
+      );
+      break;
+    case "disk":
+      body = (
+        <>
+          <rect x={16} y={10} width={68} height={80} rx={8} {...soft} />
+          <circle cx={50} cy={44} r={20} {...s} />
+          <circle cx={50} cy={44} r={4} {...solid} />
+          <path d="M62 74L72 64" {...s} />
+        </>
+      );
+      break;
+    case "ups":
+      body = (
+        <>
+          <rect x={20} y={12} width={60} height={78} rx={8} {...soft} />
+          <path d="M54 24L40 50H52L46 74L62 44H50Z" fill={color} />
+        </>
+      );
+      break;
+    case "key":
+      body = (
+        <>
+          <circle cx={32} cy={50} r={18} {...soft} />
+          <path d="M50 50H90M78 50V64M88 50V60" {...s} />
+        </>
+      );
+      break;
+    case "refresh":
+      body = <path d="M80 44A31 31 0 0 0 22 36M20 56A31 31 0 0 0 78 64M22 20V36H38M78 80V64H62" {...s} strokeWidth={7} />;
+      break;
+    case "pulse":
+      body = (
+        <>
+          <rect x={8} y={18} width={84} height={64} rx={8} {...soft} />
+          <path d="M16 52H34L42 34L52 68L60 46L66 52H84" {...s} />
+        </>
+      );
+      break;
+    case "headset":
+      body = (
+        <>
+          <path d="M18 60V48A32 32 0 0 1 82 48V60" {...s} />
+          <rect x={10} y={54} width={18} height={28} rx={6} {...soft} />
+          <rect x={72} y={54} width={18} height={28} rx={6} {...soft} />
+          <path d="M80 82Q80 92 62 92H54" {...s} />
         </>
       );
       break;

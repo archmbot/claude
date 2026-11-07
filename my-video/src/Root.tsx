@@ -5,6 +5,8 @@ import { BlackU15Intro, calculateBU15Metadata } from "./black-u15/Intro";
 import { DURATION as BU15_DURATION, FPS as BU15_FPS, HEIGHT as BU15_HEIGHT, WIDTH as BU15_WIDTH } from "./black-u15/timeline";
 import { QylineChoix } from "./Composition";
 import { Reseau11 } from "./reseau/Video";
+import { NasCout } from "./nas/Video";
+import { DURATION as NAS_DURATION, FPS as NAS_FPS, HEIGHT as NAS_HEIGHT, WIDTH as NAS_WIDTH } from "./nas/timing";
 import { DURATION as NET_DURATION, FPS as NET_FPS, HEIGHT as NET_HEIGHT, WIDTH as NET_WIDTH } from "./reseau/timing";
 import { DURATION as CHOIX_DURATION, FPS as CHOIX_FPS, HEIGHT as CHOIX_HEIGHT, WIDTH as CHOIX_WIDTH } from "./timeline";
 import { QylineAd } from "./qyline/Ad";
@@ -23,6 +25,15 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="NasCout"
+        component={NasCout}
+        durationInFrames={NAS_DURATION}
+        fps={NAS_FPS}
+        width={NAS_WIDTH}
+        height={NAS_HEIGHT}
+        defaultProps={{ subtitles: true }}
+      />
       <Composition
         id="Reseau11"
         component={Reseau11}

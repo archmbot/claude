@@ -106,6 +106,22 @@ npm run reseau:render   # export MP4 H.264 + AAC -> out/reseau-1-1-quest-ce-quun
 
 Sans sous-titres incrustés : `npx remotion render Reseau11 out/reseau-1-1.mp4 --props='{"subtitles":false}'`.
 
+## « Pourquoi l'informatique coûte-t-elle si cher ? L'exemple d'un NAS » (1 min, 1920 × 1080)
+
+Composition `NasCout` (25 i/s), dans la charte de la formation réseaux (`src/reseau/ui.tsx`) :
+deux personnes partagent des dossiers sur un NAS, chacune avec son compte, au bureau et à distance.
+À gauche, l'étape expliquée (matériel, mise en place, sauvegarde, entretien) ; à droite, un devis
+indicatif qui se remplit (ordres de grandeur relevés en 2026, à vérifier au moment du devis).
+
+```console
+npm run nas:voice     # voix off (scripts/nas-cout/narration.txt) + minutage -> src/nas/voice.ts
+npm run nas:audio     # musique douce + bruitages sous la voix -> public/nas-cout/audio.wav
+npm run nas:render    # export MP4 -> out/nas-pourquoi-informatique-si-cher.mp4
+```
+
+Les deux vidéos « formation » partagent `scripts/lib/narrate.py` (voix phrase par phrase) et
+`src/components/voiceTiming.ts` (repères `T("expression")` calés sur la voix).
+
 ## Docs
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
