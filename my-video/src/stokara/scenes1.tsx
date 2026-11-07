@@ -84,7 +84,7 @@ export const S1: React.FC = () => {
   const head = interpolate(f, [p1 - 6, p1 + 12], [0, 1], clamp);
   const agenda: [string, IconName, string][] = [
     ["la connexion", "box-arrow-in-right", "Se connecter"],
-    ["l'explorateur", "folder2-open", "L'explorateur de fichiers"],
+    ["l'explorateur de", "folder2-open", "L'explorateur de fichiers"],
     ["le partage", "link-45deg", "Partager"],
     ["la messagerie", "chat-dots-fill", "Messagerie et notifications"],
     ["votre compte", "person-circle", "Mon compte"],

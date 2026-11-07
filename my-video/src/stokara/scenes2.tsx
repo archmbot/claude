@@ -594,7 +594,10 @@ export const S17: React.FC = () => {
     <Stage>
       {phase === 0 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", flexDirection: "row", gap: 60 }}>
-          <DeviceCard at={t.srv - 6} icon="hdd-stack" title="Windows Server" sub="2016 · 2019 · 2022" />
+          <Pop at={PS(0)} style={{ position: "absolute", top: 150, left: 0, right: 0, textAlign: "center" }}>
+            <div style={{ fontFamily: FONT, fontSize: 30, fontWeight: 600, color: K.orange2, letterSpacing: 3, textTransform: "uppercase" }}>Où installer Stokara ?</div>
+          </Pop>
+          <DeviceCard at={Math.min(t.srv - 6, PS(0) + 10)} icon="hdd-stack" title="Windows Server" sub="2016 · 2019 · 2022" />
           <DeviceCard at={t.pc} icon="pc-display" title="PC Windows" sub="10 ou 11" />
           <Pop at={t.xampp}>
             <Card style={{ padding: "30px 36px", width: 420 }}>
@@ -706,6 +709,10 @@ export const S18: React.FC = () => {
   return (
     <Stage>
       <AbsoluteFill style={{ opacity: 1 - outro }}>
+        <Pop at={2} style={{ position: "absolute", left: 0, right: 0, top: 64, display: "flex", justifyContent: "center", alignItems: "center", gap: 18 }}>
+          <Logo size={56} />
+          <div style={{ fontFamily: FONT, fontSize: 30, fontWeight: 600, color: K.orange2, letterSpacing: 3, textTransform: "uppercase" }}>En résumé</div>
+        </Pop>
         <div style={{ position: "absolute", left: 180, top: 170, display: "flex", flexDirection: "column", gap: 22 }}>
           {recap.map(([cue, icon, label], i) => (
             <Pop key={label} at={T(cue)}>
