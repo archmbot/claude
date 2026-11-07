@@ -1,17 +1,15 @@
-# Voix off de « Pourquoi l'informatique coûte-t-elle si cher ? L'exemple d'un NAS » (≈ 1 min).
+# Voix off de « Pourquoi l'informatique coûte-t-elle si cher ? » d'après un devis réel de NAS (≈ 1 min).
 # ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
 ## S1
-Un {NAS|/nˈas/}, ce boîtier qui partage vos fichiers, coûte quelques centaines d'euros. Alors pourquoi le devis dépasse-t-il souvent les mille euros ?
+Pourquoi l'informatique coûte-t-elle si cher ? Voici un vrai devis : un {NAS|/nˈas/} partagé par deux personnes, au bureau et à distance. Total : {710 €|sept cent dix euros} hors taxes.
 ## S2
-Prenons Léa et Karim : ils partagent des dossiers, chacun avec son compte. Au bureau, sur le réseau local, et à distance, depuis chez eux.
+D'abord, installer et configurer le serveur, puis créer et organiser les dossiers partagés : un dossier commun, et un dossier pour chacun.
 ## S3
-D'abord, le matériel : le {NAS|/nˈas/}, deux disques en miroir, pour survivre à la panne de l'un d'eux, et un onduleur contre les coupures de courant.
+Ensuite, les identifiants et mots de passe de chacun, et les droits d'accès : qui voit quoi, qui peut modifier.
 ## S4
-Ensuite, la mise en place : comptes, droits sur chaque dossier, double {authentification|/otɑ̃tifikasjˈɔ̃/}, et un accès à distance sécurisé par VPN, plutôt qu'un {NAS|/nˈas/} ouvert sur Internet.
+Puis un portail intranet web, pour tout retrouver depuis un navigateur, et un accès extérieur sécurisé en HTTPS : les échanges sont chiffrés.
 ## S5
-Puis la sauvegarde. Le miroir ne protège ni d'une suppression, ni d'un rançongiciel : il faut une copie ailleurs, et la tester.
+Le RAID et les sauvegardes protègent les données si un disque lâche ou en cas d'erreur. Les notifications par {e-mail|/imˈɛl/}, elles, sont offertes.
 ## S6
-Enfin, l'entretien : mises à jour, surveillance des disques, assistance.
-## S7
-Vous ne payez pas une boîte : vous payez des données protégées, accessibles partout, et le savoir-faire pour y arriver.
-[PAUSE 4]
+{710 €|Sept cent dix euros}, ce n'est pas le prix d'une boîte : c'est celui d'un travail qui rend vos données organisées, protégées et accessibles.
+[PAUSE 5]

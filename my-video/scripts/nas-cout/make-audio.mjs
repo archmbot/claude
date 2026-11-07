@@ -1,5 +1,5 @@
 // Musique électronique douce + petits bruitages, mixés sous la voix off
-// (« Pourquoi l'informatique coûte-t-elle si cher ? », 1 min). Entièrement synthétisé.
+// (« Pourquoi l'informatique coûte-t-elle si cher ? », d'après un devis réel, 1 min). Entièrement synthétisé.
 // Nécessite d'avoir lancé make-voice.py. Usage : node scripts/nas-cout/make-audio.mjs
 import { readFileSync } from "node:fs";
 import { mixWithVoice } from "../lib/mix.mjs";
@@ -51,15 +51,17 @@ pad(end, CH[0].pad, 3, 0.6, 1.2);
 // bruitages
 for (const sq of cues.seqs.slice(1)) whoosh(sq.start + 0.15, 0.5, 0.18);
 const lines = [
-  [2, "le NAS"],
-  [2, "deux disques"],
-  [2, "un onduleur"],
-  [3, "la mise en place"],
-  [4, "la sauvegarde"],
-  [5, "l'entretien"],
+  [1, "installer"],
+  [1, "créer et organiser"],
+  [2, "les identifiants"],
+  [2, "les droits"],
+  [3, "un portail"],
+  [3, "un accès extérieur"],
+  [4, "Le RAID"],
+  [4, "Les notifications"],
 ];
 lines.forEach(([sq, p], i) => pop(cue(sq, p), 79 + (i % 3) * 2, 0.22));
-const total = cue(6, "Vous ne payez");
+const total = cue(5, "710");
 [72, 76, 79, 84].forEach((m, i) => pluck(total + i * 0.07, m, 0.12, i % 2 ? 0.3 : -0.3));
 
 const music = s.mixdown({ duckDepth: 0.2, roomSize: 0.85 });

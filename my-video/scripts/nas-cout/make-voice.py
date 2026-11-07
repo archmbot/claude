@@ -16,9 +16,9 @@ build(
     out_dir=ROOT / "public" / "nas-cout",
     ts_path=ROOT / "src" / "nas" / "voice.ts",
     generator="scripts/nas-cout/make-voice.py",
-    speed=0.95,  # débit vif mais clair : la vidéo tient en une minute
+    speed=0.92,  # débit posé, la vidéo tient en une minute
     card=0,  # pas de carton entre les séquences
     lead_in=0.5,
     sentence_gap=0.3,
-    paragraph_gap=0.6,
+    paragraph_gap=0.8,
 )

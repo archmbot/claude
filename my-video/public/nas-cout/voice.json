@@ -1,1101 +1,992 @@
 {
- "duration": 58.976,
+ "duration": 58.06,
  "seqs": [
   {
    "id": "S1",
    "start": 0.5,
    "cardEnd": 0.5,
-   "end": 8.15
+   "end": 11.2
   },
   {
    "id": "S2",
-   "start": 8.15,
-   "cardEnd": 8.15,
-   "end": 16.507
+   "start": 11.2,
+   "cardEnd": 11.2,
+   "end": 20.158
   },
   {
    "id": "S3",
-   "start": 16.507,
-   "cardEnd": 16.507,
-   "end": 24.827
+   "start": 20.158,
+   "cardEnd": 20.158,
+   "end": 26.631
   },
   {
    "id": "S4",
-   "start": 24.827,
-   "cardEnd": 24.827,
-   "end": 35.458
+   "start": 26.631,
+   "cardEnd": 26.631,
+   "end": 36.653
   },
   {
    "id": "S5",
-   "start": 35.458,
-   "cardEnd": 35.458,
-   "end": 43.789
+   "start": 36.653,
+   "cardEnd": 36.653,
+   "end": 45.4
   },
   {
    "id": "S6",
-   "start": 43.789,
-   "cardEnd": 43.789,
-   "end": 48.399
-  },
-  {
-   "id": "S7",
-   "start": 48.399,
-   "cardEnd": 48.399,
-   "end": 58.976
+   "start": 45.4,
+   "cardEnd": 45.4,
+   "end": 58.06
   }
  ],
  "paras": [
   {
    "seq": 0,
    "start": 0.5,
-   "end": 7.55
+   "end": 10.4
   },
   {
    "seq": 1,
-   "start": 8.15,
-   "end": 15.907
+   "start": 11.2,
+   "end": 19.358
   },
   {
    "seq": 2,
-   "start": 16.507,
-   "end": 24.227
+   "start": 20.158,
+   "end": 25.831
   },
   {
    "seq": 3,
-   "start": 24.827,
-   "end": 34.858
+   "start": 26.631,
+   "end": 35.853
   },
   {
    "seq": 4,
-   "start": 35.458,
-   "end": 43.189
+   "start": 36.653,
+   "end": 44.6
   },
   {
    "seq": 5,
-   "start": 43.789,
-   "end": 47.799
-  },
-  {
-   "seq": 6,
-   "start": 48.399,
-   "end": 54.976
+   "start": 45.4,
+   "end": 53.06
   }
  ],
  "words": [
   {
-   "text": "Un",
+   "text": "Pourquoi",
    "start": 0.5,
-   "end": 0.623,
+   "end": 0.974,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "NAS,",
-   "start": 0.623,
-   "end": 0.869,
+   "text": "l'informatique",
+   "start": 0.974,
+   "end": 1.744,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "ce",
-   "start": 0.869,
-   "end": 1.001,
+   "text": "coûte-t-elle",
+   "start": 1.744,
+   "end": 2.336,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "boîtier",
-   "start": 1.001,
-   "end": 1.463,
+   "text": "si",
+   "start": 2.336,
+   "end": 2.455,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "qui",
-   "start": 1.463,
-   "end": 1.662,
+   "text": "cher ?",
+   "start": 2.455,
+   "end": 2.692,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "partage",
-   "start": 1.662,
-   "end": 2.124,
+   "text": "Voici",
+   "start": 2.992,
+   "end": 3.339,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "vos",
-   "start": 2.124,
-   "end": 2.322,
+   "text": "un",
+   "start": 3.339,
+   "end": 3.478,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "fichiers,",
-   "start": 2.322,
-   "end": 2.85,
+   "text": "vrai",
+   "start": 3.478,
+   "end": 3.755,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "coûte",
-   "start": 3.11,
-   "end": 3.347,
+   "text": "devis :",
+   "start": 3.755,
+   "end": 4.102,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "quelques",
-   "start": 3.347,
-   "end": 3.727,
+   "text": "un",
+   "start": 4.412,
+   "end": 4.544,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "centaines",
-   "start": 3.727,
-   "end": 4.154,
+   "text": "NAS",
+   "start": 4.544,
+   "end": 4.809,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "d'euros.",
-   "start": 4.154,
-   "end": 4.438,
+   "text": "partagé",
+   "start": 4.809,
+   "end": 5.273,
    "seq": 0,
    "para": 0
   },
   {
-   "text": "Alors",
-   "start": 4.738,
-   "end": 5.019,
+   "text": "par",
+   "start": 5.273,
+   "end": 5.471,
    "seq": 0,
    "para": 0
-  },
-  {
-   "text": "pourquoi",
-   "start": 5.019,
-   "end": 5.469,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "le",
-   "start": 5.469,
-   "end": 5.582,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "devis",
-   "start": 5.582,
-   "end": 5.863,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "dépasse-t-il",
-   "start": 5.863,
-   "end": 6.425,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "souvent",
-   "start": 6.425,
-   "end": 6.819,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "les",
-   "start": 6.819,
-   "end": 6.988,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "mille",
-   "start": 6.988,
-   "end": 7.269,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "euros ?",
-   "start": 7.269,
-   "end": 7.55,
-   "seq": 0,
-   "para": 0
-  },
-  {
-   "text": "Prenons",
-   "start": 8.15,
-   "end": 8.665,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "Léa",
-   "start": 8.665,
-   "end": 8.885,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "et",
-   "start": 8.885,
-   "end": 9.032,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "Karim :",
-   "start": 9.032,
-   "end": 9.4,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "ils",
-   "start": 9.66,
-   "end": 9.848,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "partagent",
-   "start": 9.848,
-   "end": 10.411,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "des",
-   "start": 10.411,
-   "end": 10.599,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "dossiers,",
-   "start": 10.599,
-   "end": 11.1,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "chacun",
-   "start": 11.19,
-   "end": 11.512,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "avec",
-   "start": 11.512,
-   "end": 11.727,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "son",
-   "start": 11.727,
-   "end": 11.888,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "compte.",
-   "start": 11.888,
-   "end": 12.21,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "Au",
-   "start": 12.511,
-   "end": 12.652,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "bureau,",
-   "start": 12.652,
-   "end": 13.077,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "sur",
-   "start": 13.077,
-   "end": 13.265,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "le",
-   "start": 13.265,
-   "end": 13.391,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "réseau",
-   "start": 13.391,
-   "end": 13.767,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "local,",
-   "start": 13.767,
-   "end": 14.081,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "et",
-   "start": 14.321,
-   "end": 14.442,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "à",
-   "start": 14.442,
-   "end": 14.503,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "distance,",
-   "start": 14.503,
-   "end": 14.987,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "depuis",
-   "start": 14.987,
-   "end": 15.412,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "chez",
-   "start": 15.412,
-   "end": 15.695,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "eux.",
-   "start": 15.695,
-   "end": 15.907,
-   "seq": 1,
-   "para": 1
-  },
-  {
-   "text": "D'abord,",
-   "start": 16.507,
-   "end": 17.007,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "le",
-   "start": 17.167,
-   "end": 17.347,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "matériel :",
-   "start": 17.347,
-   "end": 18.067,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "le",
-   "start": 18.317,
-   "end": 18.234,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "NAS,",
-   "start": 18.234,
-   "end": 18.067,
-   "seq": 2,
-   "para": 2
   },
   {
    "text": "deux",
-   "start": 18.317,
-   "end": 18.553,
-   "seq": 2,
-   "para": 2
+   "start": 5.471,
+   "end": 5.736,
+   "seq": 0,
+   "para": 0
   },
   {
-   "text": "disques",
-   "start": 18.553,
-   "end": 18.966,
-   "seq": 2,
-   "para": 2
+   "text": "personnes,",
+   "start": 5.736,
+   "end": 6.332,
+   "seq": 0,
+   "para": 0
   },
   {
-   "text": "en",
-   "start": 18.966,
-   "end": 19.084,
-   "seq": 2,
-   "para": 2
+   "text": "au",
+   "start": 6.482,
+   "end": 6.627,
+   "seq": 0,
+   "para": 0
   },
   {
-   "text": "miroir,",
-   "start": 19.084,
-   "end": 19.438,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "pour",
-   "start": 19.438,
-   "end": 19.781,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "survivre",
-   "start": 19.781,
-   "end": 20.468,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "à",
-   "start": 20.468,
-   "end": 20.554,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "la",
-   "start": 20.554,
-   "end": 20.725,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "panne",
-   "start": 20.725,
-   "end": 21.154,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "de",
-   "start": 21.154,
-   "end": 21.326,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "l'un",
-   "start": 21.326,
-   "end": 21.584,
-   "seq": 2,
-   "para": 2
-  },
-  {
-   "text": "d'eux,",
-   "start": 21.584,
-   "end": 21.927,
-   "seq": 2,
-   "para": 2
+   "text": "bureau",
+   "start": 6.627,
+   "end": 7.063,
+   "seq": 0,
+   "para": 0
   },
   {
    "text": "et",
-   "start": 22.187,
-   "end": 22.294,
-   "seq": 2,
-   "para": 2
+   "start": 7.063,
+   "end": 7.208,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "à",
+   "start": 7.208,
+   "end": 7.28,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "distance.",
+   "start": 7.28,
+   "end": 7.861,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "Total :",
+   "start": 8.161,
+   "end": 8.534,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "710",
+   "start": 8.534,
+   "end": 9.131,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "€",
+   "start": 9.131,
+   "end": 9.729,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "hors",
+   "start": 9.729,
+   "end": 10.027,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "taxes.",
+   "start": 10.027,
+   "end": 10.4,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "D'abord,",
+   "start": 11.2,
+   "end": 11.78,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "installer",
+   "start": 11.94,
+   "end": 12.558,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "et",
+   "start": 12.558,
+   "end": 12.695,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "configurer",
+   "start": 12.695,
+   "end": 13.382,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "le",
+   "start": 13.382,
+   "end": 13.519,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "serveur,",
+   "start": 13.519,
+   "end": 14.0,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "puis",
+   "start": 14.3,
+   "end": 14.534,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "créer",
+   "start": 14.534,
+   "end": 14.826,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "et",
+   "start": 14.826,
+   "end": 14.943,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "organiser",
+   "start": 14.943,
+   "end": 15.469,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "les",
+   "start": 15.469,
+   "end": 15.645,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "dossiers",
+   "start": 15.645,
+   "end": 16.112,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "partagés :",
+   "start": 16.112,
+   "end": 16.58,
+   "seq": 1,
+   "para": 1
   },
   {
    "text": "un",
-   "start": 22.294,
-   "end": 22.402,
-   "seq": 2,
-   "para": 2
+   "start": 16.91,
+   "end": 17.033,
+   "seq": 1,
+   "para": 1
   },
   {
-   "text": "onduleur",
-   "start": 22.402,
-   "end": 22.831,
-   "seq": 2,
-   "para": 2
+   "text": "dossier",
+   "start": 17.033,
+   "end": 17.462,
+   "seq": 1,
+   "para": 1
   },
   {
-   "text": "contre",
-   "start": 22.831,
-   "end": 23.153,
+   "text": "commun,",
+   "start": 17.462,
+   "end": 17.83,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "et",
+   "start": 18.03,
+   "end": 18.156,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "un",
+   "start": 18.156,
+   "end": 18.283,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "dossier",
+   "start": 18.283,
+   "end": 18.726,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "pour",
+   "start": 18.726,
+   "end": 18.978,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "chacun.",
+   "start": 18.978,
+   "end": 19.358,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "Ensuite,",
+   "start": 20.158,
+   "end": 20.62,
    "seq": 2,
    "para": 2
   },
   {
    "text": "les",
-   "start": 23.153,
-   "end": 23.314,
+   "start": 20.62,
+   "end": 20.807,
    "seq": 2,
    "para": 2
   },
   {
-   "text": "coupures",
-   "start": 23.314,
-   "end": 23.744,
+   "text": "identifiants",
+   "start": 20.807,
+   "end": 21.557,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "et",
+   "start": 21.557,
+   "end": 21.681,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "mots",
+   "start": 21.681,
+   "end": 21.931,
    "seq": 2,
    "para": 2
   },
   {
    "text": "de",
-   "start": 23.744,
-   "end": 23.851,
+   "start": 21.931,
+   "end": 22.056,
    "seq": 2,
    "para": 2
   },
   {
-   "text": "courant.",
-   "start": 23.851,
-   "end": 24.227,
+   "text": "passe",
+   "start": 22.056,
+   "end": 22.368,
    "seq": 2,
    "para": 2
   },
   {
-   "text": "Ensuite,",
-   "start": 24.827,
-   "end": 25.257,
-   "seq": 3,
-   "para": 3
+   "text": "de",
+   "start": 22.368,
+   "end": 22.493,
+   "seq": 2,
+   "para": 2
   },
   {
-   "text": "la",
-   "start": 25.407,
-   "end": 25.567,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "mise",
-   "start": 25.567,
-   "end": 25.887,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "en",
-   "start": 25.887,
-   "end": 26.047,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "place :",
-   "start": 26.047,
-   "end": 26.447,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "comptes,",
-   "start": 26.727,
-   "end": 26.447,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "droits",
-   "start": 26.727,
-   "end": 27.125,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "sur",
-   "start": 27.125,
-   "end": 27.324,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "chaque",
-   "start": 27.324,
-   "end": 27.722,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "dossier,",
-   "start": 27.722,
-   "end": 28.187,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "double",
-   "start": 28.347,
-   "end": 28.754,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "authentification,",
-   "start": 28.754,
-   "end": 29.637,
-   "seq": 3,
-   "para": 3
+   "text": "chacun,",
+   "start": 22.493,
+   "end": 22.868,
+   "seq": 2,
+   "para": 2
   },
   {
    "text": "et",
-   "start": 29.897,
-   "end": 30.061,
+   "start": 23.128,
+   "end": 23.236,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "les",
+   "start": 23.236,
+   "end": 23.399,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "droits",
+   "start": 23.399,
+   "end": 23.723,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "d'accès :",
+   "start": 23.723,
+   "end": 24.048,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "qui",
+   "start": 24.298,
+   "end": 24.459,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "voit",
+   "start": 24.459,
+   "end": 24.673,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "quoi,",
+   "start": 24.673,
+   "end": 24.888,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "qui",
+   "start": 25.028,
+   "end": 25.189,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "peut",
+   "start": 25.189,
+   "end": 25.403,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "modifier.",
+   "start": 25.403,
+   "end": 25.831,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "Puis",
+   "start": 26.631,
+   "end": 26.981,
    "seq": 3,
    "para": 3
   },
   {
    "text": "un",
-   "start": 30.061,
-   "end": 30.226,
+   "start": 26.981,
+   "end": 27.156,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "portail",
+   "start": 27.156,
+   "end": 27.769,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "intranet",
+   "start": 27.769,
+   "end": 28.469,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "web,",
+   "start": 28.469,
+   "end": 28.731,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "pour",
+   "start": 28.971,
+   "end": 29.211,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "tout",
+   "start": 29.211,
+   "end": 29.451,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "retrouver",
+   "start": 29.451,
+   "end": 29.991,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "depuis",
+   "start": 29.991,
+   "end": 30.351,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "un",
+   "start": 30.351,
+   "end": 30.471,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "navigateur,",
+   "start": 30.471,
+   "end": 31.071,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "et",
+   "start": 31.361,
+   "end": 31.542,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "un",
+   "start": 31.542,
+   "end": 31.723,
    "seq": 3,
    "para": 3
   },
   {
    "text": "accès",
-   "start": 30.226,
-   "end": 30.637,
+   "start": 31.723,
+   "end": 32.176,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "à",
-   "start": 30.637,
-   "end": 30.719,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "distance",
-   "start": 30.719,
-   "end": 31.376,
+   "text": "extérieur",
+   "start": 32.176,
+   "end": 32.992,
    "seq": 3,
    "para": 3
   },
   {
    "text": "sécurisé",
-   "start": 31.376,
-   "end": 32.034,
+   "start": 32.992,
+   "end": 33.717,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "par",
-   "start": 32.034,
-   "end": 32.28,
+   "text": "en",
+   "start": 33.717,
+   "end": 33.898,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "VPN,",
-   "start": 32.28,
-   "end": 32.527,
+   "text": "HTTPS :",
+   "start": 33.898,
+   "end": 34.351,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "plutôt",
-   "start": 32.747,
-   "end": 33.156,
+   "text": "les",
+   "start": 34.591,
+   "end": 34.756,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "qu'un",
-   "start": 33.156,
-   "end": 33.428,
+   "text": "échanges",
+   "start": 34.756,
+   "end": 35.195,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "NAS",
-   "start": 33.428,
-   "end": 33.7,
+   "text": "sont",
+   "start": 35.195,
+   "end": 35.414,
    "seq": 3,
    "para": 3
   },
   {
-   "text": "ouvert",
-   "start": 33.7,
-   "end": 34.109,
+   "text": "chiffrés.",
+   "start": 35.414,
+   "end": 35.853,
    "seq": 3,
    "para": 3
-  },
-  {
-   "text": "sur",
-   "start": 34.109,
-   "end": 34.313,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "Internet.",
-   "start": 34.313,
-   "end": 34.858,
-   "seq": 3,
-   "para": 3
-  },
-  {
-   "text": "Puis",
-   "start": 35.458,
-   "end": 35.736,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "la",
-   "start": 35.736,
-   "end": 35.875,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "sauvegarde.",
-   "start": 35.875,
-   "end": 36.57,
-   "seq": 4,
-   "para": 4
   },
   {
    "text": "Le",
-   "start": 36.87,
-   "end": 37.005,
+   "start": 36.653,
+   "end": 36.785,
    "seq": 4,
    "para": 4
   },
   {
-   "text": "miroir",
-   "start": 37.005,
-   "end": 37.411,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "ne",
-   "start": 37.411,
-   "end": 37.546,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "protège",
-   "start": 37.546,
-   "end": 38.02,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "ni",
-   "start": 38.02,
-   "end": 38.155,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "d'une",
-   "start": 38.155,
-   "end": 38.426,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "suppression,",
-   "start": 38.426,
-   "end": 39.17,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "ni",
-   "start": 39.42,
-   "end": 39.571,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "d'un",
-   "start": 39.571,
-   "end": 39.796,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "rançongiciel :",
-   "start": 39.796,
-   "end": 40.7,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "il",
-   "start": 40.99,
-   "end": 41.108,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "faut",
-   "start": 41.108,
-   "end": 41.345,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "une",
-   "start": 41.345,
-   "end": 41.522,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "copie",
-   "start": 41.522,
-   "end": 41.817,
-   "seq": 4,
-   "para": 4
-  },
-  {
-   "text": "ailleurs,",
-   "start": 41.817,
-   "end": 42.29,
+   "text": "RAID",
+   "start": 36.785,
+   "end": 37.05,
    "seq": 4,
    "para": 4
   },
   {
    "text": "et",
-   "start": 42.43,
-   "end": 42.582,
+   "start": 37.05,
+   "end": 37.182,
    "seq": 4,
    "para": 4
   },
   {
-   "text": "la",
-   "start": 42.582,
-   "end": 42.734,
+   "text": "les",
+   "start": 37.182,
+   "end": 37.38,
    "seq": 4,
    "para": 4
   },
   {
-   "text": "tester.",
-   "start": 42.734,
-   "end": 43.189,
+   "text": "sauvegardes",
+   "start": 37.38,
+   "end": 38.107,
    "seq": 4,
    "para": 4
   },
   {
-   "text": "Enfin,",
-   "start": 43.789,
-   "end": 44.141,
-   "seq": 5,
-   "para": 5
+   "text": "protègent",
+   "start": 38.107,
+   "end": 38.702,
+   "seq": 4,
+   "para": 4
   },
   {
-   "text": "l'entretien :",
-   "start": 44.141,
-   "end": 44.809,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "mises",
-   "start": 45.089,
-   "end": 45.444,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "à",
-   "start": 45.444,
-   "end": 45.515,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "jour,",
-   "start": 45.515,
-   "end": 45.799,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "surveillance",
-   "start": 45.929,
-   "end": 46.565,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "des",
-   "start": 46.565,
-   "end": 46.724,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "disques,",
-   "start": 46.724,
-   "end": 47.096,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "assistance.",
-   "start": 47.096,
-   "end": 47.799,
-   "seq": 5,
-   "para": 5
-  },
-  {
-   "text": "Vous",
-   "start": 48.399,
-   "end": 48.644,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "ne",
-   "start": 48.644,
-   "end": 48.767,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "payez",
-   "start": 48.767,
-   "end": 49.074,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "pas",
-   "start": 49.074,
-   "end": 49.258,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "une",
-   "start": 49.258,
-   "end": 49.442,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "boîte :",
-   "start": 49.442,
-   "end": 49.749,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "vous",
-   "start": 49.879,
-   "end": 50.156,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "payez",
-   "start": 50.156,
-   "end": 50.503,
-   "seq": 6,
-   "para": 6
-  },
-  {
-   "text": "des",
-   "start": 50.503,
-   "end": 50.71,
-   "seq": 6,
-   "para": 6
+   "text": "les",
+   "start": 38.702,
+   "end": 38.901,
+   "seq": 4,
+   "para": 4
   },
   {
    "text": "données",
-   "start": 50.71,
-   "end": 51.195,
-   "seq": 6,
-   "para": 6
+   "start": 38.901,
+   "end": 39.363,
+   "seq": 4,
+   "para": 4
   },
   {
-   "text": "protégées,",
-   "start": 51.195,
-   "end": 51.819,
-   "seq": 6,
-   "para": 6
+   "text": "si",
+   "start": 39.363,
+   "end": 39.495,
+   "seq": 4,
+   "para": 4
   },
   {
-   "text": "accessibles",
-   "start": 51.919,
-   "end": 52.585,
-   "seq": 6,
-   "para": 6
+   "text": "un",
+   "start": 39.495,
+   "end": 39.628,
+   "seq": 4,
+   "para": 4
   },
   {
-   "text": "partout,",
-   "start": 52.585,
-   "end": 53.009,
-   "seq": 6,
-   "para": 6
+   "text": "disque",
+   "start": 39.628,
+   "end": 40.024,
+   "seq": 4,
+   "para": 4
   },
   {
-   "text": "et",
-   "start": 53.279,
-   "end": 53.405,
-   "seq": 6,
-   "para": 6
+   "text": "lâche",
+   "start": 40.024,
+   "end": 40.355,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "ou",
+   "start": 40.355,
+   "end": 40.487,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "en",
+   "start": 40.487,
+   "end": 40.619,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "cas",
+   "start": 40.619,
+   "end": 40.817,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "d'erreur.",
+   "start": 40.817,
+   "end": 41.28,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "Les",
+   "start": 41.58,
+   "end": 41.788,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "notifications",
+   "start": 41.788,
+   "end": 42.687,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "par",
+   "start": 42.687,
+   "end": 42.894,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "e-mail,",
+   "start": 42.894,
+   "end": 43.24,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "elles,",
+   "start": 43.46,
+   "end": 43.24,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "sont",
+   "start": 43.46,
+   "end": 43.84,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "offertes.",
+   "start": 43.84,
+   "end": 44.599,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "710",
+   "start": 45.4,
+   "end": 46.0,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "€,",
+   "start": 46.0,
+   "end": 46.6,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "ce",
+   "start": 46.85,
+   "end": 46.956,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "n'est",
+   "start": 46.956,
+   "end": 47.168,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "pas",
+   "start": 47.168,
+   "end": 47.326,
+   "seq": 5,
+   "para": 5
   },
   {
    "text": "le",
-   "start": 53.405,
-   "end": 53.53,
-   "seq": 6,
-   "para": 6
+   "start": 47.326,
+   "end": 47.432,
+   "seq": 5,
+   "para": 5
   },
   {
-   "text": "savoir-faire",
-   "start": 53.53,
-   "end": 54.222,
-   "seq": 6,
-   "para": 6
+   "text": "prix",
+   "start": 47.432,
+   "end": 47.644,
+   "seq": 5,
+   "para": 5
   },
   {
-   "text": "pour",
-   "start": 54.222,
-   "end": 54.473,
-   "seq": 6,
-   "para": 6
+   "text": "d'une",
+   "start": 47.644,
+   "end": 47.855,
+   "seq": 5,
+   "para": 5
   },
   {
-   "text": "y",
-   "start": 54.473,
-   "end": 54.536,
-   "seq": 6,
-   "para": 6
+   "text": "boîte :",
+   "start": 47.855,
+   "end": 48.12,
+   "seq": 5,
+   "para": 5
   },
   {
-   "text": "arriver.",
-   "start": 54.536,
-   "end": 54.976,
-   "seq": 6,
-   "para": 6
+   "text": "c'est",
+   "start": 48.27,
+   "end": 48.545,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "celui",
+   "start": 48.545,
+   "end": 48.888,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "d'un",
+   "start": 48.888,
+   "end": 49.094,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "travail",
+   "start": 49.094,
+   "end": 49.575,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "qui",
+   "start": 49.575,
+   "end": 49.781,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "rend",
+   "start": 49.781,
+   "end": 50.056,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "vos",
+   "start": 50.056,
+   "end": 50.262,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "données",
+   "start": 50.262,
+   "end": 50.743,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "organisées,",
+   "start": 50.743,
+   "end": 51.43,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "protégées",
+   "start": 51.6,
+   "end": 52.197,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "et",
+   "start": 52.197,
+   "end": 52.33,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "accessibles.",
+   "start": 52.33,
+   "end": 53.06,
+   "seq": 5,
+   "para": 5
   }
  ]
 }
