@@ -49,7 +49,7 @@
     "nas:voice": "python3 scripts/nas-cout/make-voice.py .kokoro",
     "nas:audio": "node scripts/nas-cout/make-audio.mjs",
     "nas:render": "remotion render NasCout out/nas-devis-pourquoi-informatique-si-cher.mp4 --codec=h264 --crf=18",
-    "stokara:voice": "python3 scripts/stokara/make-voice.py .kokoro",
+    "stokara:voice": "python3 scripts/stokara/make-voice.py .piper",
     "stokara:audio": "node scripts/stokara/make-audio.mjs",
     "stokara:render": "remotion render StokaraTuto out/stokara-tutoriel-guide-complet.mp4 --codec=h264 --crf=20"
   },

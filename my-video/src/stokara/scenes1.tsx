@@ -3,7 +3,7 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { IconName } from "./icons";
 import { timing } from "./timing";
-import { Card, CurKey, FONT, Icon, K, Keys, Logo, P, Pop, R, Rect, Screen, SpotDef, Stage, Tip, U, clamp, grow, usePop } from "./ui";
+import { Card, CurKey, FONT, Icon, K, Keys, Logo, P, Pop, QylineBadge, R, Rect, Screen, SpotDef, Stage, Tip, U, clamp, grow, usePop } from "./ui";
 
 // En-tête de l'application (boutons du bandeau, capture 1600 × 860)
 const HD = { files: [958, 20, 100, 36] as Rect, msg: [1064, 20, 126, 36] as Rect, notif: [1196, 20, 133, 36] as Rect, user: [1335, 20, 145, 36] as Rect };
@@ -59,6 +59,7 @@ export const Opening: React.FC = () => {
   const drop = usePop(4, 9, 120);
   const title = usePop(22);
   const sub = usePop(36);
+  const credit = usePop(52);
   const bounce = Math.abs(Math.sin(Math.min(f, 40) / 8)) * Math.max(0, 1 - f / 40) * 40;
   return (
     <Stage>
@@ -70,6 +71,7 @@ export const Opening: React.FC = () => {
         <div style={{ fontFamily: FONT, fontSize: 36, color: K.ink2, opacity: sub, transform: `translateY(${(1 - sub) * 20}px)` }}>
           Le guide complet · <span style={{ color: K.orange2, fontWeight: 600 }}>tutoriel pas à pas</span>
         </div>
+        <QylineBadge style={{ marginTop: 34, opacity: credit, transform: `translateY(${(1 - credit) * 20}px)` }} />
       </AbsoluteFill>
     </Stage>
   );
@@ -99,8 +101,11 @@ export const S1: React.FC = () => {
         <div style={{ fontFamily: FONT, fontSize: 100, fontWeight: 700, color: K.ink, letterSpacing: 14 }}>STOKARA</div>
       </div>
       {f < p1 && (
-        <div style={{ position: "absolute", top: 500, width: "100%", textAlign: "center", fontFamily: FONT, fontSize: 36, color: K.ink2 }}>
-          Le guide complet · <span style={{ color: K.orange2, fontWeight: 600 }}>tutoriel pas à pas</span>
+        <div style={{ position: "absolute", top: 500, width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 30, fontFamily: FONT, fontSize: 36, color: K.ink2, opacity: interpolate(f, [p1 - 8, p1], [1, 0], clamp) }}>
+          <div>
+            Le guide complet · <span style={{ color: K.orange2, fontWeight: 600 }}>tutoriel pas à pas</span>
+          </div>
+          <QylineBadge style={{ transform: `scale(${f >= T("développé") ? 1 + 0.08 * Math.sin(Math.min(1, (f - T("développé")) / 12) * Math.PI) : 1})` }} />
         </div>
       )}
       {/* trois piliers */}

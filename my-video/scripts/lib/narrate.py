@@ -2,7 +2,7 @@
 
 Le texte (narration.txt) est découpé en séquences « ## Sn » ; une ligne = un paragraphe ;
 [PAUSE n] = silence de n secondes ; {affiché|prononcé} et /…/ comme dans voice.py.
-Chaque phrase est synthétisée (Kokoro, voix ff_siwis) puis placée à la suite, avec un carton
+Chaque phrase est synthétisée (Kokoro, ou Piper avec piper_synth) puis placée à la suite, avec un carton
 silencieux optionnel au début des séquences 2 et suivantes et une respiration entre phrases
 et paragraphes. Le minutage obtenu pilote l'animation (module TypeScript généré).
 """
@@ -17,13 +17,8 @@ from kokoro_onnx import Kokoro
 from voice import SR, VOICE, parse, trim, word_times
 
 
-def build(models, narration, out_dir, ts_path, generator, speed, card, lead_in, sentence_gap, paragraph_gap):
-    """Écrit voice.wav et voice.json (out_dir) et le module TS ; renvoie la durée en secondes.
-
-    card : silence (s) au début des séquences 2 et suivantes, ou dict {nom de séquence: s}
-    pour ne réserver un carton qu'à certaines séquences (chapitres).
-    """
-    card_for = (lambda name: card.get(name, 0)) if isinstance(card, dict) else (lambda name: card)
+def kokoro_synth(models, speed):
+    """Synthèse Kokoro (voix ff_siwis) ; /…/ = phonèmes imposés. Renvoie une fonction texte -> audio 24 kHz."""
     models = Path(models)
     kokoro = Kokoro(str(models / "kokoro-v1.0.onnx"), str(models / "voices-v1.0.bin"))
 
@@ -43,6 +38,50 @@ def build(models, narration, out_dir, ts_path, generator, speed, card, lead_in, 
         samples, sr = kokoro.create(to_phonemes(text), voice=VOICE, speed=speed, lang="fr-fr", is_phonemes=True)
         assert sr == SR
         return trim(np.asarray(samples, dtype=np.float32))
+
+    return synth
+
+
+def piper_synth(model, config, speaker=None, length_scale=1.0):
+    """Synthèse Piper (voix VITS, espeak-ng) ; /…/ = phonèmes imposés. Renvoie une fonction texte -> audio 24 kHz."""
+    from math import gcd
+
+    from piper import PiperVoice
+    from piper.config import SynthesisConfig
+    from scipy.signal import resample_poly
+
+    v = PiperVoice.load(model, config)
+    cfg = SynthesisConfig(speaker_id=speaker, length_scale=length_scale)
+    sr = v.config.sample_rate
+    g = gcd(SR, sr)
+
+    def synth(text):
+        phon = []
+        for i, part in enumerate(re.split(r"/([^/]+)/", text)):
+            if i % 2:
+                phon += list(part)
+            elif part.strip():
+                for sentence in v.phonemize(part):
+                    phon += sentence + [" "]
+        while phon and phon[-1] == " ":
+            phon.pop()
+        a = np.asarray(v.phoneme_ids_to_audio(v.phonemes_to_ids(phon), cfg), dtype=np.float32)
+        if np.abs(a).max() > 1.5:
+            a = a / 32768.0
+        return trim(resample_poly(a, SR // g, sr // g).astype(np.float32))
+
+    return synth
+
+
+def build(models, narration, out_dir, ts_path, generator, speed, card, lead_in, sentence_gap, paragraph_gap, synth=None):
+    """Écrit voice.wav et voice.json (out_dir) et le module TS ; renvoie la durée en secondes.
+
+    card : silence (s) au début des séquences 2 et suivantes, ou dict {nom de séquence: s}
+    pour ne réserver un carton qu'à certaines séquences (chapitres).
+    """
+    card_for = (lambda name: card.get(name, 0)) if isinstance(card, dict) else (lambda name: card)
+    if synth is None:
+        synth = kokoro_synth(models, speed)
 
     # ------------------------------------------------------------------ lecture du texte
     text = Path(narration).read_text(encoding="utf-8")

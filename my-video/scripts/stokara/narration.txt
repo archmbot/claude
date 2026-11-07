@@ -1,7 +1,7 @@
-# Voix off du tutoriel « Stokara : le guide complet » (≈ 12 min).
+# Voix off du tutoriel « Stokara : le guide complet » (≈ 12 min), développé par QYLINE.
 # ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
 ## S1
-Bienvenue dans ce tutoriel consacré à Stokara.
+Bienvenue dans ce tutoriel consacré à Stokara, le logiciel développé par {QYLINE.|/kajlˈajn/.}
 Stokara, c'est l'espace de travail de votre entreprise : vos fichiers, vos dossiers partagés et votre messagerie, au même endroit. Il fonctionne sur votre propre serveur, au bureau : vos données restent chez vous.
 On l'utilise depuis un simple navigateur, au bureau comme à distance. Et le même dossier s'ouvre aussi directement dans l'Explorateur {Windows|/wˈindoz/}.
 Dans cette vidéo, nous allons voir pas à pas : la connexion, l'explorateur de fichiers, le partage, la messagerie, votre compte, l'ajout de Stokara dans {Windows|/wˈindoz/}, et enfin l'administration.
@@ -87,10 +87,14 @@ Vous y activez aussi la copie {RAID|/ʁˈɛd/} : toutes les dix minutes, Stokara
 Dans Serveur, vous voyez l'état d'Apache et de {MySQL,|/maj ɛs ky ˈɛl/,} les tâches planifiées, et vous réglez l'adresse publique : celle qui permet d'accéder à Stokara depuis Internet.
 Le Journal garde la trace de chaque action : connexions, imports, suppressions, partages. Et les Paramètres règlent la durée des sessions, le verrouillage après plusieurs échecs, la durée de la corbeille, ou le nom du site.
 ## S17
-Côté serveur, Stokara s'installe sur {Windows|/wˈindoz/} Server, ou sur un PC {Windows|/wˈindoz/} dix ou onze, avec {XAMPP.|/ksˈamp/.}
+Côté serveur, Stokara s'installe sur {Windows|/wˈindoz/} {Server,|/sˈœʁvœʁ/,} ou sur un PC {Windows|/wˈindoz/} dix ou onze, avec {XAMPP.|/ksˈamp/.}
 Un double-clic sur le fichier Installer sur le serveur suffit : il configure Apache, {MySQL,|/maj ɛs ky ˈɛl/,} la base de données, le pare-feu et les tâches planifiées.
 Ensuite, le Panneau du serveur permet de démarrer ou d'arrêter les services, de régler le domaine et le certificat {HTTPS,|HTTPS,} le {RAID|/ʁˈɛd/} et les tâches, de lire les journaux, et de lancer une sauvegarde.
 ## S18
 Vous savez maintenant utiliser Stokara : vous connecter, ranger et retrouver vos fichiers, les partager, échanger avec vos collègues, et ouvrir vos dossiers directement dans {Windows.|/wˈindoz/.}
-Et tout cela fonctionne aussi sur téléphone. Vos fichiers, vos dossiers partagés et votre messagerie, au même endroit. Merci d'avoir suivi ce tutoriel !
-[PAUSE 4]
+Et tout cela fonctionne aussi sur téléphone. Vos fichiers, vos dossiers partagés et votre messagerie, au même endroit.
+## S19
+Stokara est développé par la {micro-entreprise|micro entreprise} {QYLINE,|/kajlˈajn/,} de Mathias Javierre.
+Pour plus de renseignements, écrivez à {qyline40@gmail.com,|/kajlˈajn/ quarante arobase gé mail point com,} ou rendez-vous sur {qyline.org.|/kajlˈajn/ point /ˈɔʁɡ/.}
+Merci d'avoir suivi ce tutoriel !
+[PAUSE 5]

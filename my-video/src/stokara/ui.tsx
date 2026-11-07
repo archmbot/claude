@@ -89,6 +89,18 @@ export const Stage: React.FC<{ children?: React.ReactNode; spheres?: boolean }> 
   );
 };
 
+// Crédit de l'éditeur (logo QYLINE fourni par Mathias Javierre)
+export const QYLINE_GRADIENT = "linear-gradient(90deg, #6a1be8 0%, #4a3cf0 40%, #0066ff 100%)";
+export const QylineBadge: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
+  <div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "rgba(255,255,255,.85)", borderRadius: 40, padding: "8px 24px 8px 12px", boxShadow: "0 10px 26px rgba(26,35,126,.14)", ...style }}>
+    <Img src={staticFile("stokara/qyline-logo.png")} style={{ width: 46, height: 46, objectFit: "contain" }} />
+    <span style={{ fontFamily: FONT, fontSize: 26, color: K.ink2 }}>
+      Développé par{" "}
+      <b style={{ background: QYLINE_GRADIENT, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", fontWeight: 700, letterSpacing: 1 }}>QYLINE</b>
+    </span>
+  </div>
+);
+
 export const Logo: React.FC<{ size: number; style?: React.CSSProperties }> = ({ size, style }) => <Img src={staticFile("stokara/logo.png")} style={{ width: size, height: size, objectFit: "contain", ...style }} />;
 
 // ------------------------------------------------------------------ captures et géométrie

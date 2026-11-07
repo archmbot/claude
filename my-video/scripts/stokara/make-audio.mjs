@@ -42,5 +42,5 @@ for (const sq of cues.seqs.slice(1)) {
 }
 
 const music = s.mixdown({ duckDepth: 0.15, roomSize: 0.85 });
-mixWithVoice({ music, N: s.N, voicePath: "public/stokara/voice.wav", out: "public/stokara/audio.wav", musicGain: 0.26, duck: 0.6, levelIn: 1.17, limit: 0.84, fadeOut: 2.0 });
+mixWithVoice({ music, N: s.N, voicePath: "public/stokara/voice.wav", out: "public/stokara/audio.wav", musicGain: 0.26, duck: 0.6, levelIn: 1.55, limit: 0.84, fadeOut: 2.0 });
 console.log(`Écrit public/stokara/audio.wav (${DURATION}s)`);

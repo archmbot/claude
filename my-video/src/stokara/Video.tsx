@@ -1,4 +1,5 @@
-// Tutoriel « Stokara : le guide complet » — 1920 × 1080, ≈ 12 min, voix off française, sous-titres.
+// Tutoriel « Stokara : le guide complet » — 1920 × 1080, ≈ 13 min, voix off française, sous-titres.
+// Stokara est développé par QYLINE (micro-entreprise de Mathias Javierre).
 // Écrans réels de Stokara (copie de démonstration, données fictives) et reconstitution de Windows 11
 // pour l'ajout de Stokara comme emplacement réseau (WebDAV).
 import React, { useMemo } from "react";
@@ -6,12 +7,12 @@ import { AbsoluteFill, Html5Audio, Sequence, interpolate, spring, staticFile, us
 import { buildChunks } from "../components/Subtitles";
 import { IconName } from "./icons";
 import { Opening, S1, S10, S2, S3, S4, S5, S6, S7, S8, S9 } from "./scenes1";
-import { S11, S12, S13, S14, S15, S16, S17, S18 } from "./scenes2";
+import { S11, S12, S13, S14, S15, S16, S17, S18, S19 } from "./scenes2";
 import { DURATION, SEQS } from "./timing";
 import { ChapterCard, FONT, K, Stage, clamp, useStkFonts } from "./ui";
 import { VOICE } from "./voice";
 
-const SCENES = [S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18];
+const SCENES = [S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19];
 const CHAPTERS: Record<string, { n: number; title: string; sub: string; icon: IconName }> = {
   S2: { n: 1, title: "Se connecter", sub: "Connexion, mot de passe oublié, première connexion", icon: "box-arrow-in-right" },
   S3: { n: 2, title: "L'explorateur de fichiers", sub: "Naviguer, importer, organiser, retrouver", icon: "folder2-open" },

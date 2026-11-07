@@ -122,7 +122,7 @@ npm run nas:render    # export MP4 -> out/nas-devis-pourquoi-informatique-si-che
 Les deux vidéos « formation » partagent `scripts/lib/narrate.py` (voix phrase par phrase) et
 `src/components/voiceTiming.ts` (repères `T("expression")` calés sur la voix).
 
-## Tutoriel « Stokara : le guide complet » (≈ 11 min 45 s, 1920 × 1080)
+## Tutoriel « Stokara : le guide complet » (≈ 13 min 15 s, 1920 × 1080)
 
 Composition `StokaraTuto` (25 i/s), dans la charte de Stokara (Poppins, bleu `#3949ab` / orange `#f9871a`,
 fond à sphères de la page de connexion, icônes Bootstrap Icons) :
@@ -134,9 +134,14 @@ fond à sphères de la page de connexion, icônes Bootstrap Icons) :
   donne la position des éléments pointés (curseur, encadrés, zooms).
 - `src/stokara/windows.tsx` : reconstitution simplifiée de l'Explorateur Windows 11 et de l'assistant.
 - `scripts/stokara/narration.txt` : texte de la voix off ; chaque animation est calée sur un mot (`T("…")`).
+- Voix : Piper « tom » (française, masculine, posée), modèle `fr_FR-tom-medium` dans `.piper/`
+  (https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-fr_FR-tom-medium.tar.bz2) ;
+  `pip install piper-tts scipy soundfile`.
+- Fin : crédit « Développé par la micro-entreprise QYLINE de Mathias Javierre », qyline40@gmail.com,
+  https://qyline.org (logo `public/stokara/qyline-logo.png`).
 
 ```console
-npm run stokara:voice    # voix off Kokoro + minutage -> public/stokara/voice.*, src/stokara/voice.ts
+npm run stokara:voice    # voix off Piper (tom) + minutage -> public/stokara/voice.*, src/stokara/voice.ts
 npm run stokara:audio    # musique douce + transitions, -16 LUFS -> public/stokara/audio.wav
 npm run stokara:render   # export MP4 -> out/stokara-tutoriel-guide-complet.mp4
 ```

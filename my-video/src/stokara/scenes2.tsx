@@ -4,7 +4,7 @@ import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "rem
 import { IconName } from "./icons";
 import { PhoneShot } from "./scenes1";
 import { timing } from "./timing";
-import { Card, Cursor, CurKey, FONT, Icon, K, Keys, Logo, P, Pop, R, Rect, Screen, SpotDef, Spots, Stage, U, clamp, grow, usePop } from "./ui";
+import { Card, Cursor, CurKey, FONT, Icon, K, Keys, Logo, P, Pop, QYLINE_GRADIENT, R, Rect, Screen, SpotDef, Spots, Stage, U, clamp, grow, usePop } from "./ui";
 import { CR, CRP, ContextMenu, Credentials, Desktop, EX, EXP, Explorer, ExplorerState, MENU_ITEM_Y, Sheet, WZ, WZP, Wizard } from "./windows";
 
 const ch = (n: number, t: string) => `${n} · ${t}`;
@@ -735,11 +735,56 @@ export const S18: React.FC = () => {
           <Logo size={190} style={{ filter: "drop-shadow(0 30px 40px rgba(26,35,126,.35))" }} />
           <div style={{ fontFamily: FONT, fontSize: 96, fontWeight: 700, color: K.ink, letterSpacing: 14, marginTop: 16 }}>STOKARA</div>
           <div style={{ fontFamily: FONT, fontSize: 34, color: K.ink2, marginTop: 6 }}>Vos fichiers, vos dossiers partagés et votre messagerie, au même endroit.</div>
-          <Pop at={T("Merci")}>
-            <div style={{ fontFamily: FONT, fontSize: 40, fontWeight: 600, color: K.orange2, marginTop: 40 }}>Merci d'avoir suivi ce tutoriel !</div>
-          </Pop>
         </AbsoluteFill>
       )}
+    </Stage>
+  );
+};
+
+// ===================================================================== S19 — Crédits : développé par QYLINE
+const Contact: React.FC<{ at: number; icon: IconName; label: string; value: string }> = ({ at, icon, label, value }) => (
+  <Pop at={at}>
+    <Card style={{ width: 620, display: "flex", alignItems: "center", gap: 24, padding: "22px 30px" }}>
+      <div style={{ width: 74, height: 74, borderRadius: 22, background: QYLINE_GRADIENT, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+        <Icon name={icon} size={38} color="#fff" />
+      </div>
+      <div style={{ fontFamily: FONT }}>
+        <div style={{ fontSize: 22, color: K.ink3 }}>{label}</div>
+        <div style={{ fontSize: 36, fontWeight: 700, color: K.ink }}>{value}</div>
+      </div>
+    </Card>
+  </Pop>
+);
+export const S19: React.FC = () => {
+  const f = useCurrentFrame();
+  const { T, PS } = timing(18);
+  const logo = usePop(4, 12, 110);
+  const merci = PS(2);
+  const lift = interpolate(f, [merci - 6, merci + 10], [0, 1], { ...clamp, easing: (x) => x * x * (3 - 2 * x) });
+  return (
+    <Stage>
+      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 150 + 40 * lift }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 44, transform: `scale(${0.9 + 0.1 * logo})`, opacity: logo }}>
+          <Img src={staticFile("stokara/qyline-logo.png")} style={{ width: 250, height: 228, objectFit: "contain", filter: "drop-shadow(0 24px 34px rgba(74,60,240,.3))" }} />
+          <div style={{ fontFamily: FONT }}>
+            <div style={{ fontSize: 30, color: K.ink2 }}>Stokara est développé par</div>
+            <div style={{ fontSize: 120, fontWeight: 700, lineHeight: 1.05, letterSpacing: 6, background: QYLINE_GRADIENT, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>QYLINE</div>
+            <Pop at={T("micro-entreprise")}>
+              <div style={{ fontSize: 32, color: K.ink }}>
+                Micro-entreprise de <b>Mathias Javierre</b>
+              </div>
+            </Pop>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 34, marginTop: 56 }}>
+          <Contact at={T("écrivez")} icon="envelope-fill" label="Pour plus de renseignements" value="qyline40@gmail.com" />
+          <Contact at={T("ou rendez-vous")} icon="globe2" label="Site web" value="https://qyline.org" />
+        </div>
+        <Pop at={merci} style={{ marginTop: 56, display: "flex", alignItems: "center", gap: 18 }}>
+          <Logo size={64} />
+          <div style={{ fontFamily: FONT, fontSize: 44, fontWeight: 600, color: K.orange2 }}>Merci d'avoir suivi ce tutoriel !</div>
+        </Pop>
+      </AbsoluteFill>
     </Stage>
   );
 };
