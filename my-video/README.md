@@ -122,6 +122,25 @@ npm run nas:render    # export MP4 -> out/nas-devis-pourquoi-informatique-si-che
 Les deux vidéos « formation » partagent `scripts/lib/narrate.py` (voix phrase par phrase) et
 `src/components/voiceTiming.ts` (repères `T("expression")` calés sur la voix).
 
+## Tutoriel « Stokara : le guide complet » (≈ 11 min 45 s, 1920 × 1080)
+
+Composition `StokaraTuto` (25 i/s), dans la charte de Stokara (Poppins, bleu `#3949ab` / orange `#f9871a`,
+fond à sphères de la page de connexion, icônes Bootstrap Icons) :
+
+- 8 chapitres : connexion, explorateur de fichiers, partage, messagerie, mon compte, **Stokara dans Windows**
+  (*Ce PC → Ajouter un emplacement réseau*, adresse `…/dav/`), administration, côté serveur.
+- `public/stokara/caps/` : écrans réels de Stokara, capturés sur une copie de démonstration isolée
+  (données, comptes et adresses fictifs : « Cabinet Horizon », `stokara.exemple.fr`). `src/stokara/shots.json`
+  donne la position des éléments pointés (curseur, encadrés, zooms).
+- `src/stokara/windows.tsx` : reconstitution simplifiée de l'Explorateur Windows 11 et de l'assistant.
+- `scripts/stokara/narration.txt` : texte de la voix off ; chaque animation est calée sur un mot (`T("…")`).
+
+```console
+npm run stokara:voice    # voix off Kokoro + minutage -> public/stokara/voice.*, src/stokara/voice.ts
+npm run stokara:audio    # musique douce + transitions, -16 LUFS -> public/stokara/audio.wav
+npm run stokara:render   # export MP4 -> out/stokara-tutoriel-guide-complet.mp4
+```
+
 ## Docs
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

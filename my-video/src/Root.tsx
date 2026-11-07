@@ -6,6 +6,8 @@ import { DURATION as BU15_DURATION, FPS as BU15_FPS, HEIGHT as BU15_HEIGHT, WIDT
 import { QylineChoix } from "./Composition";
 import { Reseau11 } from "./reseau/Video";
 import { NasCout } from "./nas/Video";
+import { StokaraTuto } from "./stokara/Video";
+import { DURATION as STK_DURATION, FPS as STK_FPS, HEIGHT as STK_HEIGHT, WIDTH as STK_WIDTH } from "./stokara/timing";
 import { DURATION as NAS_DURATION, FPS as NAS_FPS, HEIGHT as NAS_HEIGHT, WIDTH as NAS_WIDTH } from "./nas/timing";
 import { DURATION as NET_DURATION, FPS as NET_FPS, HEIGHT as NET_HEIGHT, WIDTH as NET_WIDTH } from "./reseau/timing";
 import { DURATION as CHOIX_DURATION, FPS as CHOIX_FPS, HEIGHT as CHOIX_HEIGHT, WIDTH as CHOIX_WIDTH } from "./timeline";
@@ -25,6 +27,15 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="StokaraTuto"
+        component={StokaraTuto}
+        durationInFrames={STK_DURATION}
+        fps={STK_FPS}
+        width={STK_WIDTH}
+        height={STK_HEIGHT}
+        defaultProps={{ subtitles: true }}
+      />
       <Composition
         id="NasCout"
         component={NasCout}

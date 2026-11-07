@@ -27,7 +27,7 @@ const keyIndexes = (words: CaptionWord[], phrases: string[]) => {
 };
 
 // Morceaux courts (par défaut au plus 4 mots / 22 caractères), coupés à la ponctuation
-const buildChunks = (words: CaptionWord[], maxWords: number, maxChars: number) => {
+export const buildChunks = (words: CaptionWord[], maxWords: number, maxChars: number) => {
   const out: Chunk[] = [];
   let cur: IndexedWord[] = [];
   const flush = () => {

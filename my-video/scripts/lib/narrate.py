@@ -18,7 +18,12 @@ from voice import SR, VOICE, parse, trim, word_times
 
 
 def build(models, narration, out_dir, ts_path, generator, speed, card, lead_in, sentence_gap, paragraph_gap):
-    """Écrit voice.wav et voice.json (out_dir) et le module TS ; renvoie la durée en secondes."""
+    """Écrit voice.wav et voice.json (out_dir) et le module TS ; renvoie la durée en secondes.
+
+    card : silence (s) au début des séquences 2 et suivantes, ou dict {nom de séquence: s}
+    pour ne réserver un carton qu'à certaines séquences (chapitres).
+    """
+    card_for = (lambda name: card.get(name, 0)) if isinstance(card, dict) else (lambda name: card)
     models = Path(models)
     kokoro = Kokoro(str(models / "kokoro-v1.0.onnx"), str(models / "voices-v1.0.bin"))
 
@@ -65,8 +70,8 @@ def build(models, narration, out_dir, ts_path, generator, speed, card, lead_in, 
     silence(lead_in)
     for si, (name, items) in enumerate(seqs):
         start = t
-        if si > 0 and card:
-            silence(card)
+        if si > 0 and card_for(name):
+            silence(card_for(name))
         card_end = t
         for k, (kind, value) in enumerate(items):
             if kind == "pause":

@@ -1,0 +1,96 @@
+# Voix off du tutoriel « Stokara : le guide complet » (≈ 12 min).
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Bienvenue dans ce tutoriel consacré à Stokara.
+Stokara, c'est l'espace de travail de votre entreprise : vos fichiers, vos dossiers partagés et votre messagerie, au même endroit. Il fonctionne sur votre propre serveur, au bureau : vos données restent chez vous.
+On l'utilise depuis un simple navigateur, au bureau comme à distance. Et le même dossier s'ouvre aussi directement dans l'Explorateur {Windows|/wˈindoz/}.
+Dans cette vidéo, nous allons voir pas à pas : la connexion, l'explorateur de fichiers, le partage, la messagerie, votre compte, l'ajout de Stokara dans {Windows|/wˈindoz/}, et enfin l'administration.
+## S2
+Tout commence par la page de connexion. Saisissez votre nom d'utilisateur, puis votre mot de passe. L'icône en forme d'œil permet de vérifier ce que vous tapez.
+La case « Rester connecté trente jours » vous évite de ressaisir votre mot de passe sur cet appareil. Évitez-la sur un ordinateur partagé. Cliquez ensuite sur Se connecter.
+En cas d'erreur, Stokara indique le nombre d'essais restants. Par sécurité, après cinq essais ratés, le compte est bloqué quelques minutes.
+Mot de passe oublié ? Cliquez sur le lien, puis indiquez votre nom d'utilisateur. Si votre compte a une adresse {e-mail|/imˈɛl/}, vous recevez un lien valable une heure. Sinon, c'est l'administrateur qui est prévenu.
+Enfin, lors de votre toute première connexion, Stokara vous demande de choisir votre propre mot de passe, de huit caractères minimum.
+## S3
+Une fois connecté, vous arrivez dans l'explorateur de fichiers. En haut, le bandeau donne accès aux Fichiers, à la Messagerie et aux Notifications.
+À gauche se trouvent les vues : tous les fichiers, partagés avec moi, favoris, récents, mes liens de partage, et la corbeille. En dessous, l'arborescence des dossiers, puis l'espace disque disponible.
+Au centre, le contenu du dossier ouvert. Chacun ne voit que les dossiers que l'administrateur lui a ouverts : ici, Karim voit les clients, les documents communs et les photos de chantier, mais pas la comptabilité.
+## S4
+Stokara fonctionne comme l'Explorateur {Windows|/wˈindoz/} : un clic sélectionne, un double-clic ouvre. Le fil d'Ariane, en haut, permet de remonter d'un niveau.
+Avec la touche Contrôle, ou en traçant un cadre à la souris, vous sélectionnez plusieurs éléments. La barre d'actions affiche alors ce que vous pouvez en faire.
+Ces deux boutons basculent entre l'affichage en mosaïque et l'affichage en liste. Et le bouton Trier classe par nom, par date, par taille ou par type.
+## S5
+Pour ajouter des documents, cliquez sur Nouveau. Vous pouvez créer un dossier, importer des fichiers, ou importer un dossier entier.
+Plus simple encore : glissez-déposez vos fichiers depuis votre ordinateur, directement dans la fenêtre. Un panneau suit l'avancement de chaque fichier. Les gros fichiers sont envoyés par morceaux, et l'envoi reprend tout seul en cas de coupure.
+Si un fichier du même nom existe déjà, Stokara vous laisse le choix : ignorer, garder les deux, ou remplacer. L'ancienne version part alors dans la corbeille.
+## S6
+Le clic droit ouvre toutes les actions : aperçu, télécharger, envoyer par {e-mail|/imˈɛl/}, créer un lien de partage, renommer, déplacer, copier, ou ajouter aux favoris.
+Les raccourcis habituels marchent aussi : {F2|F deux} pour renommer, Contrôle C et Contrôle V pour copier et coller, et la touche Suppr pour supprimer.
+Pour déplacer un document, choisissez simplement le dossier de destination.
+Un élément supprimé part dans la corbeille. Vous pouvez annuler tout de suite, et il reste récupérable pendant trente jours : un clic sur Restaurer le remet à sa place.
+## S7
+Pour retrouver un document, utilisez la recherche, ou le raccourci {Ctrl+F|contrôle F}. Cherchez dans le dossier ouvert ou partout, puis filtrez par type : {PDF,|PDF,} images, {Word,|/wˈœʁd/,} Excel, et ainsi de suite.
+Un double-clic sur un fichier ouvre l'aperçu, sans rien télécharger. Les flèches passent au fichier suivant.
+Stokara affiche les {PDF,|PDF,} les images, les vidéos, l'audio, les textes et les tableaux.
+Les documents {Word|/wˈœʁd/} ou Excel s'ouvrent, eux, dans vos logiciels habituels : téléchargez-les, ou ouvrez-les depuis le lecteur réseau, que nous verrons plus loin.
+Enfin, le panneau Détails affiche les informations du fichier, qui y a accès, et son historique. Vous pouvez même y laisser une note, visible par toute l'équipe.
+## S8
+Pour transmettre un fichier à quelqu'un qui n'a pas de compte, faites un clic droit, puis Créer un lien de partage.
+Choisissez la durée de validité, ajoutez si besoin un mot de passe, et un nombre maximal de téléchargements. Cliquez sur Créer le lien : il est aussitôt copié. Envoyez-le, et communiquez le mot de passe séparément.
+Votre correspondant arrive sur une page sécurisée, aux couleurs de Stokara. Il saisit le mot de passe, voit l'aperçu, et télécharge le fichier.
+Vous pouvez aussi envoyer vos fichiers par {e-mail|/imˈɛl/} directement depuis Stokara : à un collègue, à un groupe, ou à n'importe quelle adresse.
+Le lien sécurisé est recommandé : il fonctionne quelle que soit la taille. La pièce jointe, elle, est limitée à vingt mégaoctets.
+Tous vos liens se retrouvent dans Mes liens de partage. Vous y voyez leur date d'expiration et le nombre de téléchargements, et vous pouvez les supprimer à tout moment.
+## S9
+La messagerie permet d'échanger entre collègues sans quitter Stokara. Choisissez une conversation, écrivez votre message, puis appuyez sur Entrée.
+Le trombone joint un fichier depuis votre ordinateur, ou directement un document de Stokara.
+Une pièce jointe reçue se range dans un dossier en un clic, sans passer par vos téléchargements.
+Pour démarrer une discussion, cliquez sur Nouveau, et choisissez un collègue ou un groupe entier. Si votre collègue est absent, il est prévenu par {e-mail|/imˈɛl/}.
+La cloche regroupe vos notifications : un dossier qui vient de vous être ouvert, un fichier reçu, ou une annonce de l'administrateur.
+## S10
+Dans Mon compte, vous modifiez votre nom affiché et votre adresse {e-mail,|/imˈɛl/,} et vous choisissez d'être prévenu par {e-mail|/imˈɛl/} ou non.
+Vous pouvez aussi changer votre mot de passe.
+La liste Mes appareils connectés montre où votre compte est ouvert. Un téléphone perdu ? Un clic sur Déconnecter, et il n'a plus accès.
+## S11
+Passons maintenant à une fonction très pratique : ouvrir Stokara directement dans l'Explorateur {Windows,|/wˈindoz/,} comme un dossier de votre ordinateur.
+C'est exactement le même dossier que sur le site : ce que vous déposez d'un côté apparaît aussitôt de l'autre, avec les mêmes droits.
+Commencez par récupérer l'adresse. En bas à gauche, cliquez sur Ouvrir dans l'Explorateur {Windows,|/wˈindoz/,} puis copiez l'adresse affichée. Elle se termine toujours par {/dav/.|slash dave slash.}
+## S12
+Ouvrez maintenant l'Explorateur de fichiers, et cliquez sur Ce PC, dans la colonne de gauche.
+Faites un clic droit dans un espace vide, sous vos disques, et choisissez Ajouter un emplacement réseau.
+L'assistant s'ouvre : cliquez sur Suivant. Sélectionnez Choisissez un emplacement réseau personnalisé, puis Suivant.
+Collez l'adresse copiée dans Stokara, dans le champ Adresse Internet ou réseau, et cliquez sur Suivant.
+{Windows|/wˈindoz/} vous demande alors vos identifiants : ce sont ceux de Stokara. Saisissez votre nom d'utilisateur et votre mot de passe, cochez Mémoriser mes informations d'identification, puis cliquez sur {OK.|/okˈe/.}
+Donnez un nom à cet emplacement, par exemple Stokara, puis Suivant. Et enfin, Terminer.
+## S13
+Et voilà : Stokara apparaît dans Ce PC, sous Emplacements réseau. Double-cliquez : vous retrouvez exactement vos dossiers, avec vos droits.
+Ouvrez un document {Word|/wˈœʁd/} ou Excel, modifiez-le, enregistrez : il est aussitôt à jour sur le site, pour toute l'équipe. Et comme l'adresse est la même au bureau et à la maison, cet emplacement fonctionne partout, sans {VPN.|VPN.}
+Quelques conseils. L'adresse doit toujours se terminer par {/dav/.|slash dave slash.} Si vous changez votre mot de passe, reconnectez-vous une fois au site avant de rouvrir le lecteur.
+Par défaut, {Windows|/wˈindoz/} limite à cinquante mégaoctets les fichiers ouverts de cette façon. Votre administrateur peut lever cette limite.
+Et si vous préférez une lettre de lecteur, comme S, utilisez plutôt Connecter un lecteur réseau, avec la même adresse.
+## S14
+Voyons maintenant l'administration, réservée aux administrateurs. Le tableau de bord résume tout : comptes, fichiers, volume stocké, sessions ouvertes, état du stockage, des {e-mails|/imˈɛl/} et du serveur.
+Dans Comptes, le bouton Nouveau compte crée un utilisateur : identifiant, nom affiché, adresse {e-mail,|/imˈɛl/,} et rôle, utilisateur ou administrateur.
+Laissez le mot de passe vide pour qu'il soit généré, et gardez cochée la case qui impose de le changer à la première connexion. Vous pouvez aussi lui créer un dossier personnel, et lui envoyer ses identifiants par {e-mail.|/imˈɛl/.}
+Stokara affiche alors les identifiants à transmettre.
+Les groupes, comme Bureau ou Comptabilité, rassemblent plusieurs comptes pour leur ouvrir des dossiers en une seule fois.
+## S15
+C'est l'administrateur qui décide qui voit quoi. Ouvrez un dossier, puis cliquez sur Droits.
+Ajoutez une personne ou un groupe, et cochez ses droits : voir, modifier, supprimer, partager. Les préréglages Lecture, Modification et Complet vont plus vite.
+Les droits s'appliquent aussi aux sous-dossiers. Pour rendre un dossier confidentiel, décochez Hériter des droits du dossier parent : seules les personnes listées y ont accès. Les personnes ajoutées sont prévenues automatiquement.
+Dans l'onglet Mot de passe, vous pouvez en plus protéger un dossier sensible, avec un indice.
+Et la page Droits des dossiers donne une vue d'ensemble de tous les accès.
+## S16
+Les Annonces affichent un message à toute l'équipe : en haut des pages, dans les notifications, et même sur la page de connexion.
+Dans Stockage, vous choisissez le disque et le dossier où sont rangés les fichiers, la corbeille et les données internes.
+Vous y activez aussi la copie {RAID|/ʁˈɛd/} : toutes les dix minutes, Stokara recopie vos fichiers sur un second disque. Si un disque tombe en panne, vos documents sont sur l'autre.
+Dans Serveur, vous voyez l'état d'Apache et de {MySQL,|/maj ɛs ky ˈɛl/,} les tâches planifiées, et vous réglez l'adresse publique : celle qui permet d'accéder à Stokara depuis Internet.
+Le Journal garde la trace de chaque action : connexions, imports, suppressions, partages. Et les Paramètres règlent la durée des sessions, le verrouillage après plusieurs échecs, la durée de la corbeille, ou le nom du site.
+## S17
+Côté serveur, Stokara s'installe sur {Windows|/wˈindoz/} Server, ou sur un PC {Windows|/wˈindoz/} dix ou onze, avec {XAMPP.|/ksˈamp/.}
+Un double-clic sur le fichier Installer sur le serveur suffit : il configure Apache, {MySQL,|/maj ɛs ky ˈɛl/,} la base de données, le pare-feu et les tâches planifiées.
+Ensuite, le Panneau du serveur permet de démarrer ou d'arrêter les services, de régler le domaine et le certificat {HTTPS,|HTTPS,} le {RAID|/ʁˈɛd/} et les tâches, de lire les journaux, et de lancer une sauvegarde.
+## S18
+Vous savez maintenant utiliser Stokara : vous connecter, ranger et retrouver vos fichiers, les partager, échanger avec vos collègues, et ouvrir vos dossiers directement dans {Windows.|/wˈindoz/.}
+Et tout cela fonctionne aussi sur téléphone. Vos fichiers, vos dossiers partagés et votre messagerie, au même endroit. Merci d'avoir suivi ce tutoriel !
+[PAUSE 4]
