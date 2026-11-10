@@ -1,6 +1,7 @@
-// Musique entraînante + bruitages d'interface, mixés sous la voix off de la publicité Stokara (30 s).
-// Entièrement synthétisé (aucun échantillon externe). Les bruitages suivent les repères de
-// src/stokara-pub/events.json, exactement comme l'animation.
+// Musique électro-pop énergique (124 BPM) + bruitages d'interface, mixés sous la voix off de la
+// publicité Stokara (30 s). Entièrement synthétisé (aucun échantillon externe). Les bruitages suivent
+// les repères de src/stokara-pub/events.json, exactement comme l'animation ; la grosse caisse tombe
+// sur les mêmes temps que les pulsations de l'image (BPM de src/stokara-pub/kit.tsx).
 // Nécessite d'avoir lancé make-voice.py. Usage : node scripts/stokara-pub/make-audio.mjs
 import { readFileSync } from "node:fs";
 import { mixWithVoice } from "../lib/mix.mjs";
@@ -8,7 +9,9 @@ import { createSynth, mtof, svf } from "../lib/synth.mjs";
 
 const FPS = 30;
 const DURATION = 30;
-const BEAT = 60 / 116; // 116 BPM
+const BPM = 124;
+const BEAT = 60 / BPM;
+const BAR = BEAT * 4;
 
 // ------------------------------------------------------------- repères (même calcul que src/components/voiceTiming.ts)
 const VOICE = JSON.parse(readFileSync("public/stokara-pub/voice.json", "utf8"));
@@ -43,15 +46,15 @@ const F = (frames) => frames / FPS;
 
 // ------------------------------------------------------------- synthé
 const s = createSynth({ duration: DURATION, seed: 3020 });
-const { place, noise, fx, kick, hat, clap, crash, bass, pad, pluck, whoosh, riser, impact, pop } = s;
+const { place, noise, fx, music, kick, hat, clap, snare, crash, bass, pad, pluck, whoosh, riser, impact, pop } = s;
 
 const click = (time, gain = 1) => {
   const f = svf(3800, 1.2);
   place(fx, time, 0.05, (t) => (f.run(noise()), f.bp * 1.6 + Math.sin(2 * Math.PI * 2100 * t) * 0.5) * Math.exp(-t * 140), { gain: gain * 0.5, rev: 0.05 });
 };
-const success = (time, gain = 1) => [76, 79, 84, 88].forEach((m, i) => pluck(time + i * 0.06, m, gain * 0.16, i % 2 ? 0.3 : -0.3));
+const success = (time, gain = 1) => [76, 79, 84, 88].forEach((m, i) => pluck(time + i * 0.055, m, gain * 0.17, i % 2 ? 0.3 : -0.3));
 const chime = (time, gain = 1, high = 86) =>
-  [0, 0.09].forEach((d, i) => {
+  [0, 0.08].forEach((d, i) => {
     const f0 = mtof(high + (i ? 7 : 0));
     place(fx, time + d, 0.5, (t) => (Math.sin(2 * Math.PI * f0 * t) + 0.25 * Math.sin(4 * Math.PI * f0 * t)) * Math.exp(-t * 9) * Math.min(1, t * 400), { gain: gain * 0.26, rev: 0.25 });
   });
@@ -60,90 +63,153 @@ const tick = (time, gain = 1) => {
   place(fx, time, 0.025, () => (f.run(noise()), f.bp) * 1.0, { gain: gain * 0.18, pan: 0.2 });
 };
 const thud = (time, gain = 1) => place(fx, time, 0.5, (t) => Math.sin(2 * Math.PI * (70 - 30 * t) * t) * Math.exp(-t * 7), { gain: gain * 0.7 });
-
-// Accords : D, A, Bm, G (pop lumineuse), mesures de 4 temps
-const CH = {
-  D: { pad: [62, 66, 69], root: 38, arp: [74, 78, 81, 86] },
-  A: { pad: [61, 64, 69], root: 45, arp: [73, 76, 81, 85] },
-  Bm: { pad: [62, 66, 71], root: 47, arp: [74, 78, 83, 86] },
-  G: { pad: [62, 67, 71], root: 43, arp: [74, 79, 83, 86] },
+// lead « supersaw » court (accroches mélodiques)
+const lead = (time, midi, dur, gain = 1, pan = 0) => {
+  const f0 = mtof(midi);
+  const lp = svf(2600, 0.9);
+  const ph = [0, 0.13, 0.41, 0.67, 0.89];
+  const det = [-0.012, -0.005, 0, 0.006, 0.013];
+  place(
+    music,
+    time,
+    dur + 0.15,
+    (t) => {
+      let x = 0;
+      for (let k = 0; k < 5; k++) {
+        ph[k] = (ph[k] + (f0 * (1 + det[k])) / 48000) % 1;
+        x += 2 * ph[k] - 1;
+      }
+      lp.set(1400 + 3200 * Math.exp(-t * 6));
+      lp.run(x / 5);
+      const env = Math.min(1, t * 200) * (t < dur ? 1 : Math.max(0, 1 - (t - dur) / 0.15));
+      return lp.lp * env;
+    },
+    { gain, pan, rev: 0.25 },
+  );
 };
-const PROG = ["D", "A", "Bm", "G"];
-const BAR = BEAT * 4;
-const section = (from, to, { kicks = true, claps = true, arp = true, hats = true, bassOn = true, level = 1, padLevel = 1 } = {}) => {
-  let bar = Math.round(from / BAR);
+
+// Accords : Bm, G, D, A (pop énergique), une mesure chacun
+const CH = {
+  Bm: { pad: [59, 62, 66], root: 35, arp: [71, 74, 78, 83] },
+  G: { pad: [59, 62, 67], root: 31, arp: [71, 74, 79, 83] },
+  D: { pad: [57, 62, 66], root: 38, arp: [69, 74, 78, 81] },
+  A: { pad: [57, 61, 64], root: 33, arp: [69, 73, 76, 81] },
+};
+const PROG = ["Bm", "G", "D", "A"];
+// Mélodie d'accroche (une note par croche), rejouée toutes les 2 mesures
+const HOOK = [83, null, 81, 78, null, 78, 81, null, 83, null, 86, 83, null, 81, 78, null];
+const section = (from, to, { kicks = true, claps = true, arp = true, hats = true, bassOn = true, leadOn = false, level = 1, padLevel = 1 } = {}) => {
+  let bar = 0;
   for (let t0 = from; t0 < to - 0.01; t0 += BAR, bar++) {
     const ch = CH[PROG[bar % 4]];
     const len = Math.min(BAR, to - t0);
-    pad(t0, ch.pad, len - 0.03, 0.55 * level * padLevel);
-    for (let k = 0; k < Math.round(len / BEAT); k++) {
-      const t = t0 + k * BEAT;
-      if (kicks) kick(t, 0.72 * level);
-      if (bassOn) [0, 0.5].forEach((h) => bass(t + h * BEAT, ch.root + (h ? 12 : 0), BEAT * 0.42, 0.3 * level));
-      if (hats) hat(t + BEAT / 2, k % 2 === 1, 0.055 * level, 0.25);
-      if (claps && k % 2 === 1) clap(t, 0.22 * level);
-      if (arp) [0, 1].forEach((h) => pluck(t + h * (BEAT / 2), ch.arp[(k * 2 + h) % 4], 0.05 * level, h ? 0.35 : -0.35));
+    pad(t0, ch.pad, len - 0.03, 0.42 * level * padLevel);
+    const steps = Math.round(len / (BEAT / 4));
+    for (let k = 0; k < steps; k++) {
+      const t = t0 + (k * BEAT) / 4;
+      const beatIdx = Math.floor(k / 4);
+      const sub = k % 4;
+      if (kicks && sub === 0) kick(t, 0.85 * level);
+      if (bassOn && sub === 2) bass(t, ch.root + 12, BEAT * 0.22, 0.34 * level); // basse « off-beat »
+      if (bassOn && sub === 0) bass(t, ch.root, BEAT * 0.18, 0.22 * level);
+      if (hats) hat(t, sub === 2, (sub === 2 ? 0.07 : 0.03) * level, sub % 2 ? 0.3 : -0.3);
+      if (claps && sub === 0 && beatIdx % 2 === 1) clap(t, 0.32 * level);
+      if (arp && sub % 2 === 0) pluck(t, ch.arp[(k / 2) % 4], 0.05 * level, (k / 2) % 2 ? 0.35 : -0.35);
+      if (leadOn && sub % 2 === 0) {
+        const n = HOOK[((bar % 2) * 8 + k / 2) % 16];
+        if (n) lead(t, n - 12, BEAT * 0.4, 0.09 * level, 0);
+      }
     }
   }
+};
+// roulement de caisse claire avant un changement de scène
+const fill = (end, beats = 1, gain = 0.22) => {
+  const n = beats * 4;
+  for (let k = 0; k < n; k++) snare(end - ((n - k) * BEAT) / 4, gain * (0.4 + (0.6 * k) / n));
 };
 
 // ------------------------------------------------------------- structure (calée sur les scènes)
 const s2 = ev("s2");
 const s7 = ev("s7");
-// accroche : nappe et arpège, sans batterie, petite montée vers « Avec Stokara »
-section(0, s2, { kicks: false, claps: false, hats: false, bassOn: false, level: 0.9, padLevel: 1.2 });
-riser(s2, 1.2, 0.3);
-// corps : groove complet
-section(s2, s7 - BEAT, { level: 1 });
-// avant le plan de fin : on retient le souffle
-riser(s7, 1.4, 0.38);
-// plan de fin : accord final tenu
-impact(s7 + F(2), 0.6);
-crash(s7 + F(2), 0.22);
-pad(s7 + F(2), [62, 66, 69, 74], DURATION - s7 - 0.3, 0.7, 1.2);
-bass(s7 + F(2), 38, 1.6, 0.4);
-[74, 78, 81, 86, 90].forEach((m, i) => pluck(s7 + F(2) + i * 0.08, m, 0.1, i % 2 ? 0.3 : -0.3));
+// accroche : tic-tac tendu, nappe filtrée, montée vers « Avec Stokara »
+for (let t = 0.05; t < s2 - 0.05; t += BEAT / 2) tick(t, 0.9);
+pad(0, CH.Bm.pad, s2, 0.45, 0.3);
+bass(0, 35, s2 - 0.1, 0.18);
+riser(s2, 1.6, 0.45);
+fill(s2, 1, 0.24);
+// corps : groove complet ; la mélodie d'accroche arrive avec les tarifs
+section(s2, ev("s6"), { level: 1 });
+section(ev("s6"), s7 - BEAT, { level: 1.05, leadOn: true });
+// relances aux changements de scène
+["s3", "s4", "s5", "s6"].forEach((k) => {
+  crash(ev(k), 0.12);
+  impact(ev(k), 0.18);
+});
+fill(ev("s6"), 1, 0.18);
+// avant le plan de fin : coupure et montée
+riser(s7, 1.4, 0.4);
+fill(s7, 1, 0.22);
+// plan de fin : impact, accord final et dernier passage de la mélodie
+impact(s7 + F(2), 0.7);
+crash(s7 + F(2), 0.25);
+section(s7 + F(2), DURATION - 0.6, { level: 0.85, leadOn: true, claps: true, arp: true });
+pad(DURATION - 0.6, CH.Bm.pad, 0.6, 0.4, 0.6);
 
 // ------------------------------------------------------------- bruitages
-// 1. accroche
-thud(ev("jiggle"), 0.8);
-[0, 0.07, 0.14].forEach((d) => tick(ev("jiggle") + d, 1.2));
-impact(ev("lonely"), 0.25);
-pop(ev("lonely"), 60, 0.12);
-// 2. glisser-déposer
-impact(s2 + 0.05, 0.45);
+thud(ev("jiggle"), 0.9);
+[0, 0.07, 0.14].forEach((d) => tick(ev("jiggle") + d, 1.4));
+impact(ev("lonely"), 0.3);
+// glisser-déposer
+impact(s2 + 0.02, 0.55);
+crash(s2 + 0.02, 0.2);
 chime(ev("logo"), 1.1, 86);
 click(ev("grab"));
-whoosh(ev("drop") - 0.1, 0.9, 0.18, 0.4, -0.2);
-pop(ev("drop"), 88, 0.22);
+whoosh(ev("drop") + 0.12, 0.3, 0.08, 0.4, -0.2); // court et discret : ne pas masquer « en ligne »
+pop(ev("drop"), 88, 0.24);
 success(ev("done"));
-// 3. Windows
-whoosh(ev("s3") + F(6), 0.5, 0.35);
+// Windows
+whoosh(ev("s3") + F(6), 0.45, 0.35);
 click(ev("rclick"));
 pop(ev("rclick") + F(2), 79, 0.12);
 click(ev("pick"));
 for (let t = ev("pick") + F(7); t < ev("finish") - F(7); t += F(1.5)) tick(t, 0.9);
 click(ev("finish"));
-success(ev("drive") + F(4));
+success(ev("drive") + F(2));
 chime(ev("disk"), 0.9, 90);
-// 4. où vous voulez
-whoosh(ev("s4") + F(6), 0.5, 0.35);
-pop(ev("server") - F(6), 81, 0.2);
-pop(ev("site") - F(4), 85, 0.2);
-[0, 4, 8].forEach((d, i) => pop(ev("everywhere") + F(d), 84 + i * 3, 0.18));
-// 5. entreprises
-whoosh(ev("s5") + F(6), 0.5, 0.35);
+// où vous voulez
+whoosh(ev("s4") + F(6), 0.45, 0.35);
+pop(ev("server") - F(6), 81, 0.22);
+pop(ev("site") - F(4), 85, 0.22);
+[0, 4, 8].forEach((d, i) => pop(ev("everywhere") + F(d), 84 + i * 3, 0.2));
+// entreprises
+whoosh(ev("s5") + F(6), 0.45, 0.35);
 pop(ev("s5") + F(4), 79, 0.18);
-[0, 4, 8, 12].forEach((d, i) => pop(ev("accounts") + F(d), 81 + i * 2, 0.16));
-[0, 4, 8, 12].forEach((d, i) => tick(ev("access") + F(d), 1));
+[0, 4, 8, 12].forEach((d, i) => pop(ev("accounts") + F(d), 81 + i * 2, 0.17));
+[0, 4, 8, 12].forEach((d) => tick(ev("access") + F(d), 1.1));
 chime(ev("same"), 0.8, 83);
-// 6. tarifs
-whoosh(ev("s6") + F(6), 0.5, 0.35);
-pop(ev("p1"), 88, 0.26);
-pop(ev("go"), 91, 0.18);
+// tarifs
+whoosh(ev("s6") + F(6), 0.45, 0.35);
+pop(ev("p1"), 88, 0.28);
+impact(ev("p1"), 0.25);
+pop(ev("go"), 91, 0.2);
 pop(ev("pro") - F(4), 83, 0.2);
-pop(ev("p2"), 90, 0.26);
+pop(ev("p2"), 90, 0.28);
+impact(ev("p2"), 0.25);
+// fin : clic sur « Créer mon compte »
+click(ev("cta") + F(4), 1.2);
+success(ev("cta") + F(6), 1.1);
 
-const music = s.mixdown({ duckDepth: 0.35, roomSize: 0.8 });
-mixWithVoice({ music, N: s.N, voicePath: "public/stokara-pub/voice.wav", out: "public/stokara-pub/audio.wav", musicGain: 0.42, duck: 0.55, levelIn: 1.5, limit: 0.86, fadeOut: 0.9 });
-console.log(`Écrit public/stokara-pub/audio.wav (${DURATION} s)`);
+const mix = s.mixdown({ duckDepth: 0.45, roomSize: 0.75 });
+mixWithVoice({
+  music: mix,
+  N: s.N,
+  voicePath: "public/stokara-pub/voice.wav",
+  out: "public/stokara-pub/audio.wav",
+  musicGain: 0.42,
+  duck: 0.6,
+  levelIn: 1.7,
+  limit: 0.88,
+  fadeOut: 0.5,
+  voiceFx: { presence: 0.4, ratio: 3.5, threshold: 0.16 },
+});
+console.log(`Écrit public/stokara-pub/audio.wav (${DURATION} s, ${BPM} BPM)`);

@@ -19,20 +19,65 @@ export const useF = () => useCurrentFrame();
 export const sp = (f: number, at: number, damping = 14, stiffness = 170) => spring({ frame: f - at, fps: FPS, config: { damping, stiffness } });
 export const lin = (f: number, a: number, b: number, from = 0, to = 1) => interpolate(f, [a, b], [from, to], { ...clamp, easing: ease });
 
+// Tempo de la musique (scripts/stokara-pub/make-audio.mjs) : la grosse caisse tombe sur chaque temps à partir de E.s2
+export const BPM = 124;
+const BEAT_F = (FPS * 60) / BPM;
+export const beat = (f: number) => {
+  if (f < E.s2 || f >= SCENE.end - BEAT_F) return 0;
+  return Math.exp((-((f - E.s2) % BEAT_F) / FPS) * 10);
+};
+// Petites secousses sur les temps forts (impacts de la musique)
+const HITS = () => [E.s2, E.drive, E.p1, E.p2, SCENE.end + 2];
+export const shake = (f: number): [number, number] => {
+  let x = 0;
+  let y = 0;
+  HITS().forEach((h, i) => {
+    const t = f - h;
+    if (t < 0 || t > 12) return;
+    const a = 9 * Math.exp(-t / 4);
+    x += Math.sin(t * 2.6 + i) * a;
+    y += Math.cos(t * 3.1 + i) * a * 0.7;
+  });
+  return [x, y];
+};
+
 // Élément qui apparaît (ressort) à l'image `at`
 export const Pop: React.FC<{ at: number; children: React.ReactNode; style?: React.CSSProperties; dy?: number; scale?: boolean }> = ({ at, children, style, dy = 40, scale }) => {
   const f = useF();
   if (f < at - 1) return null;
-  const p = sp(f, at);
-  return <div style={{ opacity: interpolate(p, [0, 0.35], [0, 1], clamp), transform: `translateY(${(1 - p) * dy}px) scale(${scale ? 0.6 + 0.4 * p : 1})`, ...style }}>{children}</div>;
+  const p = sp(f, at, 11, 210);
+  return <div style={{ opacity: interpolate(p, [0, 0.3], [0, 1], clamp), transform: `translateY(${(1 - p) * dy}px) scale(${scale ? 0.5 + 0.5 * p : 1})`, ...style }}>{children}</div>;
 };
 
-// Scène visible entre `from` et `to` ; elle s'efface en glissant pendant les XF dernières images
+// Scène visible entre `from` et `to` : entrée en zoom (sauf la première, visible dès l'image 0),
+// sortie en glissant vers le haut pendant les XF images qui suivent `to`
 export const SceneWrap: React.FC<{ from: number; to: number; children: React.ReactNode }> = ({ from, to, children }) => {
   const f = useF();
   if (f < from || f >= to + XF) return null;
   const out = interpolate(f, [to, to + XF], [0, 1], { ...clamp, easing: ease });
-  return <AbsoluteFill style={{ opacity: 1 - out, transform: `translateY(${-70 * out}px) scale(${1 - 0.04 * out})` }}>{children}</AbsoluteFill>;
+  const pin = from > 0 ? sp(f, from, 13, 200) : 1;
+  const o = from > 0 ? lin(f, from, from + 4) : 1;
+  return <AbsoluteFill style={{ opacity: o * (1 - out), transform: `translateY(${-110 * out}px) scale(${(1.12 - 0.12 * pin) * (1 - 0.06 * out)})` }}>{children}</AbsoluteFill>;
+};
+
+// Transition « balayage » aux couleurs de Stokara entre deux scènes
+export const Swipes: React.FC<{ at: number[] }> = ({ at }) => {
+  const f = useF();
+  return (
+    <>
+      {at.map((b) => {
+        if (f < b - 7 || f > b + 8) return null;
+        const x = interpolate(f, [b - 7, b + 8], [-1500, 1700], { ...clamp, easing: ease });
+        return (
+          <AbsoluteFill key={b} style={{ pointerEvents: "none" }}>
+            <div style={{ position: "absolute", left: x - 140, top: -200, width: 160, height: 2400, background: K.navy, transform: "skewX(-16deg)", opacity: 0.95 }} />
+            <div style={{ position: "absolute", left: x, top: -200, width: 620, height: 2400, background: `linear-gradient(90deg, ${K.orange}, ${K.orange2})`, transform: "skewX(-16deg)", boxShadow: "0 0 60px rgba(249,135,26,.5)" }} />
+            <div style={{ position: "absolute", left: x + 640, top: -200, width: 70, height: 2400, background: K.blue, transform: "skewX(-16deg)", opacity: 0.9 }} />
+          </AbsoluteFill>
+        );
+      })}
+    </>
+  );
 };
 
 // ------------------------------------------------------------------ fond (sphères de la page de connexion)
@@ -48,6 +93,7 @@ const SPHERES: { x: number; y: number; r: number; c: "b" | "o"; s: number }[] = 
 ];
 export const Background: React.FC = () => {
   const f = useF();
+  const b = beat(f);
   return (
     <AbsoluteFill style={{ background: "linear-gradient(160deg, #e3e8fb 0%, #f1f2fb 45%, #fdeedd 100%)", overflow: "hidden" }}>
       {SPHERES.map((s, i) => (
@@ -63,6 +109,7 @@ export const Background: React.FC = () => {
             background: sphereBg(s.c),
             boxShadow: "0 30px 60px rgba(26,35,126,.18)",
             opacity: 0.9,
+            transform: `scale(${1 + 0.08 * b * (i % 2 ? 1 : 0.6)})`,
           }}
         />
       ))}
@@ -73,13 +120,13 @@ export const Background: React.FC = () => {
 // ------------------------------------------------------------------ marque (en haut, après l'apparition du logo)
 export const BrandPill: React.FC = () => {
   const f = useF();
-  const from = E.logo + 26;
+  const from = E.logo + 20;
   if (f < from - 2 || f >= SCENE.end + 6) return null;
   const p = sp(f, from, 16, 200);
   const out = lin(f, SCENE.end - 4, SCENE.end + 6);
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: Z.brandY - 30, display: "flex", justifyContent: "center", opacity: interpolate(p, [0, 0.4], [0, 1], clamp) * (1 - out) }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 12, background: "rgba(255,255,255,.88)", borderRadius: 40, padding: "6px 24px 6px 8px", boxShadow: "0 10px 24px rgba(26,35,126,.14)", transform: `scale(${0.7 + 0.3 * p})` }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, background: "rgba(255,255,255,.88)", borderRadius: 40, padding: "6px 24px 6px 8px", boxShadow: "0 10px 24px rgba(26,35,126,.14)", transform: `scale(${(0.7 + 0.3 * p) * (1 + 0.05 * beat(f))})` }}>
         <Logo size={46} />
         <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 30, color: K.navy, letterSpacing: 0.5 }}>Stokara</span>
       </div>
@@ -95,9 +142,9 @@ export const Headline: React.FC<{ titles: Title[] }> = ({ titles }) => {
   return (
     <>
       {titles.map((t, i) => {
-        if (f < t.at - 1 || f >= t.until + XF) return null;
-        const pin = t.at <= 0 ? 1 : sp(f, t.at, 15, 190);
-        const out = lin(f, t.until, t.until + XF);
+        if (f < t.at - 1 || f >= t.until + 3) return null;
+        const pin = t.at <= 0 ? 1 : sp(f, t.at, 12, 220);
+        const out = lin(f, t.until - 3, t.until + 3);
         const size = t.size ?? 68;
         let word = 0;
         return (
@@ -105,7 +152,7 @@ export const Headline: React.FC<{ titles: Title[] }> = ({ titles }) => {
             {t.kicker && (
               <div style={{ display: "inline-block", fontSize: 28, fontWeight: 600, letterSpacing: 4, textTransform: "uppercase", color: K.orange2, marginBottom: 10, background: "rgba(255,255,255,.75)", padding: "4px 18px", borderRadius: 30 }}>{t.kicker}</div>
             )}
-            <div style={{ fontSize: size, fontWeight: 700, lineHeight: 1.1, color: K.ink, letterSpacing: -0.5 }}>
+            <div style={{ fontSize: size, fontWeight: 700, lineHeight: 1.1, color: K.ink, letterSpacing: -0.5, transform: `scale(${1 + 0.018 * beat(f)})` }}>
               {t.parts.map((p, k) => {
                 if (p === "\n") return <br key={k} />;
                 const hl = Array.isArray(p);
@@ -113,9 +160,9 @@ export const Headline: React.FC<{ titles: Title[] }> = ({ titles }) => {
                 // les mots arrivent un à un (léger décalage)
                 return txt.split(" ").map((w, j) => {
                   const d = word++ * 2;
-                  const q = t.at <= 0 ? 1 : sp(f, t.at + d, 16, 220);
+                  const q = t.at <= 0 ? 1 : sp(f, t.at + d, 11, 240);
                   return (
-                    <span key={`${k}-${j}`} style={{ display: "inline-block", whiteSpace: "pre", transform: `translateY(${(1 - q) * 30}px)`, opacity: interpolate(q, [0, 0.5], [0, 1], clamp) }}>
+                    <span key={`${k}-${j}`} style={{ display: "inline-block", whiteSpace: "pre", transform: `translateY(${(1 - q) * 46}px) rotate(${(1 - q) * 8}deg) scale(${0.7 + 0.3 * q})`, opacity: interpolate(q, [0, 0.4], [0, 1], clamp) }}>
                       <span
                         style={
                           hl
@@ -143,7 +190,7 @@ const WORDS = VOICE.words.map((w) => ({ text: w.text, start: w.start, end: w.end
 export const Captions: React.FC<{ hideFrom: number }> = ({ hideFrom }) => {
   const f = useF();
   const { fps } = useVideoConfig();
-  const chunks = useMemo(() => buildChunks(WORDS, 5, 30), []);
+  const chunks = useMemo(() => buildChunks(WORDS, 4, 20), []); // une seule ligne
   if (f >= hideFrom) return null;
   const t = f / fps;
   const c = chunks.find((x) => t >= x.start - 0.05 && t < x.end);
@@ -160,16 +207,18 @@ export const Captions: React.FC<{ hideFrom: number }> = ({ hideFrom }) => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "2px 14px",
+          gap: "2px 18px",
           opacity: interpolate(pop, [0, 0.4], [0, 1], clamp),
           transform: `scale(${0.9 + 0.1 * pop})`,
         }}
       >
         {c.words.map((w) => {
-          const on = t >= w.start;
+          const on = t >= w.start - 0.03;
           const cur = on && t < w.end + 0.05;
+          // mot prononcé : il « claque » (grossit puis se pose) ; mot à venir : discret, à sa place
+          const q = on ? spring({ frame: f - Math.round((w.start - 0.03) * fps), fps, config: { damping: 12, stiffness: 320 } }) : 1;
           return (
-            <span key={w.i} style={{ fontFamily: FONT, fontWeight: 700, fontSize: 48, lineHeight: 1.22, color: cur ? K.orange : on ? "#fff" : "rgba(255,255,255,.5)" }}>
+            <span key={w.i} style={{ display: "inline-block", fontFamily: FONT, fontWeight: 700, fontSize: 54, lineHeight: 1.2, color: cur ? K.orange : "#fff", opacity: on ? 1 : 0.28, transform: `translateY(${-(1 - q) * 12}px) scale(${1 + (1 - q) * Math.min(0.3, 0.5 / w.text.length)})` }}>
               {w.text}
             </span>
           );

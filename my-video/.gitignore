@@ -17,3 +17,6 @@ __pycache__/
 public/reseau-1-1/*.wav
 public/stokara/*.wav
 .piper/
+
+# Voix et modèles de reconnaissance téléchargés pour comparer les voix (scripts/stokara-pub)
+.tts/

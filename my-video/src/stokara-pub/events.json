@@ -6,7 +6,7 @@
   "logo": { "seq": 1, "p": "stokara" },
   "grab": { "seq": 1, "p": "mettez" },
   "over": { "seq": 1, "p": "en ligne", "add": -0.1 },
-  "drop": { "seq": 1, "p": "d'un", "add": 0.02 },
+  "drop": { "seq": 1, "p": "en un", "add": 0.02 },
   "done": { "seq": 1, "p": "glisser-déposer", "add": 0.4 },
   "s3": { "seq": 2, "p": "et", "add": -0.17 },
   "rclick": { "seq": 2, "p": "l'explorateur", "add": 0.3 },
@@ -18,7 +18,7 @@
   "s4": { "seq": 3, "p": "sur", "add": -0.17 },
   "server": { "seq": 3, "p": "serveur" },
   "site": { "seq": 3, "p": "directement" },
-  "everywhere": { "seq": 3, "p": "accessibles" },
+  "everywhere": { "seq": 3, "p": "accessible" },
   "s5": { "seq": 4, "p": "en", "add": -0.17 },
   "accounts": { "seq": 4, "p": "plusieurs" },
   "access": { "seq": 4, "p": "chacun" },
@@ -28,5 +28,6 @@
   "go": { "seq": 5, "p": "20" },
   "pro": { "seq": 5, "p": "entreprises" },
   "p2": { "seq": 5, "p": "dès" },
-  "s7": { "seq": 6, "p": "stokara", "add": -0.25 }
+  "s7": { "seq": 6, "p": "stokara", "add": -0.25 },
+  "cta": { "seq": 6, "p": "créez" }
 }

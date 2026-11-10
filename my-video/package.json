@@ -52,7 +52,7 @@
     "stokara:voice": "python3 scripts/stokara/make-voice.py .piper",
     "stokara:audio": "node scripts/stokara/make-audio.mjs",
     "stokara:render": "remotion render StokaraTuto out/stokara-tutoriel-guide-complet.mp4 --codec=h264 --crf=20",
-    "pub:voice": "python3 scripts/stokara-pub/make-voice.py .piper",
+    "pub:voice": "python3 scripts/stokara-pub/make-voice.py .tts",
     "pub:audio": "node scripts/stokara-pub/make-audio.mjs",
     "pub:render": "remotion render StokaraPub out/stokara-pub-30s-9x16.mp4 --codec=h264 --crf=18"
   },

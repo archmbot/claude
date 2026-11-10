@@ -2,9 +2,9 @@
 // française et sous-titres. Écrans réels de Stokara (copie de démonstration, données fictives) et
 // reconstitution de Windows 11 (« Connecter un lecteur réseau »). Stokara est développé par QYLINE.
 import React from "react";
-import { AbsoluteFill, Html5Audio, staticFile } from "remotion";
+import { AbsoluteFill, Html5Audio, staticFile, useCurrentFrame } from "remotion";
 import { useStkFonts } from "../stokara/ui";
-import { Background, BrandPill, Captions, Headline, Title } from "./kit";
+import { Background, BrandPill, Captions, Headline, Swipes, Title, shake } from "./kit";
 import { ActEnd, ActPrice, ActTeam, ActUpload, ActWhere, ActWindows } from "./scenes";
 import { E, SCENE } from "./timing";
 
@@ -17,21 +17,30 @@ const TITLES: Title[] = [
   { at: SCENE.price + 2, until: SCENE.end, kicker: "Sans engagement", parts: ["Des tarifs", ["simples"]], size: 76 },
 ];
 
+// Les scènes tremblent légèrement sur les temps forts de la musique
+const Shaker: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [x, y] = shake(useCurrentFrame());
+  return <AbsoluteFill style={{ transform: `translate(${x}px, ${y}px)` }}>{children}</AbsoluteFill>;
+};
+
 export const StokaraPub: React.FC<{ subtitles?: boolean }> = ({ subtitles = true }) => {
   useStkFonts();
   return (
     <AbsoluteFill style={{ background: "#eef0fb" }}>
       <Html5Audio src={staticFile("stokara-pub/audio.wav")} />
       <Background />
-      <ActUpload />
-      <ActWindows />
-      <ActWhere />
-      <ActTeam />
-      <ActPrice />
-      <ActEnd />
+      <Shaker>
+        <ActUpload />
+        <ActWindows />
+        <ActWhere />
+        <ActTeam />
+        <ActPrice />
+        <ActEnd />
+      </Shaker>
       <BrandPill />
       <Headline titles={TITLES} />
       {subtitles && <Captions hideFrom={E.s7} />}
+      <Swipes at={[SCENE.upload, SCENE.windows, SCENE.where, SCENE.team, SCENE.price, SCENE.end]} />
     </AbsoluteFill>
   );
 };

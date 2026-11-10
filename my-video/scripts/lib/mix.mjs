@@ -48,10 +48,39 @@ export const resample = (src, rate, n) => {
   return out;
 };
 
+// Traitement « spot publicitaire » d'une voix : présence (≈ 3 kHz) et compression (voix plus dense et en avant).
+// presence : part de bande 3 kHz ajoutée ; ratio et threshold : compresseur (attaque 4 ms, relâchement 90 ms).
+export const punchVoice = (v, { presence = 0.35, ratio = 3, threshold = 0.18 } = {}) => {
+  const bp = svf(3200, 0.9);
+  const air = svf(7500, 0.7);
+  const att = 1 - Math.exp(-1 / (SR * 0.004));
+  const rel = 1 - Math.exp(-1 / (SR * 0.09));
+  let env = 0;
+  let peakIn = 0;
+  let peakOut = 0;
+  const out = new Float32Array(v.length);
+  for (let i = 0; i < v.length; i++) {
+    bp.run(v[i]);
+    air.run(v[i]);
+    const x = v[i] + bp.bp * presence + air.hp * presence * 0.4;
+    const a = Math.abs(x);
+    env += (a - env) * (a > env ? att : rel);
+    const g = env > threshold ? (threshold + (env - threshold) / ratio) / env : 1;
+    out[i] = x * g;
+    peakIn = Math.max(peakIn, Math.abs(v[i]));
+    peakOut = Math.max(peakOut, Math.abs(out[i]));
+  }
+  const makeup = peakIn / (peakOut || 1);
+  for (let i = 0; i < out.length; i++) out[i] *= makeup;
+  return out;
+};
+
 // music : résultat de synth.mixdown() ; N : nombre d'échantillons à 48 kHz ; duck : part de musique retirée sous la voix
-export const mixWithVoice = ({ music, N, voicePath, out, musicGain, duck, levelIn = 1.25, limit = 0.84, fadeOut = 0.3 }) => {
+// voiceFx : options de punchVoice (absent = voix telle quelle)
+export const mixWithVoice = ({ music, N, voicePath, out, musicGain, duck, levelIn = 1.25, limit = 0.84, fadeOut = 0.3, voiceFx }) => {
   const { data, rate } = readWavMono(voicePath);
-  const voice = resample(data, rate, N);
+  const raw = resample(data, rate, N);
+  const voice = voiceFx ? punchVoice(raw, voiceFx) : raw;
   // enveloppe de la voix (attaque 10 ms, relâchement 300 ms) -> la musique s'efface quand elle parle
   const att = 1 - Math.exp(-1 / (SR * 0.01));
   const rel = 1 - Math.exp(-1 / (SR * 0.3));

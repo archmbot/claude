@@ -248,14 +248,14 @@ const DragStack: React.FC<{ f: number; keys: CK[] }> = ({ f, keys }) => {
 
 // Logo de Stokara qui jaillit puis rejoint la marque en haut
 const LogoBurst: React.FC<{ f: number }> = ({ f }) => {
-  if (f < E.logo - 2 || f > E.logo + 36) return null;
-  const p = sp(f, E.logo, 11, 180);
-  const fly = lin(f, E.logo + 20, E.logo + 34);
+  if (f < E.logo - 2 || f > E.logo + 28) return null;
+  const p = sp(f, E.logo, 10, 200);
+  const fly = lin(f, E.logo + 13, E.logo + 26);
   const x = 540 + (452 - 540) * fly;
   const y = 790 + (128 - 790) * fly;
   const size = 240 * (1 - 0.81 * fly);
   return (
-    <div style={{ position: "absolute", left: x - size / 2, top: y - size / 2, width: size, height: size, transform: `scale(${p})`, opacity: 1 - lin(f, E.logo + 28, E.logo + 34) }}>
+    <div style={{ position: "absolute", left: x - size / 2, top: y - size / 2, width: size, height: size, transform: `scale(${p})`, opacity: 1 - lin(f, E.logo + 21, E.logo + 27) }}>
       <div style={{ position: "absolute", inset: -size * 0.35, borderRadius: "50%", background: "radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(255,255,255,.6) 45%, transparent 70%)", opacity: 1 - fly }} />
       <Logo size={size} style={{ position: "relative", filter: "drop-shadow(0 18px 30px rgba(26,35,126,.35))" }} />
     </div>
@@ -573,7 +573,8 @@ export const ActEnd: React.FC = () => {
   if (f < SCENE.end) return null;
   const p = sp(f, SCENE.end + 2, 10, 150);
   const rays = (f - SCENE.end) * 0.6;
-  const cta = 1 + 0.035 * Math.sin((f - SCENE.end) / 4);
+  const tap = f >= E.cta + 4 ? Math.exp(-(f - E.cta - 4) / 5) : 0;
+  const cta = (1 + 0.035 * Math.sin((f - SCENE.end) / 4)) * (1 - 0.08 * tap * (f < E.cta + 7 ? 1 : -1.2));
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", left: 540 - 420, top: 690 - 420, width: 840, height: 840, borderRadius: "50%", background: "radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(255,255,255,.5) 40%, transparent 70%)", opacity: p }} />
@@ -609,6 +610,15 @@ export const ActEnd: React.FC = () => {
       <Pop at={SCENE.end + 40} style={{ position: "absolute", left: 0, right: 0, top: 1420, display: "flex", justifyContent: "center" }}>
         <QylineBadge />
       </Pop>
+      <Pointer
+        keys={[
+          { t: E.cta - 12, p: [880, 1290] },
+          { t: E.cta + 4, p: [700, 1104], click: "l", d: 14 },
+        ]}
+        from={E.cta - 12}
+        to={E.cta + 40}
+        size={1.6}
+      />
     </AbsoluteFill>
   );
 };
