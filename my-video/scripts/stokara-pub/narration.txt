@@ -1,0 +1,16 @@
+# Voix off de la publicité Stokara (30 s, format vertical 9:16), développé par QYLINE.
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Vos documents, coincés sur un seul PC ?
+## S2
+Avec Stokara, mettez vos dossiers en ligne, d'un simple glisser-déposer.
+## S3
+Et retrouvez-les dans l'Explorateur {Windows|/wˈindoz/} : connectez un lecteur réseau, et Stokara devient un disque.
+## S4
+Sur votre serveur local, ou directement sur le site : accessibles partout.
+## S5
+En entreprise : plusieurs comptes, chacun ses accès, sur le même serveur.
+## S6
+Particuliers : {3 €|trois euros} par mois pour {20 Go.|vingt gigas.} Entreprises : dès {15 €|quinze euros} par mois.
+## S7
+Stokara, vos fichiers partout.
