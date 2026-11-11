@@ -1,0 +1,16 @@
+# Voix off de la publicité « Installer le programme Stokara » (format vertical 9:16), développé par QYLINE.
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Vos fichiers sont sur le serveur du bureau ?
+## S2
+Avec Stokara, téléchargez le programme : il est déjà relié à votre espace.
+## S3
+Sur le serveur, double-cliquez sur Installer, puis choisissez le dossier à synchroniser.
+## S4
+Le programme démarre avec {Windows.|/wˈindoz/.} Aucun port à ouvrir, aucune box à régler : c'est lui qui contacte le site.
+## S5
+Ensuite, à vous de choisir : vos fichiers sur votre serveur local seulement, sans rien stocker sur le site…
+## S6
+Ou avec une copie de secours sur le site : si votre serveur tombe en panne, rien n'est coupé !
+## S7
+Stokara : votre serveur, accessible partout. Entreprises : dès {15 €|quinze euros} par mois !

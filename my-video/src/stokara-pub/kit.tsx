@@ -1,12 +1,11 @@
-// Briques de la publicité Stokara (format vertical) : fond, logo, titres, sous-titres,
+// Briques des publicités Stokara (format vertical 1080 × 1920, 30 i/s) : fond, logo, titres, sous-titres,
 // curseur, transitions. Charte et polices de l'application (voir ../stokara/ui.tsx).
-import React, { useMemo } from "react";
+// Chaque publicité fournit ses réglages (voix, tempo, temps forts) par <AdProvider>.
+import React, { createContext, useContext, useMemo } from "react";
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { buildChunks } from "../components/Subtitles";
+import { CaptionWord, buildChunks } from "../components/Subtitles";
 import { IconName } from "../stokara/icons";
 import { FONT, Icon, K, Logo, clamp, ease, sphereBg } from "../stokara/ui";
-import { E, FPS, SCENE, XF } from "./timing";
-import { VOICE } from "./voice";
 
 export { FONT, Icon, K, Logo, clamp, ease };
 export type Pt = [number, number];
@@ -14,31 +13,51 @@ export type Pt = [number, number];
 // Zones de l'image 1080 × 1920 (zone sûre des réseaux sociaux : ni tout en haut, ni tout en bas)
 export const Z = { brandY: 128, kickerY: 206, titleY: 250, visTop: 490, visBottom: 1340, capTop: 1392 };
 
+export const FPS = 30;
+export const XF = 9; // chevauchement : sortie de la scène précédente
+
+// ------------------------------------------------------------------ réglages propres à chaque publicité
+export type AdConf = {
+  words: CaptionWord[]; // mots de la voix off (sous-titres)
+  bpm: number; // tempo de la musique ; la grosse caisse tombe sur chaque temps de beatFrom à beatTo (images)
+  beatFrom: number;
+  beatTo: number;
+  hits: number[]; // temps forts (images) : petite secousse de l'image
+  brandFrom: number; // marque en haut de l'image, de brandFrom à brandTo
+  brandTo: number;
+};
+const AdCtx = createContext<AdConf>({ words: [], bpm: 120, beatFrom: 0, beatTo: 0, hits: [], brandFrom: 0, brandTo: 0 });
+export const AdProvider: React.FC<{ conf: AdConf; children: React.ReactNode }> = ({ conf, children }) => <AdCtx.Provider value={conf}>{children}</AdCtx.Provider>;
+// Pulsation (1 sur le temps, puis décroissance) à l'image f
+const beatOf = (c: AdConf, f: number) => {
+  const bf = (FPS * 60) / c.bpm;
+  if (f < c.beatFrom || f >= c.beatTo) return 0;
+  return Math.exp((-((f - c.beatFrom) % bf) / FPS) * 10);
+};
+export const useBeat = () => {
+  const c = useContext(AdCtx);
+  return (f: number) => beatOf(c, f);
+};
+
 // ------------------------------------------------------------------ outils d'animation
 export const useF = () => useCurrentFrame();
 export const sp = (f: number, at: number, damping = 14, stiffness = 170) => spring({ frame: f - at, fps: FPS, config: { damping, stiffness } });
 export const lin = (f: number, a: number, b: number, from = 0, to = 1) => interpolate(f, [a, b], [from, to], { ...clamp, easing: ease });
 
-// Tempo de la musique (scripts/stokara-pub/make-audio.mjs) : la grosse caisse tombe sur chaque temps à partir de E.s2
-export const BPM = 124;
-const BEAT_F = (FPS * 60) / BPM;
-export const beat = (f: number) => {
-  if (f < E.s2 || f >= SCENE.end - BEAT_F) return 0;
-  return Math.exp((-((f - E.s2) % BEAT_F) / FPS) * 10);
-};
-// Petites secousses sur les temps forts (impacts de la musique)
-const HITS = () => [E.s2, E.drive, E.p1, E.p2, SCENE.end + 2];
-export const shake = (f: number): [number, number] => {
+// Les scènes tremblent légèrement sur les temps forts (impacts de la musique)
+export const Shaker: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const f = useF();
+  const { hits } = useContext(AdCtx);
   let x = 0;
   let y = 0;
-  HITS().forEach((h, i) => {
+  hits.forEach((h, i) => {
     const t = f - h;
     if (t < 0 || t > 12) return;
     const a = 9 * Math.exp(-t / 4);
     x += Math.sin(t * 2.6 + i) * a;
     y += Math.cos(t * 3.1 + i) * a * 0.7;
   });
-  return [x, y];
+  return <AbsoluteFill style={{ transform: `translate(${x}px, ${y}px)` }}>{children}</AbsoluteFill>;
 };
 
 // Élément qui apparaît (ressort) à l'image `at`
@@ -93,7 +112,7 @@ const SPHERES: { x: number; y: number; r: number; c: "b" | "o"; s: number }[] = 
 ];
 export const Background: React.FC = () => {
   const f = useF();
-  const b = beat(f);
+  const b = useBeat()(f);
   return (
     <AbsoluteFill style={{ background: "linear-gradient(160deg, #e3e8fb 0%, #f1f2fb 45%, #fdeedd 100%)", overflow: "hidden" }}>
       {SPHERES.map((s, i) => (
@@ -120,10 +139,11 @@ export const Background: React.FC = () => {
 // ------------------------------------------------------------------ marque (en haut, après l'apparition du logo)
 export const BrandPill: React.FC = () => {
   const f = useF();
-  const from = E.logo + 20;
-  if (f < from - 2 || f >= SCENE.end + 6) return null;
+  const beat = useBeat();
+  const { brandFrom: from, brandTo: to } = useContext(AdCtx);
+  if (f < from - 2 || f >= to + 6) return null;
   const p = sp(f, from, 16, 200);
-  const out = lin(f, SCENE.end - 4, SCENE.end + 6);
+  const out = lin(f, to - 4, to + 6);
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: Z.brandY - 30, display: "flex", justifyContent: "center", opacity: interpolate(p, [0, 0.4], [0, 1], clamp) * (1 - out) }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, background: "rgba(255,255,255,.88)", borderRadius: 40, padding: "6px 24px 6px 8px", boxShadow: "0 10px 24px rgba(26,35,126,.14)", transform: `scale(${(0.7 + 0.3 * p) * (1 + 0.05 * beat(f))})` }}>
@@ -139,6 +159,7 @@ export type Title = { at: number; until: number; kicker?: string; parts: (string
 // parts : texte normal, [texte] mis en valeur (orange), ou "\n" pour un retour à la ligne
 export const Headline: React.FC<{ titles: Title[] }> = ({ titles }) => {
   const f = useF();
+  const beat = useBeat();
   return (
     <>
       {titles.map((t, i) => {
@@ -186,11 +207,11 @@ export const Headline: React.FC<{ titles: Title[] }> = ({ titles }) => {
 };
 
 // ------------------------------------------------------------------ sous-titres (vidéo souvent regardée sans le son)
-const WORDS = VOICE.words.map((w) => ({ text: w.text, start: w.start, end: w.end, scene: w.seq, sentence: w.para }));
 export const Captions: React.FC<{ hideFrom: number }> = ({ hideFrom }) => {
   const f = useF();
   const { fps } = useVideoConfig();
-  const chunks = useMemo(() => buildChunks(WORDS, 4, 20), []); // une seule ligne
+  const { words } = useContext(AdCtx);
+  const chunks = useMemo(() => buildChunks(words, 4, 20), [words]); // une seule ligne
   if (f >= hideFrom) return null;
   const t = f / fps;
   const c = chunks.find((x) => t >= x.start - 0.05 && t < x.end);

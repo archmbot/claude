@@ -8,6 +8,8 @@ import { Reseau11 } from "./reseau/Video";
 import { NasCout } from "./nas/Video";
 import { StokaraTuto } from "./stokara/Video";
 import { StokaraPub } from "./stokara-pub/Video";
+import { StokaraProgramme } from "./stokara-prog/Video";
+import { DURATION as PROG_DURATION, FPS as PROG_FPS, HEIGHT as PROG_HEIGHT, WIDTH as PROG_WIDTH } from "./stokara-prog/timing";
 import { DURATION as PUB_DURATION, FPS as PUB_FPS, HEIGHT as PUB_HEIGHT, WIDTH as PUB_WIDTH } from "./stokara-pub/timing";
 import { DURATION as STK_DURATION, FPS as STK_FPS, HEIGHT as STK_HEIGHT, WIDTH as STK_WIDTH } from "./stokara/timing";
 import { DURATION as NAS_DURATION, FPS as NAS_FPS, HEIGHT as NAS_HEIGHT, WIDTH as NAS_WIDTH } from "./nas/timing";
@@ -29,6 +31,15 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="StokaraProgramme"
+        component={StokaraProgramme}
+        durationInFrames={PROG_DURATION}
+        fps={PROG_FPS}
+        width={PROG_WIDTH}
+        height={PROG_HEIGHT}
+        defaultProps={{ subtitles: true }}
+      />
       <Composition
         id="StokaraPub"
         component={StokaraPub}

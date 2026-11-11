@@ -31,4 +31,3 @@ export const SCENE = {
   price: E.s6,
   end: E.s7,
 };
-export const XF = 9; // chevauchement (sortie de la scène précédente)
