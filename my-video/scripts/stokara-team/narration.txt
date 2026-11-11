@@ -1,0 +1,16 @@
+# Voix off de la publicité « Partager et travailler ensemble » (Stokara, format vertical 9:16), développé par QYLINE.
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Un devis à envoyer à un client ?
+## S2
+Avec Stokara, un clic droit, puis Créer un lien de partage. Choisissez la durée, un mot de passe, et le nombre de téléchargements.
+## S3
+Votre client l'ouvre sans compte, en toute sécurité.
+## S4
+Avec votre équipe, discutez dans la messagerie, pièces jointes comprises.
+## S5
+Un fichier {Excel|/ɛksˈɛl/} ou {Word ?|/wˈœʁd/ ?} Il s'ouvre dans votre logiciel, et {Ctrl+S|contrôle S} l'enregistre directement dans Stokara.
+## S6
+Supprimé par erreur ? La corbeille le garde trente jours.
+## S7
+Stokara : partagez, travaillez ensemble, l'esprit tranquille !

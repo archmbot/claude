@@ -57,7 +57,10 @@
     "pub:render": "remotion render StokaraPub out/stokara-pub-30s-9x16.mp4 --codec=h264 --crf=18",
     "prog:voice": "python3 scripts/stokara-prog/make-voice.py .tts",
     "prog:audio": "node scripts/stokara-prog/make-audio.mjs",
-    "prog:render": "remotion render StokaraProgramme out/stokara-installer-le-programme-35s-9x16.mp4 --codec=h264 --crf=18"
+    "prog:render": "remotion render StokaraProgramme out/stokara-installer-le-programme-35s-9x16.mp4 --codec=h264 --crf=18",
+    "team:voice": "python3 scripts/stokara-team/make-voice.py .tts",
+    "team:audio": "node scripts/stokara-team/make-audio.mjs",
+    "team:render": "remotion render StokaraEquipe out/stokara-partager-travailler-ensemble-30s-9x16.mp4 --codec=h264 --crf=18"
   },
   "sideEffects": [
     "*.css"
