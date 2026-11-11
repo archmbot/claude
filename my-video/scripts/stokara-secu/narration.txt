@@ -1,0 +1,16 @@
+# Voix off de la publicité « Sécurité et contrôle » (Stokara, format vertical 9:16), développé par QYLINE.
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Qui peut voir vos fichiers ?
+## S2
+Avec Stokara, c'est vous qui décidez. Sur chaque dossier, donnez le droit de voir, modifier, supprimer ou partager.
+## S3
+Ajoutez une personne en lecture seule, ou rendez un dossier confidentiel, avec un mot de passe en plus.
+## S4
+Trop d'essais ratés ? Le compte se verrouille. Et un appareil perdu se déconnecte en un clic.
+## S5
+Le journal garde la trace de chaque action.
+## S6
+Sur le site, vos fichiers sont chiffrés, et hébergés en France.
+## S7
+Stokara : vos fichiers, sous votre contrôle !
