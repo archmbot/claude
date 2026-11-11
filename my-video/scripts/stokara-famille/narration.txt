@@ -1,0 +1,16 @@
+# Voix off de la publicité « Particuliers et familles » (Stokara, format vertical 9:16), développé par QYLINE.
+# ## Sn = séquence n ; [PAUSE n] = silence de n secondes ; {affiché|prononcé} ; /…/ = phonèmes imposés.
+## S1
+Vos photos et vos papiers sont éparpillés partout ?
+## S2
+Avec Stokara, rassemblez tout au même endroit : en ligne, et chiffré.
+## S3
+Partagez avec vos proches, jusqu'à cinq membres. Chacun retrouve les photos de vacances, même sur son téléphone.
+## S4
+Carte grise, factures, assurance : les papiers importants restent sous la main.
+## S5
+Et pour envoyer un album entier, un simple lien suffit.
+## S6
+Pour les particuliers : {3 €|trois euros} par mois, pour {20 Go.|vingt gigas.}
+## S7
+Stokara : les souvenirs de la famille, bien à l'abri !

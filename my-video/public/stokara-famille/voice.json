@@ -1,0 +1,604 @@
+{
+ "duration": 26.907,
+ "seqs": [
+  {
+   "id": "S1",
+   "start": 0.3,
+   "cardEnd": 0.3,
+   "end": 3.194
+  },
+  {
+   "id": "S2",
+   "start": 3.194,
+   "cardEnd": 3.194,
+   "end": 7.076
+  },
+  {
+   "id": "S3",
+   "start": 7.076,
+   "cardEnd": 7.076,
+   "end": 13.653
+  },
+  {
+   "id": "S4",
+   "start": 13.653,
+   "cardEnd": 13.653,
+   "end": 17.902
+  },
+  {
+   "id": "S5",
+   "start": 17.902,
+   "cardEnd": 17.902,
+   "end": 21.081
+  },
+  {
+   "id": "S6",
+   "start": 21.081,
+   "cardEnd": 21.081,
+   "end": 24.213
+  },
+  {
+   "id": "S7",
+   "start": 24.213,
+   "cardEnd": 24.213,
+   "end": 26.907
+  }
+ ],
+ "paras": [
+  {
+   "seq": 0,
+   "start": 0.3,
+   "end": 2.934
+  },
+  {
+   "seq": 1,
+   "start": 3.194,
+   "end": 6.816
+  },
+  {
+   "seq": 2,
+   "start": 7.076,
+   "end": 13.393
+  },
+  {
+   "seq": 3,
+   "start": 13.653,
+   "end": 17.642
+  },
+  {
+   "seq": 4,
+   "start": 17.902,
+   "end": 20.821
+  },
+  {
+   "seq": 5,
+   "start": 21.081,
+   "end": 23.953
+  },
+  {
+   "seq": 6,
+   "start": 24.213,
+   "end": 26.907
+  }
+ ],
+ "words": [
+  {
+   "text": "Vos",
+   "start": 0.3,
+   "end": 0.488,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "photos",
+   "start": 0.488,
+   "end": 0.864,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "et",
+   "start": 0.864,
+   "end": 0.99,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "vos",
+   "start": 0.99,
+   "end": 1.178,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "papiers",
+   "start": 1.178,
+   "end": 1.617,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "sont",
+   "start": 1.617,
+   "end": 1.868,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "éparpillés",
+   "start": 1.868,
+   "end": 2.495,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "partout ?",
+   "start": 2.495,
+   "end": 2.934,
+   "seq": 0,
+   "para": 0
+  },
+  {
+   "text": "Avec",
+   "start": 3.194,
+   "end": 3.467,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "Stokara,",
+   "start": 3.467,
+   "end": 3.944,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "rassemblez",
+   "start": 4.044,
+   "end": 4.574,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "tout",
+   "start": 4.574,
+   "end": 4.785,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "au",
+   "start": 4.785,
+   "end": 4.891,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "même",
+   "start": 4.891,
+   "end": 5.103,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "endroit :",
+   "start": 5.103,
+   "end": 5.474,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "en",
+   "start": 5.714,
+   "end": 5.856,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "ligne,",
+   "start": 5.856,
+   "end": 6.212,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "et",
+   "start": 6.212,
+   "end": 6.346,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "chiffré.",
+   "start": 6.346,
+   "end": 6.816,
+   "seq": 1,
+   "para": 1
+  },
+  {
+   "text": "Partagez",
+   "start": 7.076,
+   "end": 7.523,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "avec",
+   "start": 7.523,
+   "end": 7.747,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "vos",
+   "start": 7.747,
+   "end": 7.915,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "proches,",
+   "start": 7.915,
+   "end": 8.306,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "jusqu'à",
+   "start": 8.506,
+   "end": 8.92,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "cinq",
+   "start": 8.92,
+   "end": 9.196,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "membres.",
+   "start": 9.196,
+   "end": 9.679,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "Chacun",
+   "start": 9.879,
+   "end": 10.224,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "retrouve",
+   "start": 10.224,
+   "end": 10.685,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "les",
+   "start": 10.685,
+   "end": 10.858,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "photos",
+   "start": 10.858,
+   "end": 11.203,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "de",
+   "start": 11.203,
+   "end": 11.318,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "vacances,",
+   "start": 11.318,
+   "end": 11.779,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "même",
+   "start": 11.999,
+   "end": 12.293,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "sur",
+   "start": 12.293,
+   "end": 12.513,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "son",
+   "start": 12.513,
+   "end": 12.733,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "téléphone.",
+   "start": 12.733,
+   "end": 13.393,
+   "seq": 2,
+   "para": 2
+  },
+  {
+   "text": "Carte",
+   "start": 13.653,
+   "end": 14.083,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "grise,",
+   "start": 14.083,
+   "end": 14.513,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "factures,",
+   "start": 14.623,
+   "end": 14.513,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "assurance :",
+   "start": 14.623,
+   "end": 15.613,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "les",
+   "start": 15.873,
+   "end": 16.016,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "papiers",
+   "start": 16.016,
+   "end": 16.351,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "importants",
+   "start": 16.351,
+   "end": 16.829,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "restent",
+   "start": 16.829,
+   "end": 17.163,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "sous",
+   "start": 17.163,
+   "end": 17.355,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "la",
+   "start": 17.355,
+   "end": 17.45,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "main.",
+   "start": 17.45,
+   "end": 17.641,
+   "seq": 3,
+   "para": 3
+  },
+  {
+   "text": "Et",
+   "start": 17.902,
+   "end": 18.021,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "pour",
+   "start": 18.021,
+   "end": 18.26,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "envoyer",
+   "start": 18.26,
+   "end": 18.677,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "un",
+   "start": 18.677,
+   "end": 18.796,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "album",
+   "start": 18.796,
+   "end": 19.094,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "entier,",
+   "start": 19.094,
+   "end": 19.452,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "un",
+   "start": 19.642,
+   "end": 19.773,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "simple",
+   "start": 19.773,
+   "end": 20.166,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "lien",
+   "start": 20.166,
+   "end": 20.428,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "suffit.",
+   "start": 20.428,
+   "end": 20.822,
+   "seq": 4,
+   "para": 4
+  },
+  {
+   "text": "Pour",
+   "start": 21.081,
+   "end": 21.287,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "les",
+   "start": 21.287,
+   "end": 21.442,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "particuliers :",
+   "start": 21.442,
+   "end": 22.061,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "3 €",
+   "start": 22.271,
+   "end": 22.795,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "par",
+   "start": 22.795,
+   "end": 22.952,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "mois,",
+   "start": 22.952,
+   "end": 23.161,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "pour",
+   "start": 23.261,
+   "end": 23.459,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "20 Go.",
+   "start": 23.459,
+   "end": 23.953,
+   "seq": 5,
+   "para": 5
+  },
+  {
+   "text": "Stokara :",
+   "start": 24.213,
+   "end": 24.753,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "les",
+   "start": 24.883,
+   "end": 25.041,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "souvenirs",
+   "start": 25.041,
+   "end": 25.514,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "de",
+   "start": 25.514,
+   "end": 25.62,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "la",
+   "start": 25.62,
+   "end": 25.725,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "famille,",
+   "start": 25.725,
+   "end": 26.093,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "bien",
+   "start": 26.243,
+   "end": 26.508,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "à",
+   "start": 26.508,
+   "end": 26.575,
+   "seq": 6,
+   "para": 6
+  },
+  {
+   "text": "l'abri !",
+   "start": 26.575,
+   "end": 26.907,
+   "seq": 6,
+   "para": 6
+  }
+ ]
+}

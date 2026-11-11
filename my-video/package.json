@@ -63,7 +63,10 @@
     "team:render": "remotion render StokaraEquipe out/stokara-partager-travailler-ensemble-30s-9x16.mp4 --codec=h264 --crf=18",
     "secu:voice": "python3 scripts/stokara-secu/make-voice.py .tts",
     "secu:audio": "node scripts/stokara-secu/make-audio.mjs",
-    "secu:render": "remotion render StokaraSecurite out/stokara-securite-controle-30s-9x16.mp4 --codec=h264 --crf=18"
+    "secu:render": "remotion render StokaraSecurite out/stokara-securite-controle-30s-9x16.mp4 --codec=h264 --crf=18",
+    "famille:voice": "python3 scripts/stokara-famille/make-voice.py .tts",
+    "famille:audio": "node scripts/stokara-famille/make-audio.mjs",
+    "famille:render": "remotion render StokaraFamille out/stokara-particuliers-familles-30s-9x16.mp4 --codec=h264 --crf=18"
   },
   "sideEffects": [
     "*.css"

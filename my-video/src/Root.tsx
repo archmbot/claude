@@ -11,6 +11,8 @@ import { StokaraPub } from "./stokara-pub/Video";
 import { StokaraProgramme } from "./stokara-prog/Video";
 import { StokaraEquipe } from "./stokara-team/Video";
 import { StokaraSecurite } from "./stokara-secu/Video";
+import { StokaraFamille } from "./stokara-famille/Video";
+import { DURATION as FAM_DURATION, FPS as FAM_FPS, HEIGHT as FAM_HEIGHT, WIDTH as FAM_WIDTH } from "./stokara-famille/timing";
 import { DURATION as SECU_DURATION, FPS as SECU_FPS, HEIGHT as SECU_HEIGHT, WIDTH as SECU_WIDTH } from "./stokara-secu/timing";
 import { DURATION as TEAM_DURATION, FPS as TEAM_FPS, HEIGHT as TEAM_HEIGHT, WIDTH as TEAM_WIDTH } from "./stokara-team/timing";
 import { DURATION as PROG_DURATION, FPS as PROG_FPS, HEIGHT as PROG_HEIGHT, WIDTH as PROG_WIDTH } from "./stokara-prog/timing";
@@ -35,6 +37,15 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="StokaraFamille"
+        component={StokaraFamille}
+        durationInFrames={FAM_DURATION}
+        fps={FAM_FPS}
+        width={FAM_WIDTH}
+        height={FAM_HEIGHT}
+        defaultProps={{ subtitles: true }}
+      />
       <Composition
         id="StokaraSecurite"
         component={StokaraSecurite}
